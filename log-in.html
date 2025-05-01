@@ -26,16 +26,18 @@
     <div class="form-box Login">
      <h2 class="animation" style="--D:0">Login</h2>
      
-     <form action="#">
+     <form action="#" id="logInForm">
           <div class="input-box animation" >
-            <input type="text" required>
+            <input type="text" id="usernameInput">
             <label for="">Username</label>
             <i class='bx bxs-user'></i>
+            <p id="usernameError" style="color: #FFA333"></p>
           </div>
           <div class="input-box animation" >
-            <input type="text" required>
-            <label for="">Password</label>
+            <input type="password"  id="passwordInput">
+            <label for="password" >Password</label>
             <i class='bx bxs-lock-alt' ></i>
+            <p id="passwordError" style="color: #FFA333"></p>
           </div>
           <div class="input-box animation" >
           <button class="btn" type="submit">Login</button>

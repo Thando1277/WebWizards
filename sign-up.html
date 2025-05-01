@@ -27,27 +27,31 @@
         <div class="curved-shape2"></div>
         <div class="form-box Login">
          <h2 class="animation" style="--D:0">Login</h2>
-         <form action="#">
-          
+
+         <form action="#" id="signUpForm">
               <div class="input-box animation" >
-                <input type="text" required>
+                <input type="text" id="usernameInput">
                 <label for="">Username</label>
                 <i class='bx bxs-user'></i>
+                <p id="usernameError" style="color: #FFA333"></p>
               </div>
               <div class="input-box animation" >
-                <input type="text" required>
+                <input type="password" id="passwordInput">
                 <label for="">Password</label>
                 <i class='bx bxs-lock-alt' ></i>
+                <p id="passwordError" style="color: #FFA333""></p>
               </div>
               <div class="input-box animation" >
-                <input type="email" required>
+                <input id="emailInput">
                 <label for="">email</label>
                 <i class='bx bx-envelope'></i>
+                <p id="emailError" style="color: #FFA333""></p>
               </div>
               <div class="input-box animation" >
-                <input type="phoneNumber" required>
+                <input type="text" id="phoneInput">
                 <label for="">phoneNumber</label>
                 <i class='bx bxs-phone-call'></i>
+                <p id="phoneError" style="color: #FFA333""></p>
               </div>
               <div class="input-box animation" >
               <button class="btn" type="submit" >Sign-Up</button>
