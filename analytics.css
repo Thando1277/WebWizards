@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #111;
+    padding: 30px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .dashboard-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+    color: #FFA333;
+  }
+  
+  .card p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .map-analytics {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .map-placeholder,
+  .rewards {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .map-placeholder h3,
+  .rewards h3 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .map-fake {
+    height: 200px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  
+  #redeemBtn {
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #FFA333;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  #redeemBtn:hover {
+    background-color: #ff8a00;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-cards,
+    .map-analytics {
+      flex-direction: column;
+    }
+  }
+  

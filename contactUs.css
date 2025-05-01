@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+    font-family: 'poppins', Courier, monospace;
+}
+
+#form {
+    width: 500px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: rgb(64, 63, 63);
+    display: flex;
+    flex-direction: column;
+}
+
+#heading {
+    text-align: center;
+    color: orange;
+    margin-top: 40px;
+}
+
+label {
+    color: orange;
+    font-size: 1.1em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid orange;
+}
+
+#button {
+    padding: 15px;
+    margin: 20px auto 0 auto;
+    width: 50%;
+    border-radius: 4px;
+    background-color: orange;
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#button:hover {
+    background-color: darkorange;
+}
+
+.social_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.social_icon li {
+    list-style: none;
+}
+
+.social_icon li a {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.social_icon li a:hover {
+    transform: translateY(-10px);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
