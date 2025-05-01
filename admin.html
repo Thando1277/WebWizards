@@ -25,15 +25,15 @@
         <div class="form-box Login">
          <h2 class="animation" style="--D:0">FOR ADMIN ONLY</h2>
          
-         <form action="#" id="adminForm">
+         <form action="adminLogIn.php" id="adminForm" method="post">
               <div class="input-box animation" >
-                <input type="text" id="usernameInput" style="color: #FFA333;">
+                <input type="text" id="usernameInput" name = "username"style="color: #FFA333;">
                 <label for="">Username</label>
                 <i class='bx bxs-user'></i>
                 <p id="usernameError"></p>
               </div>
               <div class="input-box animation" >
-                <input type="password" id="passwordInput">
+                <input type="password" id="passwordInput" name="password">
                 <label for="">Password</label>
                 <i class='bx bxs-lock-alt' ></i>
                 <p id="passwordError" style="color: #FFA333;"></p>
