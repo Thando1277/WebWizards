@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Gate | SnapFix SA</title>
+  <link rel="stylesheet" href="payment-gate.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f0443fd3ee.js" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <main class="container">
+    <section class="premium-info">
+      <h2>Why Premium?</h2>
+      <p>
+        Upgrading to SnapFix SA's premium service unlocks powerful tools designed for 
+        municipalities, NGOs, and community leaders who want to take infrastructure 
+        management to the next level. With access to real-time analytics, issue heatmaps, 
+        work order assignment, and detailed reporting, premium users gain full visibility 
+        and control over reported problems. It's not just about fixing issues faster — it's 
+        about making data-driven decisions, improving service delivery, and building trust 
+        with the communities you serve. If you're serious about impact, upgrading means 
+        turning citizen feedback into measurable results.
+      </p>
+    </section>
+
+    <form id="payment-form" class="payment-form">
+      <h2>Upgrade & Pay</h2>
+      
+      <div class="form-grid">
+        <section class="billing-section">
+          <h3>Billing Address</h3>
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="form-group">
+            <label for="state">State/Province</label>
+            <input type="text" id="state" name="state" required>
+          </div>
+        </section>
+
+        <section class="payment-section">
+          <h3>Payment Details</h3>
+          <div class="payment-methods">
+            <p>Accepted Payment Methods:</p>
+            <div class="card-options">
+              <button type="button" class="card-option" data-card="visa">
+                <i class="fab fa-cc-visa"></i>
+              </button>
+              <button type="button" class="card-option" data-card="mastercard">
+                <i class="fab fa-cc-mastercard"></i>
+              </button>
+              <button type="button" class="card-option" data-card="paypal">
+                <i class="fab fa-cc-paypal"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+          </div>
+          
+          <div class="card-details">
+            <div class="form-group">
+              <label for="exp-date">Expiration Date</label>
+              <input type="month" id="exp-date" name="exp-date" required>
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" placeholder="123" required>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <button type="submit" class="submit-btn">Complete Payment</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wave-container">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </div>
+    
+    <div class="social-links">
+      <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+    </div>
+    
+    <p class="copyright">&copy; 2024 SnapFix SA | All Rights Reserved</p>
+  </footer>
+
+  <script src="payment-gate.js"></script>
+</body>
+</html>

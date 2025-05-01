@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contactUs.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"/>
+</head>
+<body>
+  <h1 id="heading">Contact Us!</h1>
+
+  <form id="form">
+    <div>
+      <label for="namejs" id="name">Name: </label>
+      <input type="text" id="namejs" name="name" placeholder="Please enter your name" required />
+    </div><br/>
+
+    <div>
+      <label for="emailjs" id="email">Email: </label>
+      <input type="text" id="emailjs" name="email" placeholder="Please enter your email" required />
+    </div><br/>
+
+    <div>
+      <label for="messagejs" id="message">Message: </label>
+      <textarea id="messagejs" name="message" placeholder="Enter your message here..." rows="5" cols="40" required></textarea>
+    </div><br/>
+
+    <div>
+      <button id="button" type="submit">Submit</button>
+    </div>
+  </form>
+
+  <footer>
+    <ul class="social_icon">
+      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <p>@2024 Web Wizards || All rights reserved</p>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("7WaLqn5JAG7bJF9wy");
+    })();
+  </script>
+
+  <script src="contactUs.js"></script>
+</body>
+</html>

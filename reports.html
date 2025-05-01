@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reports</title>
+  <link rel="stylesheet" href="reports.css"/>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDhK8f-urK6xWrKfVYrv2r0Wbzr1aedc&callback=initMap&libraries=places" async defer></script>
+</head>
+<body>
+  <h1>Welcome To The Reports Page</h1>
+
+  <div id="location_info">
+    <label for="location">Enter Your Location: </label>
+    <input type="text" id="location" name="location" required placeholder="e.g. Cape Town" />
+  </div>
+
+  <div id="buttons">
+    <button id="searchBtn">Search</button>
+    <button id="geoBtn">📍 Use My Location</button>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="reports.js"></script>
+</body>
+</html>
