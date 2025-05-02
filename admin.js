@@ -1,20 +1,19 @@
-const container=document.querySelector('.container');
-const LoginLink=document.querySelector('.SignIn');
-const LoginRegister=document.querySelector('.SignUp');
-LoginRegister.addEventListener('click',()=>{
-    container.classList.add('active');
-})
+const container = document.querySelector('.container');
+const LoginLink = document.querySelector('.SignIn');
+const LoginRegister = document.querySelector('.SignUp');
 
+LoginRegister.addEventListener('click', () => {
+    container.classList.add('active');
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".container").classList.add("active");
 });
 
-//VALIDATIONS
-
+// VALIDATIONS
 document.getElementById('adminForm').addEventListener('submit', function(e){
-    e.preventDefault();
-
+    e.preventDefault(); // Prevents the form from submitting immediately
+    
     const username = document.getElementById('usernameInput').value.trim();
     const password = document.getElementById('passwordInput').value.trim();
     const usernameErrorEl = document.getElementById('usernameError');
@@ -23,17 +22,17 @@ document.getElementById('adminForm').addEventListener('submit', function(e){
     usernameErrorEl.textContent = "";
     passwordErrorEl.textContent = "";
 
-    if (username === ""){
+    // Validation checks
+    if (username === "") {
         usernameErrorEl.textContent = "Username required";
         return;
     }
-    if (password.length < 6){
+    if (password.length < 6) {
         passwordErrorEl.textContent = "Password must have at least 6 characters";
         return;
     }
 
-    // Redirect to dashboard on successful login
-    // window.location.href = "dashboard.html";
-
-    document.getElementById('adminForm').reset(); 
+    // If the validation passes, allow the form to submit (remove preventDefault)
+    // Manually trigger form submission after validation
+    this.submit();  // This submits the form to adminLogin.php
 });
