@@ -28,38 +28,38 @@
         <div class="form-box Login">
          <h2 class="animation" style="--D:0">Login</h2>
 
-         <form action="#" id="signUpForm">
-              <div class="input-box animation" >
-                <input type="text" id="usernameInput">
-                <label for="">Username</label>
-                <i class='bx bxs-user'></i>
-                <p id="usernameError" style="color: #FFA333"></p>
-              </div>
-              <div class="input-box animation" >
-                <input type="password" id="passwordInput">
-                <label for="">Password</label>
-                <i class='bx bxs-lock-alt' ></i>
-                <p id="passwordError" style="color: #FFA333""></p>
-              </div>
-              <div class="input-box animation" >
-                <input id="emailInput">
-                <label for="">email</label>
-                <i class='bx bx-envelope'></i>
-                <p id="emailError" style="color: #FFA333""></p>
-              </div>
-              <div class="input-box animation" >
-                <input type="text" id="phoneInput">
-                <label for="">phoneNumber</label>
-                <i class='bx bxs-phone-call'></i>
-                <p id="phoneError" style="color: #FFA333""></p>
-              </div>
-              <div class="input-box animation" >
-              <button class="btn" type="submit" >Sign-Up</button>
-              </div>
-              <div class="regi-link animation"  >
-                <p>Already have Account? <a href= "log-in.html" class="SignUp">Login</a></p>
-              </div>
-         </form>
+         <form action="sign-up.php" method="POST" id="signUpForm">
+          <div class="input-box animation">
+              <input type="text" id="usernameInput" name="username" required>
+              <label for="">Username</label>
+              <i class='bx bxs-user'></i>
+              <p id="usernameError" style="color: #FFA333"></p>
+          </div>
+          <div class="input-box animation">
+              <input type="password" id="passwordInput" name="password" required>
+              <label for="">Password</label>
+              <i class='bx bxs-lock-alt'></i>
+              <p id="passwordError" style="color: #FFA333"></p>
+          </div>
+          <div class="input-box animation">
+              <input type="email" id="emailInput" name="email" required>
+              <label for="">Email</label>
+              <i class='bx bx-envelope'></i>
+              <p id="emailError" style="color: #FFA333"></p>
+          </div>
+          <div class="input-box animation">
+              <input type="text" id="phoneInput" name="phone" required>
+              <label for="">Phone Number</label>
+              <i class='bx bxs-phone-call'></i>
+              <p id="phoneError" style="color: #FFA333"></p>
+          </div>
+          <div class="input-box animation">
+              <button class="btn" type="submit">Sign-Up</button>
+          </div>
+          <div class="regi-link animation">
+              <p>Already have an account? <a href="log-in.html" class="SignUp">Login</a></p>
+          </div>
+      </form>      
         </div>
      
        

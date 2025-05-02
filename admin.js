@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".container").classList.add("active");
 });
 
-// VALIDATIONS
+
 document.getElementById('adminForm').addEventListener('submit', function(e){
-    e.preventDefault(); // Prevents the form from submitting immediately
+    e.preventDefault(); 
     
     const username = document.getElementById('usernameInput').value.trim();
     const password = document.getElementById('passwordInput').value.trim();
@@ -22,7 +22,7 @@ document.getElementById('adminForm').addEventListener('submit', function(e){
     usernameErrorEl.textContent = "";
     passwordErrorEl.textContent = "";
 
-    // Validation checks
+
     if (username === "") {
         usernameErrorEl.textContent = "Username required";
         return;
@@ -32,7 +32,6 @@ document.getElementById('adminForm').addEventListener('submit', function(e){
         return;
     }
 
-    // If the validation passes, allow the form to submit (remove preventDefault)
-    // Manually trigger form submission after validation
-    this.submit();  // This submits the form to adminLogin.php
+
+    this.submit();
 });
