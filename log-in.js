@@ -1,18 +1,4 @@
-const container=document.querySelector('.container');
-const LoginLink=document.querySelector('.SignIn');
-const LoginRegister=document.querySelector('.SignUp');
-LoginRegister.addEventListener('click',()=>{
-    container.classList.add('active');
-})
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".container").classList.add("active");
-});
-
-//VALIDATIONS
-
-document.getElementById('logInForm').addEventListener('submit', function(e){
+document.getElementById('logInForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const username = document.getElementById('usernameInput').value.trim();
@@ -23,17 +9,21 @@ document.getElementById('logInForm').addEventListener('submit', function(e){
     usernameErrorEl.textContent = "";
     passwordErrorEl.textContent = "";
 
-    if (username === ""){
+    let isValid = true;
+
+    if (username === "") {
         usernameErrorEl.textContent = "Username required";
-        return;
+        isValid = false;
     }
-    if (password.length < 6){
+
+    if (password.length < 6) {
         passwordErrorEl.textContent = "Password must have at least 6 characters";
-        return;
+        isValid = false;
     }
 
-    // Redirect to dashboard on successful login
-    // window.location.href = "dashboard.html";
-
-    document.getElementById('adminForm').reset(); 
+    if (isValid) {
+        // Create a temporary form submit event to bypass preventDefault
+        this.removeEventListener('submit', arguments.callee); // Avoid infinite loop
+        this.submit();
+    }
 });
