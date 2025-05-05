@@ -5,25 +5,44 @@ document.getElementById('logInForm').addEventListener('submit', function(e) {
     const password = document.getElementById('passwordInput').value.trim();
     const usernameErrorEl = document.getElementById('usernameError');
     const passwordErrorEl = document.getElementById('passwordError');
+    const serverErrorEl = document.getElementById('serverError'); 
 
+ 
     usernameErrorEl.textContent = "";
     passwordErrorEl.textContent = "";
+    serverErrorEl.textContent = "";
 
     let isValid = true;
 
     if (username === "") {
-        usernameErrorEl.textContent = "Username required";
+        usernameErrorEl.textContent = "Username is required";
         isValid = false;
     }
 
     if (password.length < 6) {
-        passwordErrorEl.textContent = "Password must have at least 6 characters";
+        passwordErrorEl.textContent = "Password must be at least 6 characters";
         isValid = false;
     }
 
     if (isValid) {
-        // Create a temporary form submit event to bypass preventDefault
-        this.removeEventListener('submit', arguments.callee); // Avoid infinite loop
-        this.submit();
+        fetch('adminLogin.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = 'userdashboard.html';
+            } else if (data.error) {
+                serverErrorEl.textContent = data.error;
+            }
+        })
+        .catch(error => {
+            serverErrorEl.textContent = "Something went wrong.";
+            console.error("Error:", error);
+        });
     }
 });
