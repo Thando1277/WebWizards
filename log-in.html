@@ -27,25 +27,25 @@
      <h2 class="animation" style="--D:0">Login</h2>
      
      <form action="log-in.php" id="logInForm" method="post">
-          <div class="input-box animation" >
-            <input type="text" id="usernameInput" name="username">
-            <label for="">Username</label>
-            <i class='bx bxs-user'></i>
-            <p id="usernameError" style="color: #FFA333"></p>
-          </div>
-          <div class="input-box animation" >
-            <input type="password"  id="passwordInput" name="password">
-            <label for="password" >Password</label>
-            <i class='bx bxs-lock-alt' ></i>
-            <p id="passwordError" style="color: #FFA333"></p>
-          </div>
-          <div class="input-box animation" >
-          <p id="serverError" style="color: #FFA333; text-align: center; margin-top: 20px;"></p>
-          <button class="btn" type="submit">Login</button>
-          </div>
-          <div class="regi-link animation"  >
-            <p>Don't have Account? <a href= "sign-up.html" class="SignUp">SignUp</a></p>
-          </div>
+      <div class="input-box animation" >
+        <input type="text" required>
+        <label for="">Username</label>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box animation" >
+        <input type="text" required>
+        <label for="">Password</label>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="input-box animation" >
+        <button class="btn" type="button" onclick="window.location.href='userdashboard.html';">
+          Login
+        </button>
+        
+      </div>
+      <div class="regi-link animation"  >
+        <p>Don't have Account? <a href= "sign-up.html" class="SignUp">SignUp</a></p>
+      </div>
      </form>
     </div>
  
