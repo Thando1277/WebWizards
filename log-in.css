@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', Times, serif;
+    font-family: 'Consolas', Times, serif;
     color: white;
 }
 
@@ -64,7 +64,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding-top: 80px;
-    background-image: url(images/roadChaos.jpg);
+    background-image: url(/images/roadChaos.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -78,19 +78,27 @@ body {
     overflow: hidden;
     background-color: transparent; 
     z-index: 1; 
-    transform: translateX(-100vh);
-    opacity: 0;
-    
-    
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 
     display: flex;
     align-items: center; 
     justify-content: center;
+
+    /* Remove transform and opacity from here */
 }
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .container.active {
-    transform: translateX(0);
-    opacity: 1;
+    animation: slideInLeft 2s ease-in-out forwards;
 }
 
 .curved-shape2 {
@@ -223,6 +231,7 @@ transition-delay: calc(.1s*var(--D)) ;
 }
 .regi-link a:hover{
    text-decoration: underline;
+   
 }
 .info-content{
     position: absolute;
