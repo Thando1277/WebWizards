@@ -1,71 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <div class="numbers">0</div>
-                <div class="cardName">Reported</div>
-            </div>
-            <div class="iconBox">
-                <ion-icon name="newspaper-outline"></ion-icon>
-            </div>
-        </div>
-    
-        <div class="card">
-            <div>
-                <div class="numbers">0</div>
-                <div class="cardName">Solved</div>
-            </div>
-            <div class="iconBox">
-                <ion-icon name="document-outline"></ion-icon>
-            </div>
-        </div>
-       
-        <div class="status">
-            <h4>Status:None</h4>
-        </div>
-    </div>
-    <div class="main-wrapper">
-        <div class="upload-section">
-          <h3>Upload a picture</h3>
-          <input type="file" id="fileInput" style="display: none;" />
-          <a href="#" id="uploadIcon">
-            <ion-icon name="images-outline"></ion-icon>
-          </a>
-          <button id="clearBtn">Clear Image</button>
-        </div>
+ 
       
-        <div class="LocationWrap">
-          <div class="location-header">
-            <h3> Location</h3>
-            <ion-icon name="location-outline"></ion-icon>
-          </div>
-          <div class="CoodinatesWrap">
-            <p class="latText"></p>
-            <p class="longText"></p>
-          </div>
-          <div class="button">
-            <button onclick="getLocation()" id="locationID">Get location</button>
-          </div>
-        </div>
-        <div class="IssuesCard">
-            <h3>Report the issue</h3>
-            <ion-icon name="hammer-outline"></ion-icon>
-            <textarea id="issue" placeholder="Describe the issue here..."></textarea>
-            <button id="startVoice">🎤 Speak</button>
-          </div>
-      </div>
-      <div class="submit">
-        <button type="submit">Submit</button>
-      </div>
-
-      <script src="dashboard.js"></script>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

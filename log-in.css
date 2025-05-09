@@ -78,27 +78,19 @@ body {
     overflow: hidden;
     background-color: transparent; 
     z-index: 1; 
+    transform: translateX(-100vh);
+    opacity: 0;
+    
+    
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 
     display: flex;
     align-items: center; 
     justify-content: center;
-
-    /* Remove transform and opacity from here */
 }
-
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100vh);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 .container.active {
-    animation: slideInLeft 2s ease-in-out forwards;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .curved-shape2 {
@@ -231,7 +223,6 @@ transition-delay: calc(.1s*var(--D)) ;
 }
 .regi-link a:hover{
    text-decoration: underline;
-   
 }
 .info-content{
     position: absolute;
