@@ -37,7 +37,7 @@ document.getElementById('logInForm').addEventListener('submit', function(e) {
     }
 
     if (isValid) {
-        fetch('adminLogin.php', {
+        fetch('log-in.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
