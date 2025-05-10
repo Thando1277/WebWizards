@@ -1,100 +1,206 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 body {
+ 
   background-color: #111;
+  color: #f9f9f9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 14rem auto 14rem;
+}
+
+.warning {
+  color: green;
+}
+
+.primary {
+  color: blueviolet;
+}
+
+main {
+  margin-top: 1.4rem;
+  width: auto;
+}
+
+main input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.date {
+  display: inline-block;
+  background-color: white;
+  border-radius: 2px;
+  margin-top: 1rem;
+  padding: 0.5rem 1.6rem;
+}
+
+.insights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, 1fr)); /* Increased min width */
+  gap: 7rem;
+}
+
+.insight-card {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+main .insights>div{
+ 
+  padding: 5px;
+  border-radius: 15px;
+  margin-top: 1rem;
+  box-shadow: 0 5px 15px rgba(251, 251, 251, 0.08);
+  transition: all .3s ease;
+}
+main .insights > div:hover {
+  box-shadow: 0 2px 8px gold;
+}
+main .insights>div span{
+  color: gold;
+  padding:0.5rem;
+  font-size: 2rem;
+
+}
+main .insights>div .middle{
   display: flex;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-#menu{
-  text-align: center;
-}
-
-#hamburger {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 2;
-  cursor: pointer;
-  width: 30px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
+main .insights>div .middle h1{
+  font-size: 1.6rem;
+}
 
-#hamburger span {
-  display: block;
-  height: 3px;
-  background: orange;
-  border-radius: 2px;
-  transition: 1s ease;
+.progress svg {
+  width: 80px;
+  height: 80px;
+}
+
+.progress svg circle {
+  fill: none;
+  stroke: gold; /* Replace with your preferred color */
+  stroke-width: 5;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.middle {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   
 }
 
-#menu-toggle:checked + #hamburger span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-#menu-toggle:checked + #hamburger span:nth-child(2) {
-  opacity: 0;
-}
-#menu-toggle:checked + #hamburger span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 220px;
-  background: #111;
-  padding: 20px;
-  transform: translateX(-100%);
-  transition: 1s ease;
-  z-index: 1;
-}
-
-#menu-toggle:checked ~ #sidebar {
-  transform: translateX(0);
-}
-
-#sidebar h1 {
-  color: white;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-#sidebar ul {
-  list-style: none;
-}
-
-#sidebar ul li {
-  margin: 15px 0;
-}
-
-#sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+.left {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  transition: 0.2s;
+  justify-content: center;
 }
 
-#sidebar ul li a:hover {
-  color: orange;
-  padding-left: 5px;
+/* Headings and numbers */
+.left h3 {
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
 }
 
-#sidebar ul li a i {
-  margin-right: 10px;
+.left h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+}
+/* Center the numbers and headings */
+.middle h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+.number {
+  font-weight: bold;
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+}
+main .recent_reports{
+  margin-top: 2rem;
+}
+main .recent_reports h2{
+  color:white;
+}
+main .recent_reports table{
+  width: 100%;
+  padding: 0.5rem 1.6rem;
+  text-align: center;
+  box-shadow: 0 2px 4px gold;
+  transition: all .3s ease;
+  color: #f9f9f9;
+}
+main .recent_reports table:hover{
+  box-shadow: none;
+  
+}
+main table tbody tr{
+  height: 3.8rem;
+
+}
+main table tbody td{
+  height: 3.8rem;
+  color: #f9f9f9;
+}
+.recent_reports {
+  margin-top: 2rem;
+  margin-bottom: 2rem; 
+}
+.recent_reports table {
+  margin-top: 1rem; 
+}
+main .recent_reports table {
+  color: white;
+
+}
+
+main table tbody td {
+  color: white; 
+}
+main table tbody tr,
+main table tbody td {
+  height: 3rem;
+  width: 20rem; 
+}
+main .recent_reports a{
+  text-align: center;
+  display: block;
+  margin:2rem;
+}
+
+.table-and-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+
+table {
+  width: 70%; /* Adjust the table's width */
+  margin-right: 2rem; /* Adds space between the table and chart */
+}
+
+.chart-container {
+  /* Width of the chart container */
+  text-align: center;
+  margin-bottom: 5rem;
+  width: 300px;
+  margin-left: 5rem;
+}
+
+canvas {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  padding: 0;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.379);
 }
