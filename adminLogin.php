@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
         exit;
     }
 } else {
-    echo json_encode(["error" => "User not found"]);
+    echo json_encode(["error" => "Admin not found"]);
     exit;
 }
 
