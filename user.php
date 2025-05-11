@@ -9,7 +9,7 @@
 <body>
     <?php
     // Connect to MySQL database
-    $conn = new mysqli("localhost", "root", "", "user_db");
+    $conn = new mysqli("localhost", "root", "#Thando#2006", "adminlogss");
 
     // Check connection
     if ($conn->connect_error) {
@@ -17,16 +17,16 @@
     }
 
     // Get user info (for demo, we use a static ID of 1)
-    $sql = "SELECT * FROM users WHERE id = 1";
+    $sql = "SELECT * FROM UserTable WHERE UserID = 1";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         echo "<div class='user-info'>";
-        echo "<p><strong>Name:</strong> " . $row["Username"] . "</p>";
+        echo "<p><strong>Name:</strong> " . $row["Name"] . "</p>";
         echo "<p><strong>Pssword:</strong> " . $row["Password"] . "</p>";
-        echo "<p><strong>Email:</strong> " . $row["email"] . "</p>";
-        echo "<p><strong>Phone:</strong> " . $row["phone"] . "</p>";
+        echo "<p><strong>Email:</strong> " . $row["Email"] . "</p>";
+        echo "<p><strong>Phone:</strong> " . $row["CellPhone"] . "</p>";
         echo "</div>";
     } else {
         echo "No user found.";
