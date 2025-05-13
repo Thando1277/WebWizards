@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var uploadIcon = document.getElementById("uploadIcon");
     var fileInput = document.getElementById("fileInput");
     var clearBtn = document.getElementById("clearBtn");
-    var imageUploaded = false; // Track upload status
+    var imageUploaded = false;
   
     uploadIcon.addEventListener("click", function (event) {
       event.preventDefault();
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function() {
       }
     });
   
-    // Clear button logic
+    
     clearBtn.addEventListener("click", function () {
       if (imageUploaded) {
         fileInput.value = "";
@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', function() {
 const submitBtn = document.querySelector(".submit button");
 const issueText = document.getElementById("issue");
 const reportedCounter = document.querySelector(".cardBox .card:first-child .numbers");
-const statusText = document.getElementById("status"); // make sure your HTML has an element with id="status"
+const statusText = document.getElementById("status"); 
 
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -99,9 +99,9 @@ submitBtn.addEventListener("click", function (e) {
     issueText.value = "";
     alert("Issue reported successfully!");
 
-    // Update status with pending verification and count
+    
     statusText.textContent = `Status: Pending Verification (${issueCount})`;
-    statusText.style.color = "orange"; // I changed to orange to look more like "pending"
+    statusText.style.color = "orange";
   } else {
     alert("Please describe the issue before submitting.");
   }
@@ -118,7 +118,7 @@ function getLocation() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
 
-        // Replace with your actual API key
+        
         const apiKey = " AIzaSyBozgzhXv7ZTh9OYVmZQ3N3dw6J-ml389s";
         const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
 
