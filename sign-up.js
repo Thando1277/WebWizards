@@ -64,3 +64,19 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
         console.log("Form contains errors, please correct them.");
     }
 });
+
+if (isValid) {
+    emailjs.send("service_bt2a4v8", "template_3qawojt", {
+        username: username,
+        email: email
+    })
+    .then(function(response) {
+        console.log("Welcome email sent!", response.status, response.text);
+        alert("Sign-up successful! Welcome email sent.");
+        document.getElementById('signUpForm').submit(); 
+    }, function(error) {
+        console.error("FAILED to send email...", error);
+        alert("Sign-up successful, but failed to send welcome email.");
+        document.getElementById('signUpForm').submit(); 
+    });
+}
