@@ -2,13 +2,13 @@
 // Database connection
 $servername = "localhost";
 $username = "root";
-$password = "LockIn_78";
+$password = "#Thando#2006";
 $dbname = "adminLogss";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("<script>alert('Database connection failed.'); window.history.back();</script>");
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,39 +17,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
     $phone = trim($_POST['phone']);
 
-
     if (empty($username) || empty($password) || empty($email) || empty($phone)) {
-        echo json_encode(["error" => "All fields are required."]);
+        echo "<script>alert('All fields are required.'); window.history.back();</script>";
         exit;
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo json_encode(["error" => "Invalid email format."]);
+        echo "<script>alert('Invalid email format.'); window.history.back();</script>";
         exit;
     }
 
-
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-    $stmt = $conn->prepare("SELECT * FROM User WHERE Email = ? OR CellPhone = ?");
+    $stmt = $conn->prepare("SELECT * FROM UserTable WHERE Email = ? OR CellPhone = ?");
     $stmt->bind_param("ss", $email, $phone); 
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo json_encode(["error" => "Email or phone already exists."]);
+        echo "<script>alert('Email or phone already exists.'); window.history.back();</script>";
         $stmt->close();
         exit;
     }
+    $stmt->close();
 
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO User (Name, Email, Password, CellPhone, Points) VALUES (?, ?, ?, ?, 0)");
+    $stmt = $conn->prepare("INSERT INTO UserTable (Name, Email, Password, CellPhone, Points) VALUES (?, ?, ?, ?, 0)");
     $stmt->bind_param("ssss", $username, $email, $hashedPassword, $phone); 
 
     if ($stmt->execute()) {
-        echo json_encode(["success" => "User registered successfully."]);
+        echo "<script>
+            alert('User registered successfully.');
+            window.location.href = 'log-in.html';
+        </script>";
     } else {
-        echo json_encode(["error" => "Error: " . $stmt->error]);
+        echo "<script>
+            alert('Error: " . addslashes($stmt->error) . "');
+            window.history.back();
+        </script>";
     }
 
     $stmt->close();
@@ -57,4 +61,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
-
