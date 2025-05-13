@@ -58,7 +58,6 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
 
 
     if (isValid) {
-   
         this.submit();  
     } else {
         console.log("Form contains errors, please correct them.");

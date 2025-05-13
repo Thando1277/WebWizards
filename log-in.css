@@ -64,7 +64,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding-top: 80px;
-    background-image: url(/images/roadChaos.jpg);
+    background-image: url(images/roadChaos.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

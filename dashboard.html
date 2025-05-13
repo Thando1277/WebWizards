@@ -5,10 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="dashboard.css">
+  
 </head>
 <body>
- 
+  <div class="container">
+    <main>
+      <h1>Admin</h1>
+    
+      <div class="date">
+        <input type="date">
+      </div>
+    
+      <div class="insights">
+        <!-- Insight 1 -->
+        <div class="insight-card">
+          <span class="material-symbols-sharp">
+            <ion-icon name="receipt-outline"></ion-icon>\
+          </span>
+          <div class="middle">
+            <div class="left">
+              <h3>Total Reports</h3>
+              <h1>0</h1>
+            </div>
+            <div class="progress">
+              <svg><circle r="30" cy="40" cx="40"></circle></svg>
+              <div class="number">40%</div>
+            </div>
+            <small>Last 24 hours</small>
+          </div>
+        </div>
+    
+        <!-- Insight 2 -->
+        <div class="insight-card">
+          <span class="material-symbols-sharp">
+            <ion-icon name="trending-up-outline"></ion-icon> 
+          </span>
+          <div class="middle">
+            <div class="left">
+              <h3>Total Progress</h3>
+              <h1>0</h1>
+            </div>
+            <div class="progress">
+              <svg><circle r="30" cy="40" cx="40"></circle></svg>
+              <div class="number">30%</div>
+            </div>
+            <small>Last 24 hours</small>
+          </div>
+        </div>
+    
+        <!-- Insight 3 -->
+        <div class="insight-card">
+          <span class="material-symbols-sharp">
+            <ion-icon name="checkmark-done-outline"></ion-icon> 
+          </span>
+          <div class="middle">
+            <div class="left">
+              <h3>Total Completed</h3>
+              <h1>0</h1>
+            </div>
+            <div class="progress">
+              <svg><circle r="30" cy="40" cx="40"></circle></svg>
+              <div class="number">15%</div>
+            </div>
+            <small>Last 24 hours</small>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Recent Reports -->
+      <div class="recent_reports">
+        <h1>Recent Reports</h1>
+        <div class="table-and-chart">
+          <table>
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>PhoneNumber</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="warning">Pending</td>
+                <td class="primary">Details</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="chart-container">
+            <h2>Report Overview</h2>
+            <canvas id="reportChart" width="300" height="300"></canvas>
+
+        </div>
+      </div>
+    </main>
+    
+    
+    <div class="right">
       
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <script src="dashboard.js"></script>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

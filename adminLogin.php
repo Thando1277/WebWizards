@@ -5,7 +5,7 @@ header('Content-Type: application/json'); // Important!
 
 $servername = "localhost";  
 $db_username = "root";      
-$db_password = "LockIn_78"; 
+$db_password = "#Thando#2006"; 
 $dbname = "adminLogss";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
         exit;
     }
 } else {
-    echo json_encode(["error" => "User not found"]);
+    echo json_encode(["error" => "Admin not found"]);
     exit;
 }
 
