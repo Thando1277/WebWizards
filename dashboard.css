@@ -187,20 +187,58 @@ table {
   width: 70%; /* Adjust the table's width */
   margin-right: 2rem; /* Adds space between the table and chart */
 }
-
-.chart-container {
-  /* Width of the chart container */
-  text-align: center;
-  margin-bottom: 5rem;
-  width: 300px;
-  margin-left: 5rem;
+.charts-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem; /* Controls space between pie chart and line graph */
+  padding: 2rem;
+  flex-wrap: nowrap; /* Prevents stacking */
 }
 
-canvas {
+.chart-container {
+  text-align: center;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center */
+  align-items: center;      /* Horizontally center */
+  height: 100%; 
+}
+
+.chart-container1 {
+  flex: 1;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.379);
+  height: auto;
+  min-width: 30vw;
+ 
+  
+}
+
+.chart-container1 h2,
+.chart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3e290f;
+}
+
+canvas#reportChart {
   border-radius: 50%;
   display: block;
   margin: 0 auto;
-  width: 300px;
-  padding: 0;
+  width: 100%;
+  height: auto;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.379);
+}
+
+canvas#lineChart {
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+
 }
