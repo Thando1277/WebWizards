@@ -20,12 +20,12 @@
         <!-- Insight 1 -->
         <div class="insight-card">
           <span class="material-symbols-sharp">
-            <ion-icon name="receipt-outline"></ion-icon>\
+            <ion-icon name="receipt-outline"></ion-icon>
           </span>
           <div class="middle">
             <div class="left">
               <h3>Total Reports</h3>
-              <h1>0</h1>
+              <h1 id="totalReports">80</h1>
             </div>
             <div class="progress">
               <svg><circle r="30" cy="40" cx="40"></circle></svg>
@@ -43,7 +43,7 @@
           <div class="middle">
             <div class="left">
               <h3>Total Progress</h3>
-              <h1>0</h1>
+              <h1 id="totalProgress">60</h1>
             </div>
             <div class="progress">
               <svg><circle r="30" cy="40" cx="40"></circle></svg>
@@ -61,7 +61,7 @@
           <div class="middle">
             <div class="left">
               <h3>Total Completed</h3>
-              <h1>0</h1>
+              <h1 id="totalCompleted">15</h1>
             </div>
             <div class="progress">
               <svg><circle r="30" cy="40" cx="40"></circle></svg>
@@ -98,14 +98,22 @@
               </tr>
             </tbody>
           </table>
-          <div class="chart-container">
-            <h2>Report Overview</h2>
-            <canvas id="reportChart" width="300" height="300"></canvas>
-
+    
+          <!-- Charts side by side -->
+          <div class="charts-wrapper">
+            <div class="chart-container">
+              <h2>Total Reports%</h2>
+              <canvas id="reportChart" width="300" height="300"></canvas>
+            </div>
+    
+            <div class="chart-container1">
+              <h2>Raw value data</h2>
+              <canvas id="lineChart"></canvas>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    
     
     <div class="right">
       

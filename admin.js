@@ -1,13 +1,13 @@
-const container = document.querySelector('.container');
-const LoginLink = document.querySelector('.SignIn');
-const LoginRegister = document.querySelector('.SignUp');
-
-LoginRegister?.addEventListener('click', () => {
+const container=document.querySelector('.container');
+const LoginLink=document.querySelector('.SignIn');
+const LoginRegister=document.querySelector('.SignUp');
+LoginRegister.addEventListener('click',()=>{
     container.classList.add('active');
-});
+})
+
 
 document.addEventListener("DOMContentLoaded", function () {
-    container.classList.add("active");
+    document.querySelector(".container").classList.add("active");
 });
 
 document.getElementById('adminForm').addEventListener('submit', function(e) {
