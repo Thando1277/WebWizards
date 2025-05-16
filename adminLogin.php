@@ -2,11 +2,10 @@
 session_start();
 
 header('Content-Type: application/json'); // Important!
-
-$servername = "localhost";  
-$db_username = "root";      
-$db_password = "#Thando#2006"; 
-$dbname = "adminLogss";
+$servername = "localhost";
+$db_username = "root";
+$db_password = "LockIn_78";
+$dbname = "adminlogss";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
