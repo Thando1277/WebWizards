@@ -2,16 +2,18 @@ const container = document.querySelector('.container');
 const LoginLink = document.querySelector('.SignIn');
 const LoginRegister = document.querySelector('.SignUp');
 
-
 LoginRegister.addEventListener('click', () => {
     container.classList.add('active');
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".container").classList.add("active");
 });
 
+// Initialize EmailJS (make sure your key is correct)
+(function() {
+    emailjs.init("ALFssTcDRmb8yBusM");  // <-- Your public EmailJS key here
+})();
 
 document.getElementById('signUpForm').addEventListener('submit', function (e) {
     e.preventDefault(); 
@@ -26,7 +28,7 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
     const emailErrorEl = document.getElementById('emailError');
     const phoneErrorEl = document.getElementById('phoneError');
 
-
+    // Clear previous errors
     usernameErrorEl.textContent = "";
     passwordErrorEl.textContent = "";
     emailErrorEl.textContent = "";
@@ -44,38 +46,48 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
         isValid = false;
     }
 
-
     if (!email.includes("@") || !email.includes(".com")) {
         emailErrorEl.textContent = "Enter a valid email address";
         isValid = false;
     }
-
 
     if (phone.length !== 10 || phone[0] !== "0") {
         phoneErrorEl.textContent = "Enter a valid South African phone number";
         isValid = false;
     }
 
-
     if (isValid) {
-        this.submit();  
-    } else {
-        console.log("Form contains errors, please correct them.");
+        // Step 1: Send data to PHP backend
+        fetch("sign-up.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+        })
+        .then(response => response.text())
+        .then(result => {
+            if (result.includes("User registered successfully")) {
+                // Step 2: Send confirmation email via EmailJS
+                emailjs.send("service_bt2a4v8", "template_3qawojt", {
+                    user_name: username,
+                    user_email: email
+                })
+                .then(() => {
+                    alert("Sign-up successful! Welcome email sent.");
+                    window.location.href = "log-in.html";
+                })
+                .catch(() => {
+                    alert("Sign-up successful, but welcome email failed.");
+                    window.location.href = "log-in.html";
+                });
+            } else {
+                alert("Sign-up failed: " + result);
+            }
+        })
+        .catch(err => {
+            console.error("Error posting form:", err);
+            alert("There was a problem submitting the form.");
+        });
     }
 });
-
-if (isValid) {
-    emailjs.send("service_bt2a4v8", "template_3qawojt", {
-        username: username,
-        email: email
-    })
-    .then(function(response) {
-        console.log("Welcome email sent!", response.status, response.text);
-        alert("Sign-up successful! Welcome email sent.");
-        document.getElementById('signUpForm').submit(); 
-    }, function(error) {
-        console.error("FAILED to send email...", error);
-        alert("Sign-up successful, but failed to send welcome email.");
-        document.getElementById('signUpForm').submit(); 
-    });
-}
