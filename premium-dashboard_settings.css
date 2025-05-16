@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu{
+    text-align: center;
+  }
+  
+  #hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  #hamburger span {
+    display: block;
+    height: 3px;
+    background: orange;
+    border-radius: 2px;
+    transition: 1s ease;
+    
+  }
+  
+  #menu-toggle:checked + #hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked + #hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + #hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background: #111;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: 1s ease;
+    z-index: 1;
+  }
+  
+  #menu-toggle:checked ~ #sidebar {
+    transform: translateX(0);
+  }
+  
+  #sidebar h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  #sidebar ul {
+    list-style: none;
+  }
+  
+  #sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  #sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+  }
+  
+  #sidebar ul li a:hover {
+    color: orange;
+    padding-left: 5px;
+  }
+  
+  #sidebar ul li a i {
+    margin-right: 10px;
+  }
+  
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .settings-container {
+      width: 500px;
+      max-width: 800px;
+      background-color: #171717;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3 {
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: white;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-save {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn-cancel {
+      background-color: #ccc;
+      color: #333;
+    }
+    .btn-delete{
+        background-color: red;
+        color: #fff;
+    }
+    @media (max-width: 600px) {
+      .btn-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
