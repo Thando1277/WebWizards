@@ -2,7 +2,7 @@
 // Database connection
 $servername = "localhost";
 $username = "root";
-$password = "#Thando#2006";
+$password = "LockIn_78";
 $dbname = "adminLogss";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

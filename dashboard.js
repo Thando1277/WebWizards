@@ -111,4 +111,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial update
   updateCharts();
 });
+function storeStatus(value) {
+  localStorage.setItem("savedStatus", value);
+}
 
+// Auto-fill the dropdown if status already saved
+function storeStatus(value) {
+  localStorage.setItem("status", value); // Save selected value
+}
+
+// Load previously saved status into dropdown
+function storeStatus(value) {
+  localStorage.setItem("status", value); // Save to localStorage
+}
+
+// Optional: Restore last selected option in dropdown
+
+  const savedStatus = localStorage.getItem("status");
+
+  const statusElement = document.getElementById("status");
+
+  if (savedStatus && savedStatus.trim() !== "") {
+    const formattedStatus = savedStatus.charAt(0).toUpperCase() + savedStatus.slice(1);
+    statusElement.innerText = `Status: ${formattedStatus}`;
+    statusElement.style.color = "gold";
+  } else {
+    // Keep default text and optionally style it
+    statusElement.innerText = "Status: No issues reported";
+    statusElement.style.color = "green"; // optional
+  }
+  
+
+
+function saveFeedback(event) {
+  // Prevent page refresh if inside a form
+  if (event) event.preventDefault();
+
+  const feedback = document.getElementById("feedbackInput").value;
+  localStorage.setItem("feedbackMessage", feedback);
+  alert("Feedback saved!");
+}
