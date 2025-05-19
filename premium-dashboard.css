@@ -321,3 +321,8 @@
   color: #fff;
   margin: 8px;
 }
+
+.submit button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
