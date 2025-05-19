@@ -1,0 +1,146 @@
+  
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu{
+    text-align: center;
+  }
+  
+  #hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  #hamburger span {
+    display: block;
+    height: 3px;
+    background: orange;
+    border-radius: 2px;
+    transition: 1s ease;
+    
+  }
+  
+  #menu-toggle:checked + #hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked + #hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + #hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background: #111;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: 1s ease;
+    z-index: 1;
+  }
+  
+  #menu-toggle:checked ~ #sidebar {
+    transform: translateX(0);
+  }
+  
+  #sidebar h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  #sidebar ul {
+    list-style: none;
+  }
+  
+  #sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  #sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+  }
+  
+  #sidebar ul li a:hover {
+    color: orange;
+    padding-left: 5px;
+  }
+  
+  #sidebar ul li a i {
+    margin-right: 10px;
+  }
+  
+ 
+/****/
+
+  
+  body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: grey;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px ;
+      margin-bottom: 20px;
+      margin-left: 120px;
+      margin-right: 80px; 
+      
+    }
+    .progress {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-top: 10px;
+    }
+    .progress-bar {
+      height: 100%;
+      background-color: #4caf50;
+      width: 0;
+      transition: width 0.5s;
+    }
+    .btn {
+      background: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn:hover{
+        background: orange
+    }
+
+    .btn:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+    select {
+      padding: 8px;
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }

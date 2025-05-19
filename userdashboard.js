@@ -142,4 +142,8 @@ function getLocation() {
   } else {
     locationElement.textContent = "Geolocation is not supported by this browser.";
   }
+
+  
 }
+
+

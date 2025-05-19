@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rewards.css">
+</head>
+<body>
+    
+     <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav id="sidebar">
+    <h1 id="menu">Menu</h1>
+    
+    <ul>
+      <li><a href="#"><i class="fa-solid fa-desktop"></i> Dashboard</a></li>
+      <li><a href="#"><i class="desktop-outline"></i> User</a></li>
+      <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Messages</a></li>
+      <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i> Help</a></li>
+      <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+      <li><a href="reports.html"><i class="fa-solid fa-flag"></i> Reports</a></li>
+      <li><a href="#"><i class="fa-solid fa-location-dot"></i> Map</a></li>
+      <li><a href="rewards.html"><i class="fa-solid fa-coins"></i> Rewards</a></li>
+      <li><a href="#"><i class="fa-solid fa-gears"></i> Settings</a></li>
+      <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Log out</a></li>
+    </ul>
+  </nav>
+
+  <button class="btn" id="earn-btn">Report</button>
+
+  <div class="card">
+    <h2>Your Impact, Rewarded!</h2>
+    <p>Thank you for helping improve your community. Here’s how you’re being rewarded. Here's a token of appreciation.</p>
+  </div>
+
+  <div class="card">
+    <h3>Points Dashboard</h3>
+    <p><strong>Total Points Earned:</strong> <span id="total-points">0</span></p>
+    <p><strong>Points Available to Redeem:</strong> <span id="available-points">0</span></p>
+    <p><strong>Points Needed for Next Reward:</strong> <span id="remaining-points">150</span></p>
+    <div class="progress">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>How It Works</h3>
+    <ul>
+        <p><STRONG>You earn 20 points each time you report a problem. </STRONG></p>
+        <p>Please make sure that you:</p>
+      <li>📸  Provide a visible picture.</li>
+      <li>📍 Pin the accurate location</li>
+      <li>📝 Give a etailed description</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Available Rewards</h3>
+    <p>🎁 Choose a reward:</p>
+    <select id="reward-select">
+      <option value="shoprite">Shoprite Voucher</option>
+      <option value="airtime">Airtime</option>
+    </select>
+    <p>Required: 150 points</p>
+    <button class="btn" id="redeem-btn" disabled>Redeem</button>
+    <p id="redeem-status"></p>
+  </div>
+
+  <div class="card">
+    <h3>Reward History</h3>
+    <ul id="history">
+
+    </ul>
+  </div>
+  <script src="userdashboard.js"></script>
+  <script src="rewards.js"></script>
+</body>
+</html>
