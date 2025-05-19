@@ -3,46 +3,55 @@
 $servername = "localhost";
 $username = "root";
 $password = "LockIn_78";
-$dbname = "adminLogss";
+$dbname = "WebWizards";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Check connection
 if ($conn->connect_error) {
     die("<script>alert('Database connection failed.'); window.history.back();</script>");
 }
 
+// Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get and sanitize form inputs
+    $fullname = trim($_POST['fullname']);
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
     $email = trim($_POST['email']);
     $phone = trim($_POST['phone']);
 
-    if (empty($username) || empty($password) || empty($email) || empty($phone)) {
+    // Validate required fields
+    if (empty($fullname) || empty($username) || empty($password) || empty($email) || empty($phone)) {
         echo "<script>alert('All fields are required.'); window.history.back();</script>";
         exit;
     }
 
+    // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<script>alert('Invalid email format.'); window.history.back();</script>";
         exit;
     }
 
-    $stmt = $conn->prepare("SELECT * FROM UserTable WHERE Email = ? OR CellPhone = ?");
-    $stmt->bind_param("ss", $email, $phone); 
+    // Check for duplicate email or phone or username
+    $stmt = $conn->prepare("SELECT * FROM Users WHERE Email = ? OR PhoneNumber = ? OR Username = ?");
+    $stmt->bind_param("sss", $email, $phone, $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo "<script>alert('Email or phone already exists.'); window.history.back();</script>";
+        echo "<script>alert('Email, phone number, or username already exists.'); window.history.back();</script>";
         $stmt->close();
         exit;
     }
     $stmt->close();
 
+    // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO UserTable (Name, Email, Password, CellPhone, Points) VALUES (?, ?, ?, ?, 0)");
-    $stmt->bind_param("ssss", $username, $email, $hashedPassword, $phone); 
+    // Insert user into database
+    $stmt = $conn->prepare("INSERT INTO Users (FullName, Username, Email, Password, PhoneNumber) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $fullname, $username, $email, $hashedPassword, $phone);
 
     if ($stmt->execute()) {
         echo "<script>
