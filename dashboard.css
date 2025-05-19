@@ -242,3 +242,21 @@ canvas#lineChart {
   display: block;
 
 }
+input[type="text"],
+input[type="select"],
+select {
+  pointer-events: auto ;
+  user-select: auto ;
+  position: relative;
+  background-color: white;
+}
+
+td {
+  overflow: visible ;
+}
+.primary,
+select {
+  pointer-events: auto ;
+  user-select: auto ;
+  position: relative;
+}

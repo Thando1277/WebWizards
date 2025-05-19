@@ -76,6 +76,7 @@
       <div class="recent_reports">
         <h1>Recent Reports</h1>
         <div class="table-and-chart">
+          <form>
           <table>
             <thead>
               <tr>
@@ -85,6 +86,7 @@
                 <th>PhoneNumber</th>
                 <th>Status</th>
                 <th>Action</th>
+                <th>Feedback</th>
               </tr>
             </thead>
             <tbody>
@@ -93,12 +95,21 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
+                <td>
+                  <select name="status" onchange="storeStatus(this.value)">
+                    <option value="none">None</option>
+                    <option value="pending">Pending</option>
+                    <option value="submitted">Submitted</option>
+                  </select>
+                </td>
+                <td class="primary"><a href="details.html">Details</a></td>
+                <td class="feedback"><input type="text" name="feedback" id="feedbackInput"></td>
               </tr>
             </tbody>
+         
           </table>
-    
+         <button onclick="saveFeedback()">Save</button>
+        </form>
           <!-- Charts side by side -->
           <div class="charts-wrapper">
             <div class="chart-container">

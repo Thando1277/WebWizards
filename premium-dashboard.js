@@ -144,3 +144,14 @@ function getLocation() {
     locationElement.textContent = "Geolocation is not supported by this browser.";
   }
 }
+
+
+const savedStatus = localStorage.getItem("status");
+
+  // Update the status text and color if there's a saved value
+  if (savedStatus) {
+    const formattedStatus = savedStatus.charAt(0).toUpperCase() + savedStatus.slice(1);
+    const statusElement = document.getElementById("status");
+    statusElement.innerText = `Status: ${formattedStatus}`;
+    statusElement.style.color = "gold";
+  }

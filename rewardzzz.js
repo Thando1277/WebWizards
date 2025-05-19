@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  let totalPoints = 0;
     let availablePoints = 0;
     const requiredPoints = 150;
@@ -7,7 +6,7 @@
     const availablePointsDisplay = document.getElementById('available-points');
     const remainingPointsDisplay = document.getElementById('remaining-points');
     const progressBar = document.getElementById('progress-bar');
-    const redeemBtn = document.getElementById("submit");
+    const redeemBtn = document.getElementById("redeem-btn");
     const redeemStatus = document.getElementById('redeem-status');
     const historyList = document.getElementById('history');
     const earnBtn = document.getElementById('earn-btn');
@@ -45,24 +44,3 @@
     updateUI();
 
     
-=======
-let points = 0;
-const pointsDisplay = document.getElementById('points');
-const progressBar = document.getElementById('progress');
-const activityLog = document.getElementById('activityLog');
-
-document.getElementById('submitBtn').addEventListener('click', () => {
-  const gainedPoints = 500;
-  points += gainedPoints;
-  pointsDisplay.textContent = points;
-
- 
-  const log = document.createElement('p');
-  log.textContent = `+${gainedPoints} points from referral!`;
-  activityLog.prepend(log);
-
-
-  let percent = Math.min((points % 5000) / 50, 100);
-  progressBar.style.width = percent + '%';
-});
->>>>>>> 52e9b4581607467af81a1775e7b9201b17e5c539

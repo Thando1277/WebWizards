@@ -5,8 +5,9 @@ header('Content-Type: application/json');
 // Database credentials
 $servername = "localhost";
 $db_username = "root";
-$db_password = "#Thando#2006";
+$db_password = "LockIn_78";
 $dbname = "adminlogss";
+
 
 // Create connection
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
