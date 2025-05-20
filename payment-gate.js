@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
       paymentForm.reset();
       cardOptions.forEach(opt => opt.classList.remove('selected'));
       selectedCardType = null;
-      window.location.href = 'thank-you.html'; // redirect after success
+      window.location.href = 'log-in.html'; // redirect after success
     }, 3000);
   });
 
