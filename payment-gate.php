@@ -25,7 +25,7 @@ $amount = 99.99; // Set your fixed or dynamic amount here
 // Simple mock user (replace with session or actual user login system)
 $userID = 1; // Hardcoded for now
 
-// Encrypt sensitive data (basic example – for production, use stronger methods + HTTPS + PCI compliance)
+
 $encryptedCardNumber = base64_encode($cardNumber);
 $encryptedCVV = base64_encode($cvv);
 
@@ -40,7 +40,7 @@ try {
         ':amount' => $amount
     ]);
 
-    // Redirect to thank-you page
+   
     header("Location: log-in.html");
     exit();
 } catch (PDOException $e) {
