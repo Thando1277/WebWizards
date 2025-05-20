@@ -1,25 +1,24 @@
-const container=document.querySelector('.container');
-const LoginLink=document.querySelector('.SignIn');
-const LoginRegister=document.querySelector('.SignUp');
-LoginRegister.addEventListener('click',()=>{
-    container.classList.add('active');
-})
+const container = document.querySelector('.container');
+const LoginLink = document.querySelector('.SignIn');
+const LoginRegister = document.querySelector('.SignUp');
 
+LoginRegister.addEventListener('click', () => {
+    container.classList.add('active');
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".container").classList.add("active");
 });
 
-document.getElementById('logInForm').addEventListener('submit', function(e) {
+document.getElementById('logInForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const username = document.getElementById('usernameInput').value.trim();
     const password = document.getElementById('passwordInput').value.trim();
     const usernameErrorEl = document.getElementById('usernameError');
     const passwordErrorEl = document.getElementById('passwordError');
-    const serverErrorEl = document.getElementById('serverError'); 
+    const serverErrorEl = document.getElementById('serverError');
 
- 
     usernameErrorEl.textContent = "";
     passwordErrorEl.textContent = "";
     serverErrorEl.textContent = "";
@@ -46,8 +45,8 @@ document.getElementById('logInForm').addEventListener('submit', function(e) {
         })
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
-                window.location.href = 'userdashboard.html';
+            if (data.success && data.redirect) {
+                window.location.href = data.redirect;
             } else if (data.error) {
                 serverErrorEl.textContent = data.error;
             }
