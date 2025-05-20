@@ -1,49 +1,97 @@
 <?php
-// Database configuration
+header('Content-Type: application/json');
+
 $host = 'localhost';
 $dbname = 'WebWizards';
 $username = 'root';
 $password = 'LockIn_78';
 
-// Create PDO connection
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    http_response_code(500);
+    echo json_encode(['error' => 'Database connection failed']);
+    exit();
 }
 
-// Sanitize and fetch POST data
-$fullName = $_POST['full-name'] ?? '';
-$email = $_POST['email'] ?? '';
-$address = $_POST['address'] ?? '';
-$cardNumber = $_POST['card-number'] ?? '';
-$expDate = $_POST['exp-date'] ?? '';
-$cvv = $_POST['cvv'] ?? '';
-$amount = 99.99; // Set your fixed or dynamic amount here
+// Get and sanitize input
+$fullName = trim($_POST['full-name'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$address = trim($_POST['address'] ?? '');
+$cardNumber = preg_replace('/\D/', '', $_POST['card-number'] ?? '');
+$expDate = trim($_POST['exp-date'] ?? '');
+$cvv = preg_replace('/\D/', '', $_POST['cvv'] ?? '');
 
-// Simple mock user (replace with session or actual user login system)
-$userID = 1; // Hardcoded for now
+$amount = 99.99;
 
+// Lookup user by email (assuming email is unique in Users table)
+$stmt = $pdo->prepare("SELECT UserID FROM Users WHERE Email = :email");
+$stmt->execute([':email' => $email]);
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$encryptedCardNumber = base64_encode($cardNumber);
-$encryptedCVV = base64_encode($cvv);
+if (!$user) {
+    http_response_code(400);
+    echo json_encode(['error' => 'User not found.']);
+    exit();
+}
+
+$userID = $user['UserID'];
+
+// Validation (as before)
+$errors = [];
+
+if (empty($fullName)) $errors[] = "Full name is required.";
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email address.";
+if (strlen($cardNumber) < 13 || strlen($cardNumber) > 19) $errors[] = "Invalid card number length.";
+if (!preg_match('/^\d{4}-\d{2}$/', $expDate)) $errors[] = "Expiration date must be in YYYY-MM format.";
+if (!preg_match('/^\d{3,4}$/', $cvv)) $errors[] = "Invalid CVV.";
+
+if (!empty($errors)) {
+    http_response_code(400);
+    echo json_encode(['error' => implode(" ", $errors)]);
+    exit();
+}
+
+// Check expiration
+$expDateObj = DateTime::createFromFormat('Y-m', $expDate);
+$expDateObj->modify('last day of this month');
+$now = new DateTime();
+
+if ($expDateObj < $now) {
+    http_response_code(400);
+    echo json_encode(['error' => "Card expiration date has passed."]);
+    exit();
+}
+
+// Store expiration as YYYY-MM-01
+$expirationDate = $expDate . "-01";
+$cardLast4 = substr($cardNumber, -4);
 
 try {
+    $pdo->beginTransaction();
+
+    // Insert payment
     $stmt = $pdo->prepare("INSERT INTO Payments (UserID, CardNumber, ExpirationDate, CVV, Amount) 
                            VALUES (:userID, :cardNumber, :expirationDate, :cvv, :amount)");
     $stmt->execute([
         ':userID' => $userID,
-        ':cardNumber' => $encryptedCardNumber,
-        ':expirationDate' => $expDate . '-01',
-        ':cvv' => $encryptedCVV,
+        ':cardNumber' => $cardLast4,
+        ':expirationDate' => $expirationDate,
+        ':cvv' => $cvv,
         ':amount' => $amount
     ]);
 
-   
-    header("Location: log-in.html");
-    exit();
+    // Promote to PremiumUser
+    $stmt = $pdo->prepare("INSERT INTO PremiumUser (UserID) VALUES (:userID)");
+    $stmt->execute([':userID' => $userID]);
+
+    $pdo->commit();
+
+    echo json_encode(['redirect' => 'log-in.html']);
 } catch (PDOException $e) {
-    echo "Payment failed: " . $e->getMessage();
+    $pdo->rollBack();
+    http_response_code(500);
+    echo json_encode(['error' => 'Database error: ' . $e->getMessage()]);
 }
 ?>
