@@ -16,7 +16,7 @@
   body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('/images/road-chaos-damaged-highway-reveals-perils-erosion-poor-construction-delve-into-world-transportation-troubles_505557-20143.avif');
+                url('images/roadChaos.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

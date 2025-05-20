@@ -28,6 +28,13 @@
 
       <form action="sign-up.php" method="POST" id="signUpForm">
         <div class="input-box animation">
+          <input type="text" id="fullnameInput" name="fullname" required />
+          <label for="fullnameInput">Full Name</label>
+          <i class='bx bxs-user-detail'></i>
+          <p id="fullnameError" style="color: #FFA333"></p>
+        </div>
+
+        <div class="input-box animation">
           <input type="text" id="usernameInput" name="username" required />
           <label for="usernameInput">Username</label>
           <i class='bx bxs-user'></i>
