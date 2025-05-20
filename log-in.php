@@ -6,8 +6,7 @@ header('Content-Type: application/json');
 $servername = "localhost";
 $db_username = "root";
 $db_password = "LockIn_78";
-$dbname = "adminlogss";
-
+$dbname = "WebWizards";
 
 // Create connection
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
@@ -30,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    $stmt = $conn->prepare("SELECT UserID, Name, Password FROM UserTable WHERE Name = ? LIMIT 1");
+    $stmt = $conn->prepare("SELECT UserID, Username, Password FROM Users WHERE Username = ? LIMIT 1");
     if (!$stmt) {
         http_response_code(500);
         echo json_encode(["error" => "Database error"]);
@@ -49,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (password_verify($password, $user['Password'])) {
             session_regenerate_id(true);
             $_SESSION['user_id'] = $user['UserID'];
-            $_SESSION['username'] = $user['Name'];
+            $_SESSION['username'] = $user['Username'];
 
             http_response_code(200);
             echo json_encode(["success" => true]);
