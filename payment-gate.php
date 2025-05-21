@@ -15,7 +15,7 @@ try {
     exit();
 }
 
-// Get and sanitize input
+
 $fullName = trim($_POST['full-name'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $address = trim($_POST['address'] ?? '');
@@ -25,7 +25,6 @@ $cvv = preg_replace('/\D/', '', $_POST['cvv'] ?? '');
 
 $amount = 99.99;
 
-// Lookup user by email (assuming email is unique in Users table)
 $stmt = $pdo->prepare("SELECT UserID FROM Users WHERE Email = :email");
 $stmt->execute([':email' => $email]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
