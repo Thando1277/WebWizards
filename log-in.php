@@ -29,10 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
+    // Get user info from Users table
     $stmt = $conn->prepare("SELECT UserID, Username, Password FROM Users WHERE Username = ? LIMIT 1");
     if (!$stmt) {
         http_response_code(500);
-        echo json_encode(["error" => "Database error"]);
+        echo json_encode(["error" => "Database error (prepare failed)"]);
         exit;
     }
 
@@ -44,14 +45,34 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $user = $result->fetch_assoc();
         $stmt->close();
 
-        // Verify password (assumes password is hashed using password_hash())
+        // Verify password
         if (password_verify($password, $user['Password'])) {
             session_regenerate_id(true);
             $_SESSION['user_id'] = $user['UserID'];
             $_SESSION['username'] = $user['Username'];
 
+            // Check if user is in PremiumUser table
+            $stmt2 = $conn->prepare("SELECT PremiumID FROM PremiumUser WHERE UserID = ? LIMIT 1");
+            if (!$stmt2) {
+                http_response_code(500);
+                echo json_encode(["error" => "Database error (premium check)"]);
+                exit;
+            }
+
+            $stmt2->bind_param("i", $user['UserID']);
+            $stmt2->execute();
+            $stmt2->store_result();
+
+            $isPremium = $stmt2->num_rows > 0;
+            $stmt2->close();
+
+            $redirectPage = $isPremium ? "premium-dashboard.html" : "userdashboard.html";
+
             http_response_code(200);
-            echo json_encode(["success" => true]);
+            echo json_encode([
+                "success" => true,
+                "redirect" => $redirectPage
+            ]);
             exit;
         } else {
             http_response_code(401);
