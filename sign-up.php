@@ -12,9 +12,7 @@ if ($conn->connect_error) {
     die("<script>alert('Database connection failed.'); window.history.back();</script>");
 }
 
-// Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get and sanitize form inputs
     $fullname = trim($_POST['fullname']);
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
