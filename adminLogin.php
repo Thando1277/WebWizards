@@ -4,8 +4,8 @@ session_start();
 header('Content-Type: application/json');
 $servername = "localhost";
 $db_username = "root";
-$db_password = "LockIn_78";
-$dbname = "adminlogss";
+$db_password = "#Thando#2006";
+$dbname = "WebWizards";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
