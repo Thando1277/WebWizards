@@ -112,6 +112,7 @@
 
   p{
     text-align: center;
+    color:white;
   }
 
   /*my code*/
@@ -326,3 +327,8 @@
   background: #aaa;
   cursor: not-allowed;
 }
+
+.pic{
+ margin-bottom: 19px;
+}
+
