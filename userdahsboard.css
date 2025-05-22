@@ -320,3 +320,8 @@ display: flex;
 .myLocation{
   color: #fff;
 }
+
+.submit button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
