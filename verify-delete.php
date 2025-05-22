@@ -97,7 +97,7 @@
   <div class="confirm-container">
     <h2>Confirm Account Deletion</h2>
     <p>To confirm, please enter your account password. This action cannot be undone.</p>
-    <form action="/delete-account" method="POST">
+    <form action="delete-account.php" method="POST">
       <div class="form-group">
         <label for="password">Enter Password</label>
         <input type="password" id="password" name="password" required>
@@ -108,6 +108,5 @@
       </div>
     </form>
   </div>
-
 </body>
 </html>
