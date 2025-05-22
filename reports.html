@@ -20,8 +20,35 @@
     <button id="geoBtn">📍 Use My Location</button>
   </div>
 
-  <div id="map"></div>
+  <div id="map" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+
+  <!-- Report submission form -->
+  <form id="reportForm" action="submit_report.php" method="POST" enctype="multipart/form-data">
+    <label for="description">Description:</label><br/>
+    <textarea id="description" name="description" rows="4" required placeholder="Describe the issue..."></textarea><br/><br/>
+
+    <label for="image">Upload Image:</label><br/>
+    <input type="file" id="image" name="image" accept="image/*" required /><br/><br/>
+
+    <!-- We'll update this input with the location address before submitting -->
+    <input type="hidden" id="formLocation" name="location" />
+
+    <button type="submit">Submit Report</button>
+  </form>
 
   <script src="reports.js"></script>
+
+  <script>
+    // Update the hidden location input on form submit
+    document.getElementById('reportForm').addEventListener('submit', function(e) {
+      const locationInput = document.getElementById('location').value.trim();
+      if (!locationInput) {
+        e.preventDefault();
+        alert('Please enter a location before submitting.');
+        return false;
+      }
+      document.getElementById('formLocation').value = locationInput;
+    });
+  </script>
 </body>
 </html>
