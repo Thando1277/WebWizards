@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-header('Content-Type: application/json'); // Important!
+header('Content-Type: application/json');
 $servername = "localhost";
 $db_username = "root";
 $db_password = "LockIn_78";
@@ -22,20 +22,19 @@ if ($username === '' || $password === '') {
     exit;
 }
 
-$stmt = $conn->prepare("SELECT * FROM adminsTable WHERE username = ? LIMIT 1");
+$stmt = $conn->prepare("SELECT * FROM admins WHERE FullName = ? LIMIT 1");
 $stmt->bind_param("s", $username);
 $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    $user = $result->fetch_assoc();
+    $admins = $result->fetch_assoc();
 
-    if ($password === $user['password']) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
+    if ($password === $admins['Password']) {
+        $_SESSION['user_id'] = $admins['id'];
+        $_SESSION['username'] = $admins['FullName'];
 
         echo json_encode(["success" => true]);
-        exit;
     } else {
         echo json_encode(["error" => "Incorrect password"]);
         exit;
