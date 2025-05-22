@@ -35,7 +35,6 @@ if ($result->num_rows > 0) {
         $_SESSION['username'] = $admins['FullName'];
 
         echo json_encode(["success" => true]);
-        exit;
     } else {
         echo json_encode(["error" => "Incorrect password"]);
         exit;

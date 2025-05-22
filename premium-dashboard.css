@@ -112,6 +112,7 @@
 
   p{
     text-align: center;
+    color:white;
   }
 
   /*my code*/
@@ -321,3 +322,13 @@
   color: #fff;
   margin: 8px;
 }
+
+.submit button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.pic{
+ margin-bottom: 19px;
+}
+
