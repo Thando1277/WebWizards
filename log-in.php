@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 // Database credentials
 $servername = "localhost";
 $db_username = "root";
-$db_password = "#Thando#2006";
+$db_password = "Makungu@0608";
 $dbname = "WebWizards";
 
 // Create connection
