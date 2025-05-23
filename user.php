@@ -9,7 +9,7 @@
 <body>
     <?php
     // Connect to MySQL database
-    $conn = new mysqli("localhost", "root", "LockIn_78", "adminlogss");
+    $conn = new mysqli("localhost", "root", "Makungu@0608", "adminlogss");
 
     // Check connection
     if ($conn->connect_error) {

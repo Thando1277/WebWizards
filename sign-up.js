@@ -10,14 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".container").classList.add("active");
 });
 
-// Initialize EmailJS (make sure your key is correct)
 (function() {
-    emailjs.init("ALFssTcDRmb8yBusM");  // <-- Your public EmailJS key here
+    emailjs.init("ALFssTcDRmb8yBusM");
 })();
 
 document.getElementById('signUpForm').addEventListener('submit', function (e) {
-    e.preventDefault(); 
-
+    e.preventDefault();
+    
     const username = document.getElementById('usernameInput').value.trim();
     const password = document.getElementById('passwordInput').value.trim();
     const email = document.getElementById('emailInput').value.trim();
@@ -27,37 +26,35 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
     const passwordErrorEl = document.getElementById('passwordError');
     const emailErrorEl = document.getElementById('emailError');
     const phoneErrorEl = document.getElementById('phoneError');
-
-    // Clear previous errors
+    
     usernameErrorEl.textContent = "";
     passwordErrorEl.textContent = "";
     emailErrorEl.textContent = "";
     phoneErrorEl.textContent = "";
-
+    
     let isValid = true;
-
+    
     if (username === "") {
         usernameErrorEl.textContent = "Username required";
         isValid = false;
     }
-
+    
     if (password.length < 6) {
         passwordErrorEl.textContent = "Password must have at least 6 characters";
         isValid = false;
     }
-
+    
     if (!email.includes("@") || !email.includes(".com")) {
         emailErrorEl.textContent = "Enter a valid email address";
         isValid = false;
     }
-
+    
     if (phone.length !== 10 || phone[0] !== "0") {
         phoneErrorEl.textContent = "Enter a valid South African phone number";
         isValid = false;
     }
-
+    
     if (isValid) {
-        // Step 1: Send data to PHP backend
         fetch("sign-up.php", {
             method: "POST",
             headers: {
@@ -68,7 +65,6 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
         .then(response => response.text())
         .then(result => {
             if (result.includes("User registered successfully")) {
-                // Step 2: Send confirmation email via EmailJS
                 emailjs.send("service_bt2a4v8", "template_3qawojt", {
                     user_name: username,
                     user_email: email
@@ -89,5 +85,21 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
             console.error("Error posting form:", err);
             alert("There was a problem submitting the form.");
         });
+    }
+});
+
+const passwordInput = document.getElementById('passwordInput');
+const togglePassword = document.getElementById('togglePassword');
+
+togglePassword.addEventListener('click', function() {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    
+    if (type === 'text') {
+        togglePassword.classList.remove('bx-show');
+        togglePassword.classList.add('bx-hide');
+    } else {
+        togglePassword.classList.remove('bx-hide');
+        togglePassword.classList.add('bx-show');
     }
 });
