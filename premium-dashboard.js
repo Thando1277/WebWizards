@@ -1,161 +1,157 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const uploadIcon = document.getElementById("uploadIcon");
-  const fileInput = document.getElementById("fileInput");
-  const clearBtn = document.getElementById("clearBtn");
-  const submitBtn = document.querySelector(".submit button");
-  const reportedCounter = document.querySelector(".cardBox .card:first-child .numbers");
-  const issueTextarea = document.getElementById("issue");
-  const startVoiceBtn = document.getElementById("startVoice");
-  const statusText = document.getElementById("status");
-  let imageUploaded = false;
-  let uploadedFile = null;
-
-  // Fetch report count
-  fetch('get-reort-count.php')
-    .then(res => res.json())
-    .then(data => {
-      if (data.count !== undefined) {
-        reportedCounter.textContent = data.count;
-        statusText.textContent = `Status: Pending Verification (${data.count})`;
-        statusText.style.color = "orange";
+window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('menu-toggle').checked = true;
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    var uploadIcon = document.getElementById("uploadIcon");
+    var fileInput = document.getElementById("fileInput");
+    var clearBtn = document.getElementById("clearBtn");
+    var imageUploaded = false;
+  
+    uploadIcon.addEventListener("click", function (event) {
+      event.preventDefault();
+  
+      if (imageUploaded) {
+        alert("An image has already been uploaded. Please clear it first to upload a new one.");
+        return;
       }
-    })
-    .catch(err => console.error("Error fetching count:", err));
-
-  // Upload image
-  uploadIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (imageUploaded) {
-      alert("An image has already been uploaded. Please clear it first.");
-    } else {
+  
       fileInput.click();
-    }
+    });
+  
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0];
+  
+      if (fileInput.files.length > 1) {
+        alert("Please select only one image.");
+        fileInput.value = "";
+      } else if (file && !file.type.startsWith("image/")) {
+        alert("Only image files are allowed.");
+        fileInput.value = "";
+      } else if (!imageUploaded) {
+        imageUploaded = true;
+        alert("Image uploaded: " + file.name);
+      }
+    });
+  
+    
+    clearBtn.addEventListener("click", function () {
+      if (imageUploaded) {
+        fileInput.value = "";
+        imageUploaded = false;
+        alert("Image upload has been cleared. You can upload a new one now.");
+      } else {
+        alert("No image to clear.");
+      }
+    });
   });
-
-  fileInput.addEventListener("change", () => {
-    const file = fileInput.files[0];
-    if (fileInput.files.length > 1 || (file && !file.type.startsWith("image/"))) {
-      alert("Only one image file is allowed.");
-      fileInput.value = "";
-      return;
-    }
-    imageUploaded = true;
-    uploadedFile = file;
-    alert("Image uploaded: " + file.name);
-  });
-
-  clearBtn.addEventListener("click", () => {
-    if (imageUploaded) {
-      fileInput.value = "";
-      uploadedFile = null;
-      imageUploaded = false;
-      alert("Image cleared.");
-    } else {
-      alert("No image to clear.");
-    }
-  });
-
-  // Voice input
+  
+  
+  const issueTextarea = document.getElementById('issue');
+  const startVoiceBtn = document.getElementById('startVoice');
+  
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  
   if (SpeechRecognition) {
     const recognition = new SpeechRecognition();
-    recognition.lang = "en-US";
+    recognition.lang = 'en-US';
     recognition.interimResults = false;
-
-    startVoiceBtn.addEventListener("click", () => {
+    recognition.continuous = false;
+  
+    startVoiceBtn.addEventListener('click', () => {
       recognition.start();
       startVoiceBtn.textContent = "🎙️ Listening...";
     });
-
-    recognition.onresult = (event) => {
-      issueTextarea.value += event.results[0][0].transcript + " ";
+  
+    recognition.onresult = function (event) {
+      const transcript = event.results[0][0].transcript;
+      issueTextarea.value += transcript + " ";
       startVoiceBtn.textContent = "🎤 Speak";
     };
-
-    recognition.onerror = () => {
+  
+    recognition.onerror = function (event) {
+      console.error('Speech recognition error:', event.error);
       startVoiceBtn.textContent = "🎤 Speak";
     };
-
-    recognition.onend = () => {
+  
+    recognition.onend = function () {
       startVoiceBtn.textContent = "🎤 Speak";
     };
   } else {
     startVoiceBtn.disabled = true;
     startVoiceBtn.textContent = "Speech not supported";
   }
+  let issueCount = 0;
 
-  // Submit report
-  submitBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const issue = issueTextarea.value.trim();
-    const locationText = document.querySelector(".myLocation").textContent.replace("Location: ", "").trim();
+const submitBtn = document.querySelector(".submit button");
+const issueText = document.getElementById("issue");
+const reportedCounter = document.querySelector(".cardBox .card:first-child .numbers");
+const statusText = document.getElementById("status"); 
 
-    if (!issue || !uploadedFile || !locationText) {
-      alert("Please describe the issue, upload an image, and ensure location is detected.");
-      return;
-    }
+submitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("description", issue);
-    formData.append("location", locationText);
-    formData.append("image", uploadedFile);
+  const issue = issueText.value.trim();
 
-    fetch("submitReport.php", {
-      method: "POST",
-      body: formData
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          alert(data.message || "Report submitted!");
-          reportedCounter.textContent = data.reportedCount;
-          statusText.textContent = `Status: Pending Verification (${data.reportedCount})`;
-          statusText.style.color = "orange";
-          issueTextarea.value = "";
-          fileInput.value = "";
-          imageUploaded = false;
-          uploadedFile = null;
-        } else {
-          alert("Error: " + (data.error || "Unknown error"));
-        }
-      })
-      .catch(err => {
-        console.error("Submit error:", err);
-        alert("Failed to submit. Please try again.");
-      });
-  });
+  if (issue.length > 0) {
+    issueCount++;
+    reportedCounter.textContent = issueCount;
+    issueText.value = "";
+    alert("Issue reported successfully!");
 
-  // Get user location
-  window.getLocation = function () {
-    const locationElement = document.querySelector(".myLocation");
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          const apiKey = "AIzaSyBozgzhXv7ZTh9OYVmZQ3N3dw6J-ml389s";
-          const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
-
-          fetch(url)
-            .then(res => res.json())
-            .then(data => {
-              if (data.status === "OK") {
-                locationElement.textContent = `Location: ${data.results[0].formatted_address}`;
-              } else {
-                locationElement.textContent = "Unable to retrieve address.";
-              }
-            })
-            .catch(() => locationElement.textContent = "Error retrieving location.");
-        },
-        () => locationElement.textContent = "Location access denied."
-      );
-    } else {
-      locationElement.textContent = "Geolocation not supported.";
-    }
-  };
-
-  // Auto-open menu toggle if needed
-  const menuToggle = document.getElementById('menu-toggle');
-  if (menuToggle) {
-    menuToggle.checked = true;
+    
+    statusText.textContent = `Status: Pending Verification (${issueCount})`;
+    statusText.style.color = "orange";
+  } else {
+    alert("Please describe the issue before submitting.");
   }
 });
+
+
+
+function getLocation() {
+  const locationElement = document.querySelector(".myLocation");
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        
+        const apiKey = " AIzaSyBozgzhXv7ZTh9OYVmZQ3N3dw6J-ml389s";
+        const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
+
+        fetch(geocodeUrl)
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === "OK") {
+              const address = data.results[0].formatted_address;
+              locationElement.textContent = `Location: ${address}`;
+            } else {
+              locationElement.textContent = "Unable to retrieve address.";
+            }
+          })
+          .catch(() => {
+            locationElement.textContent = "Error retrieving location data.";
+          });
+      },
+      () => {
+        locationElement.textContent = "Unable to retrieve your location.";
+      }
+    );
+  } else {
+    locationElement.textContent = "Geolocation is not supported by this browser.";
+  }
+}
+
+
+const savedStatus = localStorage.getItem("status");
+
+  // Update the status text and color if there's a saved value
+  if (savedStatus) {
+    const formattedStatus = savedStatus.charAt(0).toUpperCase() + savedStatus.slice(1);
+    const statusElement = document.getElementById("status");
+    statusElement.innerText = `Status: ${formattedStatus}`;
+    statusElement.style.color = "gold";
+  }
