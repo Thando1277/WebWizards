@@ -137,22 +137,25 @@ document.addEventListener("DOMContentLoaded", function () {
           const apiKey = "AIzaSyBozgzhXv7ZTh9OYVmZQ3N3dw6J-ml389s";
           const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
 
-          fetch(url)
-            .then(res => res.json())
-            .then(data => {
-              if (data.status === "OK") {
-                const address = data.results[0].formatted_address;
-                locationElement.textContent = `Location: ${address}`;
-              } else {
-                locationElement.textContent = "Unable to retrieve address.";
-              }
-            })
-            .catch(() => locationElement.textContent = "Error retrieving location.");
-        },
-        () => locationElement.textContent = "Location access denied."
-      );
-    } else {
-      locationElement.textContent = "Geolocation not supported.";
-    }
-  };
-});
+        fetch(geocodeUrl)
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === "OK") {
+              const address = data.results[0].formatted_address;
+              locationElement.textContent = `Location: ${address}`;
+            } else {
+              locationElement.textContent = "Unable to retrieve address.";
+            }
+          })
+          .catch(() => {
+            locationElement.textContent = "Error retrieving location data.";
+          });
+      },
+      () => {
+        locationElement.textContent = "Unable to retrieve your location.";
+      }
+    );
+  } else {
+    locationElement.textContent = "Geolocation is not supported by this browser.";
+  }
+}
