@@ -2,13 +2,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const uploadIcon = document.getElementById("uploadIcon");
   const fileInput = document.getElementById("fileInput");
   const clearBtn = document.getElementById("clearBtn");
-  const submitBtn = document.querySelector(".submit button");
+  const submitBtn = document.getElementById("submitReportBtn");
   const reportedCounter = document.querySelector(".cardBox .card:first-child .numbers");
   const issueTextarea = document.getElementById("issue");
   const startVoiceBtn = document.getElementById("startVoice");
   // Optional: const preview = document.getElementById("imagePreview");
   let imageUploaded = false;
   let uploadedFile = null;
+
+  function checkFormReady() {
+    const issue = issueTextarea.value.trim();
+    const locationText = document.querySelector(".myLocation").textContent.trim();
+    if (issue && locationText && !locationText.startsWith("Unable to") && imageUploaded) {
+      submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
+    }
+  }
+  
 
   // Load user's report count
   fetch('get-report-count.php')
@@ -29,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
     fileInput.click();
+    checkFormReady();
+
   });
 
   fileInput.addEventListener("change", () => {
@@ -49,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Optional: show preview
     // preview.src = URL.createObjectURL(file);
+    checkFormReady();
+
   });
 
   clearBtn.addEventListener("click", () => {
@@ -152,6 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(err => {
       console.error('Error fetching report count:', err);
+      checkFormReady();
+
     });
 
   // Location Function

@@ -87,6 +87,7 @@
                 <th>Status</th>
                 <th>Action</th>
                 <th>Feedback</th>
+                <th>Upload Image</th>
               </tr>
             </thead>
             <tbody>
@@ -104,6 +105,15 @@
                 </td>
                 <td class="primary"><a href="details.html">Details</a></td>
                 <td class="feedback"><input type="text" name="feedback" id="feedbackInput"></td>
+                <td>
+                  <div class="upload-wrapper">
+                  <input type="file" id="fileInput" style="display: none;" />
+                  <a href="#" id="uploadIcon">
+                    <ion-icon name="images-outline"></ion-icon>
+                  </a>
+                  <button class="clearB" id="clearBtn">Clear Image</button> 
+                </div>
+                </td>                
               </tr>
             </tbody>
          

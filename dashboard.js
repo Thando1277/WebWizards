@@ -110,6 +110,98 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initial update
   updateCharts();
+
+
+  
+  // File upload icon logic (move this inside the DOMContentLoaded block)
+  const uploadIcon = document.getElementById("uploadIcon");
+  const fileInput = document.getElementById("fileInput");
+  const clearBtn = document.getElementById("clearBtn");
+
+  let imageSelected = false;
+
+  if (uploadIcon && fileInput && clearBtn) {
+    uploadIcon.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      if (imageSelected) {
+        alert("Please clear the current image before uploading a new one.");
+        return;
+      }
+
+      fileInput.click();
+    });
+
+    fileInput.addEventListener("change", function () {
+      const file = fileInput.files[0];
+
+      if (!file) {
+        alert("No file selected.");
+        return;
+      }
+
+      if (!file.type.startsWith("image/")) {
+        alert("Only image files are allowed.");
+        fileInput.value = "";
+        return;
+      }
+
+      const maxSizeMB = 2;
+      if (file.size > maxSizeMB * 1024 * 1024) {
+        alert("Image size must be less than 2MB.");
+        fileInput.value = "";
+        return;
+      }
+
+      // ✅ Save image to localStorage
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const base64Image = e.target.result;
+        localStorage.setItem("uploadedImage", base64Image); // ✅ Save base64 string
+        alert("Image saved!");
+        imageSelected = true;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    clearBtn.addEventListener("click", function () {
+      if (!imageSelected) {
+        alert("No image to clear.");
+        return;
+      }
+
+      // Clear image from localStorage
+      localStorage.removeItem("uploadedImage");
+
+      const newInput = fileInput.cloneNode(true);
+      fileInput.replaceWith(newInput);
+      newInput.id = "fileInput"; // maintain ID
+      document.getElementById("fileInput").addEventListener("change", function () {
+        // rebind same logic here if needed
+        // or extract the change logic into a named function and reuse
+      });
+
+      imageSelected = false;
+      alert("Image cleared successfully.");
+    });
+  }
+
+  // ✅ Still used to save feedback text only
+  window.saveFeedback = function () {
+    const feedback = document.getElementById("feedbackInput").value;
+    localStorage.setItem("feedbackMessage", feedback);
+
+    const selectedStatus = document.querySelector('select[name="status"]').value;
+    localStorage.setItem("status", selectedStatus);
+  
+   
+
+    if (localStorage.getItem("uploadedImage")) {
+      alert("Saving feedback and image...");
+    } else {
+      alert("Saving feedback only (no image uploaded).");
+    }
+  };
 });
 function storeStatus(value) {
   localStorage.setItem("savedStatus", value);
@@ -151,3 +243,4 @@ function saveFeedback(event) {
   localStorage.setItem("feedbackMessage", feedback);
   alert("Feedback saved!");
 }
+
