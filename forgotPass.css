@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Consolas', Times, serif;
+    color: white;
+}
+
+body {
+    background: url('images/roadChaos.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+header h4 {
+    font-size: 24px;
+    color: white;
+}
+
+header nav a {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+header nav a.Active,
+header nav a:hover {
+    color: orange;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #7d7b7b;
+    box-shadow: 0 0 25px #141416;
+    width: 750px;
+    max-width: 95%;
+    padding: 40px 60px;
+    margin: 40px auto;
+    border-radius: 8px;
+    color: white;
+}
+
+.form-box h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s;
+    border-radius: 4px 4px 0 0;
+}
+
+.input-box input::placeholder {
+    color: transparent;
+}
+
+.input-box input:focus,
+.input-box input:not(:placeholder-shown) {
+    border-bottom-color: orange;
+}
+
+.input-box label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 16px;
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 8px;
+    font-size: 13px;
+    color: orange;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0 6px;
+    border-radius: 4px;
+}
+
+.input-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: white;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: transparent;
+    border: 2px solid orange;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: orange;
+    color: black;
+}
+
+.regi-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.regi-link a {
+    color: orange;
+    text-decoration: none;
+}
+
+.regi-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.social_icon {
+    margin-bottom: 10px;
+}
+
+.social_icon li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social_icon li a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social_icon li a:hover {
+    color: orange;
+}
