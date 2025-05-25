@@ -260,3 +260,42 @@ select {
   user-select: auto ;
   position: relative;
 }
+.clearB{
+  pointer-events: auto ;
+  user-select: auto ;
+  position: relative; 
+}
+
+.upload-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and button */
+  margin-top: 10px;
+}
+
+#uploadIcon ion-icon {
+  font-size: 28px;
+  color: gold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#uploadIcon ion-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Style the clear button */
+.clearB {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.clearB:hover {
+  background-color: darkred;
+}
