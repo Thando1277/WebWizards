@@ -1,3 +1,3 @@
 function confirmDelete() {
-      window.location.href = "verify-delete.html";
+      window.location.href = "verify-delete-premiumUser.html";
 }
