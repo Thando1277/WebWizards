@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings</title>
+    <link rel="stylesheet" href="premium-dashboard_settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/f0443fd3ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+     <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+   <nav id="sidebar">
+      <h1 id="menu">Menu</h1>
+      <ul>
+        <li>
+           <a href="userdashboard.html">
+               <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+               <span class="title">Dashboard</span>
+           </a>
+        </li>
+         
+        <li>
+         <span class="icon"><a href="user.php"><i class="fa-solid fa-user"></i>User</a></span>    
+        </li>
+        
+        <li>
+           
+          <span class="icon"><a href="messages.html"><i class="fa-solid fa-comments"></i> Messages</a></span>
+       
+        </li>
+        <li>
+          <a href="user-dashboard-settings.html">
+            <i class="fa-solid fa-gears"></i> Settings
+          </a>
+        </li>
+      
+        <li>
+          <span class="icon"><a href="help.html"><i class="fa-solid fa-circle-info"></i> Help</a></span>
+         
+        </li>
+        <li>
+           <a href="index.html">
+               <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+               <span class="title">Log out</span>
+           </a>
+        </li>
+   
+      </ul>
+
+    </nav>
+    <div class="settings-container">
+    <h2>User Settings</h2>
+
+    <div class="section">
+      <h3>Profile Information</h3>
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="John Doe" readonly>
+      </div>
+
+      <form action="updateDetails.php" method="post" id="updateForm">
+        <div class="section">
+          <h3>Change Password</h3>
+        </div>
+        <div class="form-group">
+          <label for="currentPass">Current Password</label>
+          <input type="password" id="currentPass" name="currentPassword">
+        </div>
+        <div class="form-group">
+          <label for="newPass">New Password</label>
+          <input type="password" id="newPass" name="newPassword">
+        </div>
+        <div class="form-group">
+          <label for="confirmPass">Confirm New Password</label>
+          <input type="password" id="confirmPass" name="confirmPassword">
+        </div>
+
+      </form>
+
+    <div class="btn-group">
+      <button type="button" class="btn-save" onclick="submitForm()">Save Changes</button>
+      <button type="button" class="btn-delete" onclick="confirmDelete()">Delete Account</button>
+    </div>
+  </div>
+  <script src="user-dashboard-settings.js"></script>
+  <script>
+    function submitForm() {
+      document.getElementById("updateForm").submit();
+    }
+  </script>
+</body>
+</html>
