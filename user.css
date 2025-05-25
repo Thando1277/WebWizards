@@ -1,60 +1,299 @@
-/* Global Styles */
+/* CSS Custom Properties (Variables) */
+:root {
+    --primary-bg: #0f0f0f;
+    --secondary-bg: #1a1a1a;
+    --card-bg: #232323;
+    --accent-color: #FFA333;
+    --accent-hover: #ffb366;
+    --accent-dark: #cc7f00;
+    --orange-glow: rgba(255, 163, 51, 0.3);
+    --orange-shadow: rgba(255, 163, 51, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #333333;
+    --black-accent: #000000;
+    --shadow-light: rgba(255, 163, 51, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.8);
+    --border-radius: 16px;
+    --border-radius-small: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--black-accent) 50%, #1a0f0a 100%);
+    color: var(--text-primary);
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Container for profile */
+/* Main Container */
 .user-info {
-    background-color: #1e1e1e;
-    padding: 30px;
-    border-radius: 12px;
+    background: var(--card-bg);
+    background-image: 
+        radial-gradient(circle at 20% 20%, var(--orange-shadow) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, var(--orange-shadow) 0%, transparent 50%),
+        linear-gradient(145deg, transparent 0%, rgba(255, 163, 51, 0.02) 50%, transparent 100%);
+    padding: 40px;
+    border-radius: var(--border-radius);
     width: 100%;
-    max-width: 400px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    border: 1px solid #2c2c2c;
+    max-width: 420px;
+    box-shadow: 
+        0 20px 40px var(--shadow-dark),
+        0 0 0 1px var(--border-color),
+        0 0 20px rgba(255, 163, 51, 0.05),
+        inset 0 1px 0 rgba(255, 163, 51, 0.1),
+        inset 0 -1px 0 var(--black-accent);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
 }
 
-/* Text styles */
+.user-info::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--accent-color), var(--black-accent), var(--accent-color));
+    border-radius: var(--border-radius);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.user-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 25px 50px var(--shadow-dark),
+        0 0 30px var(--orange-glow),
+        0 0 60px rgba(255, 163, 51, 0.1),
+        inset 0 1px 0 rgba(255, 163, 51, 0.2),
+        inset 0 -1px 0 var(--black-accent);
+}
+
+.user-info:hover::before {
+    opacity: 1;
+}
+
+/* Profile Heading */
+h1 {
+    text-align: center;
+    color: var(--accent-color);
+    margin: 0 0 30px 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 
+        0 0 10px var(--orange-glow),
+        2px 2px 0 var(--black-accent),
+        -1px -1px 0 var(--black-accent),
+        1px -1px 0 var(--black-accent),
+        -1px 1px 0 var(--black-accent);
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--black-accent), var(--accent-color), var(--black-accent));
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--orange-glow);
+}
+
+/* Text Styles */
 .user-info p {
-    margin: 15px 0;
+    margin: 20px 0;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.user-info p:hover {
+    color: var(--text-primary);
 }
 
 .user-info strong {
-    color: #00bcd4;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-shadow: 
+        0 0 5px var(--orange-glow),
+        1px 1px 0 var(--black-accent);
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: shimmerText 3s ease-in-out infinite;
 }
 
-/* Profile heading */
-h1 {
-    text-align: center;
-    color: #00bcd4;
-    margin-bottom: 20px;
-}
-
-/* Optional buttons */
+/* Enhanced Button Styles */
 .button {
-    display: inline-block;
-    background-color: #00bcd4;
-    color: #121212;
-    padding: 10px 16px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: var(--black-accent);
+    padding: 14px 24px;
+    margin-top: 20px;
+    border: 2px solid var(--black-accent);
+    border-radius: var(--border-radius-small);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 4px 15px var(--orange-glow),
+        0 2px 5px var(--black-accent),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -2px 0 var(--accent-dark);
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: linear-gradient(45deg, var(--black-accent) 25%, transparent 25%, transparent 75%, var(--black-accent) 75%);
+    background-size: 4px 4px;
+    opacity: 0;
+    transition: var(--transition);
 }
 
 .button:hover {
-    background-color: #0097a7;
+    background: linear-gradient(135deg, var(--accent-hover), #ffcc66);
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+    box-shadow: 
+        0 8px 25px var(--orange-glow),
+        0 4px 10px var(--black-accent),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -2px 0 var(--accent-dark);
+}
+
+.button:hover::before {
+    left: 100%;
+}
+
+.button:hover::after {
+    opacity: 0.1;
+}
+
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 
+        0 4px 15px var(--orange-glow),
+        0 2px 5px var(--black-accent),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 var(--accent-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .user-info {
+        padding: 30px 25px;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .user-info p {
+        font-size: 15px;
+        margin: 18px 0;
+    }
+    
+    .button {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 15px;
+    }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-bg: #0a0a0a;
+        --card-bg: #1a1a1a;
+        --border-color: #2a2a2a;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Styles for Accessibility */
+.button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+    box-shadow: 
+        0 0 0 6px var(--black-accent),
+        0 8px 25px var(--yellow-glow);
+}
+
+/* Shimmer Animation for Text */
+@keyframes shimmerText {
+    0% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Loading Animation (Optional) */
+@keyframes shimmer {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+.user-info.loading {
+    animation: shimmer 2s ease-in-out infinite;
 }

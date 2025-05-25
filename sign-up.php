@@ -1,13 +1,16 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 // Database connection
 $servername = "localhost";
 $username = "root";
-$password = "Makungu@0608";
+$password = "LockIn_78";
 $dbname = "WebWizards";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("<script>alert('Database connection failed.'); window.history.back();</script>");
 }
@@ -31,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Check for duplicate email or phone or username
+    // Check for duplicates
     $stmt = $conn->prepare("SELECT * FROM Users WHERE Email = ? OR PhoneNumber = ? OR Username = ?");
     $stmt->bind_param("sss", $email, $phone, $username);
     $stmt->execute();
@@ -47,11 +50,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert user into database
+    // Insert user
     $stmt = $conn->prepare("INSERT INTO Users (FullName, Username, Email, Password, PhoneNumber) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $fullname, $username, $email, $hashedPassword, $phone);
+    $success = $stmt->execute();
 
-    if ($stmt->execute()) {
+    if ($success) {
+        // Email section
+        require 'PHPMailer/src/Exception.php';
+        require 'PHPMailer/src/PHPMailer.php';
+        require 'PHPMailer/src/SMTP.php';
+
+        $mail = new PHPMailer(true);
+        try {
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'webwizards0011@gmail.com';
+            $mail->Password   = 'uvlfiurqacgfeite'; // ✅ Move this to env variable
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
+
+            $mail->setFrom('webwizards0011@gmail.com', 'WebWizards');
+            $mail->addAddress($email, $fullname);
+            $mail->isHTML(true);
+            $mail->Subject = 'Welcome to WebWizards!';
+            $mail->Body    = "Hi <strong>$fullname</strong>,<br>Thanks for signing up!";
+
+            $mail->send();
+        } catch (Exception $e) {
+            echo "<script>alert('Email could not be sent: {$mail->ErrorInfo}');</script>";
+        }
+
         echo "<script>
             alert('User registered successfully.');
             window.location.href = 'log-in.html';
