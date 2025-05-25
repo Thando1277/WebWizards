@@ -69,7 +69,7 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
         .then(result => {
             if (result.includes("User registered successfully")) {
                 // Step 2: Send confirmation email via EmailJS
-                emailjs.send("service_bt2a4v8", "template_3qawojt", {
+                emailjs.send("service_c0oqnhr", "template_0hr6k8i", {
                     user_name: username,
                     user_email: email
                 })
