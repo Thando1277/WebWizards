@@ -328,3 +328,11 @@ color: #25252b;
         align-items: center;
         
     }
+    .password-toggle {
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  position: absolute;
+  color: white;
+}
