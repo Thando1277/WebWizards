@@ -226,7 +226,7 @@ function storeStatus(value) {
   if (savedStatus && savedStatus.trim() !== "") {
     const formattedStatus = savedStatus.charAt(0).toUpperCase() + savedStatus.slice(1);
     statusElement.innerText = `Status: ${formattedStatus}`;
-    statusElement.style.color = "gold";
+    statusElement.style.color = "orange";
   } else {
     // Keep default text and optionally style it
     statusElement.innerText = "Status: No issues reported";

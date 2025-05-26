@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (savedStatus) {
     const formattedStatus = savedStatus.charAt(0).toUpperCase() + savedStatus.slice(1);
     statusText.innerText = `Status: ${formattedStatus}`;
-    statusText.style.color = "gold";
+    statusText.style.color = "orange";
   }
 });
 
