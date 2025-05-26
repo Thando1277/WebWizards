@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_id'])) {
 //Database connection
 $host = 'localhost';
 $username = 'root';
-$password = 'LockIn_78';
+$password = '#Thando#2006';
 $databse = 'WebWizards';
 
 $conn = new mysqli($host, $username, $password, $databse);
@@ -50,10 +50,10 @@ if($delete_stmt->execute()){
     //Here we destroy the user's session
     session_unset();
     session_destroy();
-    echo "log-in.html";
     //Redirect user to homepage
+    header("Location: index.html");
+    exit();
 
-    exit;
 }else{
     echo "Error deleting account.";
 }
