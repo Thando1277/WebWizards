@@ -8,29 +8,33 @@
 </head>
 <body>
   <main class="container">
-    <section class="dashboard-cards">
-      <div class="card" id="reported">
-        <h3>Issues Reported</h3>
-        <p>128</p>
-      </div>
-      <div class="card" id="resolved">
-        <h3>Resolved</h3>
-        <p>104</p>
-      </div>
-      <div class="card" id="pending">
-        <h3>Pending</h3>
-        <p>24</p>
-      </div>
-    </section>
+    <a href="premium-dashboard.html">
+  ⬅ Back
+</a>
+   <div class="form-container">
+    <h2>Tender Application Form</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company" required>
 
-    <section class="map-analytics">
-      <div class="map-placeholder">
-        <h3>Live Map</h3>
-        <div class="map-fake">[Google Map Coming Soon]</div>
-      </div>
+      <label for="contact">Contact Person</label>
+      <input type="text" id="contact" name="contact" required>
 
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
 
-    </section>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="description">Project Proposal / Description</label>
+      <textarea id="description" name="description" rows="5" required></textarea>
+
+      <label for="document">Company documents</label>
+      <input type="file" id="document" name="document" accept=".pdf" required>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
   </main>
 </body>
 </html>
