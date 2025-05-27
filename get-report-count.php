@@ -21,13 +21,28 @@ if ($conn->connect_error) {
 }
 
 $userID = $_SESSION['user_id'];
-$sql = "SELECT COUNT(*) AS count FROM Reports WHERE UserID = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $userID);
-$stmt->execute();
-$stmt->bind_result($count);
-$stmt->fetch();
-$stmt->close();
+
+// Get total reports count for user
+$sql_total = "SELECT COUNT(*) AS total FROM Reports WHERE UserID = ?";
+$stmt_total = $conn->prepare($sql_total);
+$stmt_total->bind_param("i", $userID);
+$stmt_total->execute();
+$stmt_total->bind_result($total);
+$stmt_total->fetch();
+$stmt_total->close();
+
+// Get completed reports count for user
+$sql_completed = "SELECT COUNT(*) AS completed FROM Reports WHERE UserID = ? AND Status = 'Completed'";
+$stmt_completed = $conn->prepare($sql_completed);
+$stmt_completed->bind_param("i", $userID);
+$stmt_completed->execute();
+$stmt_completed->bind_result($completed);
+$stmt_completed->fetch();
+$stmt_completed->close();
+
 $conn->close();
 
-echo json_encode(["count" => $count]);
+echo json_encode([
+    "total" => $total,
+    "completed" => $completed
+]);
