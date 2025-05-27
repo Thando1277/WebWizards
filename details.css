@@ -1,0 +1,70 @@
+   :root {
+    --primary-bg: #0f0f0f;
+    --secondary-bg: #1a1a1a;
+    --card-bg: #232323;
+    --accent-color: #FFA333;
+    --accent-hover: #ffb366;
+    --accent-dark: #cc7f00;
+    --orange-glow: rgba(255, 163, 51, 0.3);
+    --orange-shadow: rgba(255, 163, 51, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #333333;
+    --black-accent: #000000;
+    --shadow-light: rgba(255, 163, 51, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.8);
+    --border-radius: 16px;
+    --border-radius-small: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+* {
+    box-sizing: border-box;
+}
+   
+body {
+ font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+background: linear-gradient(135deg, var(--primary-bg) 0%, var(--black-accent) 50%, #33200a 100%);
+ color: var(--text-primary);
+ margin: 0;
+ padding: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  width: 100%;                    /* full width with constraint below */
+  max-width: 900px;               /* increased from 750px */
+  min-height: 600px;              /* added height for more vertical space */
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  padding: 40px;                  /* more inner space */
+  background-color: var(--card-bg);
+  box-shadow: 0 0 30px var(--shadow-dark);
+
+}
+.preview-image {
+ max-width: 100%;
+ height: auto;
+ margin-top: 10px;
+ border-radius: 8px;
+}
+.location {
+ margin-top: 10px;
+ font-weight: bold;
+}
+.description {
+ margin-top: 10px;
+ white-space: pre-wrap;
+ background: #f9f9f9;
+ padding: 10px;
+ border-radius: 5px;
+ border: 1px solid #ddd;
+ background: var(--secondary-bg);
+ border: 1px solid var(--border-color);
+ color: var(--text-secondary);
+}

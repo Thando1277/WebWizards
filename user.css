@@ -19,6 +19,43 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.BackBtn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            height: 3em;
+            width: 100px;
+            align-items: center;
+            justify-content: center;
+            background-color: #eeeeee4b;
+            border-radius: 3px;
+            letter-spacing: 1px;
+            transition: all 0.2s linear;
+            cursor: pointer;
+            border: none;
+            background: #FFA333;
+            color: #000000;
+            font-weight: 500;
+            z-index: 1000;
+        }
+
+        .BackBtn > svg {
+            margin-right: 5px;
+            margin-left: 5px;
+            font-size: 20px;
+            transition: all 0.4s ease-in;
+        }
+
+        .BackBtn:hover > svg {
+            font-size: 1.2em;
+            transform: translateX(-5px);
+        }
+
+        .BackBtn:hover {
+            transform: translateY(-2px);
+        }
+
 /* Reset and Base Styles */
 * {
     box-sizing: border-box;
@@ -26,7 +63,7 @@
 
 body {
     font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--black-accent) 50%, #1a0f0a 100%);
+   background: linear-gradient(135deg, var(--primary-bg) 0%, var(--black-accent) 50%, #33200a 100%);
     color: var(--text-primary);
     margin: 0;
     padding: 20px;
