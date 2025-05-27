@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 // Database connection
 $servername = "localhost";
 $username = "root";
-$password = "#Thando#2006";
+$password = "LockIn_78";
 $dbname = "WebWizards";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'webwizards0011@gmail.com';
-            $mail->Password   = 'uvlfiurqacgfeite'; // ✅ Move this to env variable
+            $mail->Password   = 'xkur bfpm kbko bujq'; // ✅ Move this to env variable
             $mail->SMTPSecure = 'tls';
             $mail->Port       = 587;
 

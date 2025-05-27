@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 $host = 'localhost';
 $dbname = 'WebWizards';
 $username = 'root';
-$password = '#Thando#2006';
+$password = 'LockIn_78';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);

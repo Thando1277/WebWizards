@@ -4,7 +4,7 @@ session_start();
 // Database credentials
 $servername = "localhost";
 $db_username = "root";
-$db_password = "#Thando#2006";
+$db_password = "LockIn_78";
 $dbname = "WebWizards";
 
 // Create connection

@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "#Thando#2006";
+$password = "LockIn_78";
 $dbname = "WebWizards";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

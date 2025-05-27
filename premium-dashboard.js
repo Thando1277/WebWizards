@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', function () {
   document.getElementById('menu-toggle').checked = true;
 });
@@ -9,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearBtn = document.getElementById("clearBtn");
   const issueTextarea = document.getElementById("issue");
   const startVoiceBtn = document.getElementById("startVoice");
-  const submitBtn = document.querySelector(".submit button");
+  const submitBtn = document.getElementById("submitReportBtn");
   const reportedCounter = document.querySelector(".cardBox .card:first-child .numbers");
+  const solvedCounter = document.querySelector(".cardBox .card:nth-child(2) .numbers");
   const statusText = document.getElementById("status");
   const locationElement = document.querySelector(".myLocation");
 
@@ -26,6 +26,23 @@ document.addEventListener("DOMContentLoaded", function () {
   let photoTaken = false;
   let issueCount = 0;
   let cameraStream;
+
+function updateIssueCount() {
+  fetch('get-report-count.php')
+    .then(res => res.json())
+    .then(data => {
+      if (data.total !== undefined) {
+        issueCount = data.total;  // total reports count
+        reportedCounter.textContent = data.total;
+        solvedCounter.textContent = data.completed;
+      }
+    })
+    .catch(err => {
+      console.error('Error fetching report count:', err);
+    });
+}
+
+  updateIssueCount(); // initial fetch
 
   function checkFormReadiness() {
     const ready = (imageUploaded || photoTaken) && locationFetched && issueFilled;
@@ -90,11 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       startVoiceBtn.textContent = "🎤 Speak";
     };
 
-    recognition.onerror = function () {
-      startVoiceBtn.textContent = "🎤 Speak";
-    };
-
-    recognition.onend = function () {
+    recognition.onerror = recognition.onend = function () {
       startVoiceBtn.textContent = "🎤 Speak";
     };
   } else {
@@ -108,30 +121,68 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   submitBtn.disabled = true;
+
   submitBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    issueCount++;
-    reportedCounter.textContent = issueCount;
-    statusText.textContent = `Status: Pending Verification (${issueCount})`;
-    statusText.style.color = "orange";
 
-    let currentPoints = parseInt(localStorage.getItem("points")) || 0;
-    currentPoints += 20;
-    localStorage.setItem("points", currentPoints);
-    localStorage.setItem("availablePoints", currentPoints);
-    localStorage.setItem("status", `Pending Verification (${issueCount})`);
+    const formData = new FormData();
+    formData.append("description", issueTextarea.value.trim());
+    formData.append("location", locationElement.textContent.replace("Location: ", ""));
 
-    issueTextarea.value = "";
-    fileInput.value = "";
-    canvas.style.display = "none";
-    stopCamera();
-
-    imageUploaded = false;
-    photoTaken = false;
-    issueFilled = false;
-    checkFormReadiness();
-    alert("Issue reported successfully!");
+    if (fileInput.files.length > 0) {
+      formData.append("image", fileInput.files[0]);
+      sendFormData(formData);
+    } else if (photoTaken) {
+      canvas.toBlob((blob) => {
+        formData.append("image", blob, "snapshot.png");
+        sendFormData(formData);
+      }, "image/png");
+    } else {
+      alert("Please upload or take a photo before submitting.");
+    }
   });
+
+  function sendFormData(formData) {
+    fetch("submit-issue.php", {
+      method: "POST",
+      body: formData
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          issueTextarea.value = "";
+          fileInput.value = "";
+          canvas.style.display = "none";
+          stopCamera();
+
+          imageUploaded = false;
+          photoTaken = false;
+          issueFilled = false;
+          locationFetched = false;
+          locationElement.textContent = "Location: Not fetched yet";
+
+          checkFormReadiness();
+          updateIssueCount();    // refresh count from server
+
+          statusText.textContent = `Status: Pending Verification`;
+          statusText.style.color = "orange";
+
+          let currentPoints = parseInt(localStorage.getItem("points")) || 0;
+          currentPoints += 20;
+          localStorage.setItem("points", currentPoints);
+          localStorage.setItem("availablePoints", currentPoints);
+          localStorage.setItem("status", `Pending Verification`);
+
+          alert("Issue reported successfully!");
+        } else {
+          alert("Error: " + (data.error || "Unknown error"));
+        }
+      })
+      .catch(error => {
+        console.error("Submission error:", error);
+        alert("Failed to submit the report.");
+      });
+  }
 
   window.getLocation = function () {
     if (navigator.geolocation) {
@@ -217,5 +268,6 @@ document.addEventListener("DOMContentLoaded", function () {
     statusText.innerText = `Status: ${formattedStatus}`;
     statusText.style.color = "gold";
   }
-});
 
+  getLocation(); // initial fetch
+});

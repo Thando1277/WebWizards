@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $description = isset($_POST['description']) ? trim($_POST['description']) : '';
     $location = isset($_POST['location']) ? trim($_POST['location']) : '';
 
-    // Validate
+    // Validate input
     if ($description === '' || $location === '') {
         http_response_code(400);
         echo json_encode(["error" => "Description and location are required"]);
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Insert into Reports
+    // Insert report
     $stmt = $conn->prepare("INSERT INTO Reports (UserID, Image, Location, Description) VALUES (?, ?, ?, ?)");
     if (!$stmt) {
         http_response_code(500);
@@ -67,6 +67,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt->bind_param("isss", $userID, $imagePath, $location, $description);
     if ($stmt->execute()) {
+        // If user is premium, update TotalReports
+        $updatePremium = $conn->prepare("UPDATE PremiumUser SET TotalReports = TotalReports + 1 WHERE UserID = ?");
+        $updatePremium->bind_param("i", $userID);
+        $updatePremium->execute(); // Will only affect row if user is premium
+        $updatePremium->close();
+
         echo json_encode(["success" => true, "message" => "Report submitted"]);
     } else {
         http_response_code(500);

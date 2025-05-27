@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_id'])) {
 //Database connection
 $host = 'localhost';
 $username = 'root';
-$password = '#Thando#2006';
+$password = 'LockIn_78';
 $databse = 'WebWizards';
 
 $conn = new mysqli($host, $username, $password, $databse);

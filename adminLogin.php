@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 // DB credentials
 $servername = "localhost";
 $db_username = "root";
-$db_password = "#Thando#2006";
+$db_password = "LockIn_78";
 $dbname = "WebWizards";
 
 // Connect to MySQL

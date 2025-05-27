@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 // Database credentials
 $servername = "localhost";
 $db_username = "root";
-$db_password = "#Thando#2006";
+$db_password = "LockIn_78";
 $dbname = "WebWizards";
 
 // Create connection
@@ -64,6 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $stmt2->store_result();
 
             $isPremium = $stmt2->num_rows > 0;
+            $_SESSION['isPremium'] = $isPremium; // ✅ Store it in session for use later
+
             $stmt2->close();
 
             $redirectPage = $isPremium ? "premium-dashboard.html" : "userdashboard.html";
