@@ -16,11 +16,10 @@ if ($conn->connect_error) {
     exit();
 }
 
-// Query to get all reports with location data
-$sql = "SELECT Latitude, Longitude, Description, Status FROM Reports";
+// Query to get all reports with address-based location
+$sql = "SELECT Location, Description, Status FROM Reports";
 $result = $conn->query($sql);
 
-// Check if there are results
 $reports = [];
 if ($result && $result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -28,9 +27,6 @@ if ($result && $result->num_rows > 0) {
     }
 }
 
-// Return JSON
 echo json_encode($reports);
-
-// Close connection
 $conn->close();
 ?>

@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 window.addEventListener('DOMContentLoaded', function () {
   document.getElementById('menu-toggle').checked = true;
 });
@@ -12,14 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearBtn = document.getElementById("clearBtn");
   const issueTextarea = document.getElementById("issue");
   const startVoiceBtn = document.getElementById("startVoice");
-<<<<<<< Updated upstream
   const submitBtn = document.getElementById("submitReportBtn");
   const reportedCounter = document.querySelector(".cardBox .card:first-child .numbers");
   const solvedCounter = document.querySelector(".cardBox .card:nth-child(2) .numbers");
-=======
-  const submitBtn = document.querySelector(".submit button");
-  const reportedCounter = document.querySelector(".cardBox .card:first-child .numbers");
->>>>>>> Stashed changes
   const statusText = document.getElementById("status");
   const locationElement = document.querySelector(".myLocation");
 
@@ -36,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let issueCount = 0;
   let cameraStream;
 
-<<<<<<< Updated upstream
 function updateIssueCount() {
   fetch('get-report-count.php')
     .then(res => res.json())
@@ -54,8 +44,6 @@ function updateIssueCount() {
 
   updateIssueCount(); // initial fetch
 
-=======
->>>>>>> Stashed changes
   function checkFormReadiness() {
     const ready = (imageUploaded || photoTaken) && locationFetched && issueFilled;
     submitBtn.disabled = !ready;
@@ -119,15 +107,7 @@ function updateIssueCount() {
       startVoiceBtn.textContent = "🎤 Speak";
     };
 
-<<<<<<< Updated upstream
     recognition.onerror = recognition.onend = function () {
-=======
-    recognition.onerror = function () {
-      startVoiceBtn.textContent = "🎤 Speak";
-    };
-
-    recognition.onend = function () {
->>>>>>> Stashed changes
       startVoiceBtn.textContent = "🎤 Speak";
     };
   } else {
@@ -141,7 +121,6 @@ function updateIssueCount() {
   });
 
   submitBtn.disabled = true;
-<<<<<<< Updated upstream
 
   submitBtn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -204,32 +183,6 @@ function updateIssueCount() {
         alert("Failed to submit the report.");
       });
   }
-=======
-  submitBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    issueCount++;
-    reportedCounter.textContent = issueCount;
-    statusText.textContent = `Status: Pending Verification (${issueCount})`;
-    statusText.style.color = "orange";
-
-    let currentPoints = parseInt(localStorage.getItem("points")) || 0;
-    currentPoints += 20;
-    localStorage.setItem("points", currentPoints);
-    localStorage.setItem("availablePoints", currentPoints);
-    localStorage.setItem("status", `Pending Verification (${issueCount})`);
-
-    issueTextarea.value = "";
-    fileInput.value = "";
-    canvas.style.display = "none";
-    stopCamera();
-
-    imageUploaded = false;
-    photoTaken = false;
-    issueFilled = false;
-    checkFormReadiness();
-    alert("Issue reported successfully!");
-  });
->>>>>>> Stashed changes
 
   window.getLocation = function () {
     if (navigator.geolocation) {
@@ -313,37 +266,9 @@ function updateIssueCount() {
   if (savedStatus) {
     const formattedStatus = savedStatus.charAt(0).toUpperCase() + savedStatus.slice(1);
     statusText.innerText = `Status: ${formattedStatus}`;
-<<<<<<< Updated upstream
     statusText.style.color = "orange";
   }
 
   getLocation(); // initial fetch
-=======
-    statusText.style.color = "gold";
-  }
->>>>>>> Stashed changes
 });
 
- function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -26.2041, lng: 28.0473 }, // Center of Johannesburg
-    zoom: 12
-  });
-
-  // Fetch reports from your PHP API
-  fetch("/get-reports.php")
-    .then(res => res.json())
-    .then(data => {
-      data.forEach(report => {
-        new google.maps.Marker({
-          position: {
-            lat: parseFloat(report.Latitude),
-            lng: parseFloat(report.Longitude)
-          },
-          map: map,
-          title: report.Description
-        });
-      });
-    })
-    .catch(err => console.error("Error loading reports:", err));
-}

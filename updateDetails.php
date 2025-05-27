@@ -4,7 +4,7 @@ session_start();
 // Database credentials
 $servername = "localhost";
 $db_username = "root";
-$db_password = "LockIn_78";
+$db_password = "";
 $dbname = "WebWizards";
 
 // Create connection

@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_id'])) {
 //Database connection
 $host = 'localhost';
 $username = 'root';
-$password = 'LockIn_78';
+$password = '';
 $databse = 'WebWizards';
 
 $conn = new mysqli($host, $username, $password, $databse);
@@ -50,10 +50,6 @@ if($delete_stmt->execute()){
     //Here we destroy the user's session
     session_unset();
     session_destroy();
-<<<<<<< Updated upstream
-=======
-    echo "log-in.html";
->>>>>>> Stashed changes
     //Redirect user to homepage
     header("Location: index.html");
     exit();

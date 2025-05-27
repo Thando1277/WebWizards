@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 // DB credentials
 $servername = "localhost";
 $db_username = "root";
-$db_password = "LockIn_78";
+$db_password = "";
 $dbname = "WebWizards";
 
 // Connect to MySQL
