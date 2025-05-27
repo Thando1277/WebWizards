@@ -332,3 +332,8 @@
  margin-bottom: 19px;
 }
 
+#map {
+  height: 100vh;
+  width: 100%;
+}
+

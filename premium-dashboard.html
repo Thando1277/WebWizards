@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="premium-dashboard.css"/>
   <script src="https://kit.fontawesome.com/f0443fd3ee.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozgzhXv7ZTh9OYVmZQ3N3dw6J-ml389s&callback=initMap"
+  async
+  defer
+></script>
+
 </head>
 <body>
   <input type="checkbox" id="menu-toggle" />
@@ -26,7 +32,6 @@
       <li><a href="help.html"><i class="fa-solid fa-circle-info"></i> Help</a></li>
       <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
       <li><a href="reports.html"><i class="fa-solid fa-flag"></i> Reports</a></li>
-      <li><a href="#"><i class="fa-solid fa-location-dot"></i> Map</a></li>
         <li><a href="aa_rewards.html"><i class="fa-solid fa-coins"></i> Rewards</a></li>
       <li><a href="premium-dashboard_settings.html"><i class="fa-solid fa-gears"></i> Settings</a></li>
       <li><a href="log-in.html"><i class="fa-solid fa-chart-simple"></i>Log out</a></li>
@@ -112,10 +117,18 @@
          </div>
      </div>
      <div class="submit">
+<<<<<<< Updated upstream
       <button id="submitReportBtn" type="submit" disabled>Submit</button>
     </div>
     
   
+=======
+       <button type="submit" disabled>Submit</button>
+     </div>
+     <div id="map" style="width: 100%; height: 500px;"></div>
+
+
+>>>>>>> Stashed changes
      <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 <df-messenger
   chat-title="zara"
