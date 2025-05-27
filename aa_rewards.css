@@ -1,3 +1,22 @@
+:root {
+    --primary-bg: #0f0f0f;
+    --secondary-bg: #1a1a1a;
+    --card-bg: #232323;
+    --accent-color: #FFA333;
+    --accent-hover: #ffb366;
+    --accent-dark: #cc7f00;
+    --orange-glow: rgba(255, 163, 51, 0.3);
+    --orange-shadow: rgba(255, 163, 51, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #333333;
+    --black-accent: #000000;
+    --shadow-light: rgba(255, 163, 51, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.8);
+    --border-radius: 16px;
+    --border-radius-small: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .BackBtn {
             position: fixed;
@@ -44,7 +63,8 @@
 }
 
 body {
-  background: #1e1e2f;
+ background: linear-gradient(135deg, var(--primary-bg) 0%, var(--black-accent) 50%, #33200a 100%);
+     color: var(--text-primary);
   color: #f5f5f5;
   padding: 20px;
 }
