@@ -388,3 +388,23 @@
                 font-size: 18px;
             }
         }
+        .container {
+          position: relative; /* Allows absolute children to position from here */
+        }
+        
+        .container a {
+          position: fixed; /* Use fixed to make it stay in top-left of the viewport */
+          top: 20px;
+          left: 20px;
+          padding: 10px 20px;
+          color: white;
+          background-color: #222;
+          text-decoration: none;
+          border-radius: 5px;
+          z-index: 1000;
+        }
+        
+        .container a:hover {
+          color: #FFA333;
+          background-color: #333;
+        }
