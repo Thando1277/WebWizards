@@ -40,31 +40,19 @@
   background-color: #0056b3;
 }
 
-
-=======
-}
 /* From Uiverse.io by Jedi-hongbin */ 
->>>>>>> Stashed changes
 button {
  display: flex;
  height: 3em;
  width: 100px;
  align-items: center;
  justify-content: center;
-<<<<<<< Updated upstream
 color: #FFA333;
-=======
- background-color: #eeeeee4b;
->>>>>>> Stashed changes
  border-radius: 3px;
  letter-spacing: 1px;
  transition: all 0.2s linear;
  cursor: pointer;
  border: none;
-<<<<<<< Updated upstream
-=======
- background: #FFA333;
->>>>>>> Stashed changes
 }
 
 button > svg {
@@ -82,7 +70,6 @@ button:hover > svg {
 button:hover {
  
  transform: translateY(-2px);
-<<<<<<< Updated upstream
 }
 
 body, html {
@@ -169,6 +156,3 @@ body, html {
     color:#FFA333;
     background-color: #333;
   }
-=======
-}
->>>>>>> Stashed changes
