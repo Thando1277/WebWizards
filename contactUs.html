@@ -1,3 +1,5 @@
+html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,9 +29,16 @@
     </div><br/>
 
     <div>
-      <button id="button" type="submit">Submit</button>
+      <button type="submit" id="button">Submit</button>
     </div>
   </form>
+
+  <div id="myPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <p id="popupMessage"></p>
+    </div>
+  </div>
 
   <footer>
     <ul class="social_icon">
@@ -47,7 +56,7 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function(){
-      emailjs.init("7WaLqn5JAG7bJF9wy");
+      emailjs.init("a97H0ZkNv7l4fsMV5");
     })();
   </script>
 

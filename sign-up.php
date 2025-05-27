@@ -66,12 +66,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
+<<<<<<< Updated upstream
             $mail->Username   = 'webwizards0011@gmail.com';
             $mail->Password   = 'xkur bfpm kbko bujq'; // ✅ Move this to env variable
             $mail->SMTPSecure = 'tls';
             $mail->Port       = 587;
 
             $mail->setFrom('webwizards0011@gmail.com', 'WebWizards');
+=======
+            $mail->Username   = 'Webwizards@gmail.com';
+            $mail->Password   = 'sxptmwnynhkypuly'; // ✅ Move this to env variable
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
+
+            $mail->setFrom('Webwizards@gmail.com', 'WebWizards');
+>>>>>>> Stashed changes
             $mail->addAddress($email, $fullname);
             $mail->isHTML(true);
             $mail->Subject = 'Welcome to WebWizards!';

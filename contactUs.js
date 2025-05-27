@@ -14,10 +14,7 @@ function submit(event) {
 
     let errors = [];
 
-    if (nameValue === "") {
-        errors.push("Name is required");
-    }
-
+    if (nameValue === "") errors.push("Name is required");
     if (emailValue === "") {
         errors.push("Email is required");
     } else {
@@ -26,23 +23,32 @@ function submit(event) {
             errors.push("Email is not valid");
         }
     }
-
-    if (messageValue === "") {
-        errors.push("Message is required");
-    }
+    if (messageValue === "") errors.push("Message is required");
 
     if (errors.length > 0) {
-        alert(errors.join("\n"));
+        openPopup(errors.join("\n"), false);
     } else {
-
         emailjs.sendForm("service_bt2a4v8", "template_sdjtt1k", form)
             .then(function(response) {
-                alert("Message sent successfully!");
+                openPopup("Message sent successfully!", true);
                 form.reset();
             }, function(error) {
                 console.error("FAILED...", error);
-                alert("Failed to send message. Please try again.");
+                openPopup("Failed to send message. Please try again.", false);
             });
     }
 }
 
+function openPopup(message, isSuccess = true) {
+    const popup = document.getElementById("myPopup");
+    const popupMessage = document.getElementById("popupMessage");
+
+    popupMessage.textContent = message;
+    popupMessage.style.color = isSuccess ? "green" : "red";
+
+    popup.style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("myPopup").style.display = "none";
+}
