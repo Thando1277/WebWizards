@@ -271,3 +271,4 @@ function updateIssueCount() {
 
   getLocation(); // initial fetch
 });
+

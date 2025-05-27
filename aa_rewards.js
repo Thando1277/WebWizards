@@ -9,7 +9,7 @@ const progressBar = document.getElementById('progress-bar');
 const redeemBtn = document.getElementById('redeem-btn');
 const redeemStatus = document.getElementById('redeem-status');
 const historyList = document.getElementById('history');
-const earnBtn = document.getElementById('earn-btn');
+const earnBtn = document.getElementById('submitReportBtn');
 const rewardSelect = document.getElementById('reward-select');
 
 function updateUI() {

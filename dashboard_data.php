@@ -9,7 +9,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 // Database configuration
 $servername = "localhost";
 $username = "root"; 
-$password = "LockIn_78"; 
+$password = ""; 
 $dbname = "WebWizards";
 
 try {
