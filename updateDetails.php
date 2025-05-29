@@ -1,62 +1,96 @@
 <?php
 session_start();
+header('Content-Type: application/json');
 
-// Database credentials
+$response = ['success' => false, 'message' => ''];
+
+// Ensure user is logged in
+if (!isset($_SESSION['user_id'])) {
+    $response['message'] = "Unauthorized access.";
+    echo json_encode($response);
+    exit;
+}
+
+// Database config
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
 $dbname = "WebWizards";
 
-// Create connection
+// DB connection
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
-//Check if inputs are empty
+// if ($conn->connect_error) {
+//     $response['message'] = "Database connection failed: " . $conn->connect_error;
+//     echo json_encode($response);
+//     exit;
+// }
 
-$currentPassword = $_POST['currentPassword'];
-$newPassword = $_POST['newPassword'];
-$confirmPassword = $_POST['confirmPassword'];
 
+$currentPassword = trim($_POST['currentPassword'] ?? '');
+$newPassword     = trim($_POST['newPassword'] ?? '');
+$confirmPassword = trim($_POST['confirmPassword'] ?? '');
+
+// Validate inputs
+if (empty($currentPassword) || empty($newPassword) || empty($confirmPassword)) {
+    $response['message'] = "All fields are required.";
+    echo json_encode($response);
+    exit;
+}
+
+if (strlen($newPassword) < 6) {
+    $response['message'] = "New Password must be at least 6 characters.";
+    echo json_encode($response);
+    exit;
+}
+
+if ($newPassword !== $confirmPassword) {
+    $response['message'] = "New passwords do not match.";
+    echo json_encode($response);
+    exit;
+}
+
+// Fetch current hashed password
 $userId = $_SESSION['user_id'];
-
-if (empty($currentPassword || $newPassword || $confirmPassword)){
-    echo ("All fields are requuired");
-}
-
-if ($newPassword != $confirmPassword){
-    die("Password doesn't match");
-}
-
 $stmt = $conn->prepare("SELECT password FROM Users WHERE userID = ?");
 $stmt->bind_param("i", $userId);
 $stmt->execute();
 $stmt->store_result();
+
+if ($stmt->num_rows === 0) {
+    $response['message'] = "User not found.";
+    echo json_encode($response);
+    $stmt->close();
+    $conn->close();
+    exit;
+}
+
 $stmt->bind_result($hashedPassword);
 $stmt->fetch();
-
-if (!$stmt->num_rows) {
-    die("User not found.");
-}
-
 $stmt->close();
 
-//Verify if current password matches user password
+// Verify current password
 if (!password_verify($currentPassword, $hashedPassword)) {
-    die("Current password is incorrect.");
+    $response['message'] = "Current password is incorrect.";
+    echo json_encode($response);
+    $conn->close();
+    exit;
 }
 
-//Hash new password
+// Hash new password and update
 $newHashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-
 $updateStmt = $conn->prepare("UPDATE Users SET password = ? WHERE userID = ?");
 $updateStmt->bind_param("si", $newHashedPassword, $userId);
 
 if ($updateStmt->execute()) {
-    echo "Password updated successfully.";
+    $response['success'] = true;
+    $response['message'] = "Password updated successfully!";
 } else {
-    echo "Error updating password: " . $updateStmt->error;
+    $response['message'] = "Error updating password: " . $updateStmt->error;
 }
 
 $updateStmt->close();
 $conn->close();
 
+echo json_encode($response);
 ?>

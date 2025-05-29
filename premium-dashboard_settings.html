@@ -36,40 +36,39 @@
       <li><a href="log-in.html"><i class="fa-solid fa-chart-simple"></i>Log out</a></li>
     </ul>
   </nav>
-    <div class="settings-container">
+      <div class="settings-container">
     <h2>User Settings</h2>
 
     <div class="section">
       <h3>Profile Information</h3>
       <div class="form-group">
         <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" placeholder="John Doe" readonly>
+        <input type="text" id="fullName" placeholder="" readonly>
       </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="john@example.com">
-      </div>
-    </div>
 
-    <div class="section">
-      <h3>Change Password</h3>
-      <div class="form-group">
-        <label for="currentPass">Current Password</label>
-        <input type="password" id="currentPass">
-      </div>
-      <div class="form-group">
-        <label for="newPass">New Password</label>
-        <input type="password" id="newPass">
-      </div>
-      <div class="form-group">
-        <label for="confirmPass">Confirm New Password</label>
-        <input type="password" id="confirmPass">
-      </div>
-    </div>
+      <div id="messageBox" class="message-box"></div>
 
-    <div class="btn-group">
-      <button class="btn-save">Save Changes</button>
-      <button class="btn-delete" onclick="confirmDelete()">Delete Account</button>
+      <form id="updateForm" onsubmit="return submitForm()">
+        <div class="section">
+          <h3>Change Password</h3>
+        </div>
+        <div class="form-group">
+          <label for="currentPass">Current Password</label>
+          <input type="password" id="currentPass" name="currentPassword">
+        </div>
+        <div class="form-group">
+          <label for="newPass">New Password</label>
+          <input type="password" id="newPass" name="newPassword">
+        </div>
+        <div class="form-group">
+          <label for="confirmPass">Confirm New Password</label>
+          <input type="password" id="confirmPass" name="confirmPassword">
+        </div>
+        <div class="btn-group">
+          <button type="submit" class="btn-save">Save Changes</button>
+          <button type="button" class="btn-delete" onclick="confirmDelete()">Delete Account</button>
+        </div>
+      </form>
     </div>
   </div>
   <script src="premium-dashboard-settings.js"></script>
@@ -77,6 +76,53 @@
     document.getElementById('BackBtn').addEventListener('click', () => {
       window.location.href = 'premium-dashboard.html';
     });
+
+
+    function submitForm() {
+      const form = document.getElementById("updateForm");
+      const messageBox = document.getElementById("messageBox");
+      const formData = new FormData(form);
+
+      if (formData.get("newPassword") !== formData.get("confirmPassword")) {
+        messageBox.textContent = "New passwords do not match!";
+        messageBox.className = "message-box error";
+        return false;
+      }
+
+      fetch("updateDetails.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageBox.textContent = data.message;
+        messageBox.className = data.success ? "message-box success" : "message-box error";
+        if (data.success) form.reset();
+      })
+      .catch(err => {
+        messageBox.textContent = "Something went wrong. Please try again.";
+        messageBox.className = "message-box error";
+        console.error("Error:", err);
+      });
+
+      return false;
+    }
+
+    function confirmDelete() {
+      window.location.href = "verify-delete-premiumUser.html";
+    }
+
+    //Fetching the users full name from the databse to display as a placeholder
+    window.addEventListener("DOMContentLoaded", () => {
+      fetch("getUsername.php")
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          document.getElementById("fullName").placeholder = data.username;
+        }
+      })
+      .catch(err => console.error("Error fetching username:", err));
+});
   </script>
 </body>
 </html>

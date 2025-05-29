@@ -1,28 +1,30 @@
 <?php
 session_start();
 
+header('Content-Type: application/json'); // IMPORTANT: tell client it's JSON
+
 if(!isset($_SESSION['user_id'])) {
-    die("Access denied. You must be logged in.");
+    echo json_encode(['success' => false, 'error' => 'Access denied. You must be logged in.']);
+    exit;
 }
 
-//Database connection
+// Database connection
 $host = 'localhost';
 $username = 'root';
 $password = '';
-$databse = 'WebWizards';
+$database = 'WebWizards';
 
-$conn = new mysqli($host, $username, $password, $databse);
-
+$conn = new mysqli($host, $username, $password, $database);
 
 if($conn->connect_error) {
-    die("Connection failed");
+    echo json_encode(['success' => false, 'error' => 'Connection failed.']);
+    exit;
 }
 
 $user_id = $_SESSION['user_id'];
-
 $input_password = $_POST['password'] ?? '';
 
-//Fetching user from database
+// Fetch user password hash
 $sql = "SELECT Password FROM Users WHERE UserID = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
@@ -30,32 +32,34 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows !== 1) {
-    die("User not found.");
+    echo json_encode(['success' => false, 'error' => 'User not found.']);
+    exit;
 }
 
 $user = $result->fetch_assoc();
 $hashed_password = $user['Password'];
 
-//Now we verify the password
+// Verify password
 if (!password_verify($input_password, $hashed_password)) {
-    die("Incorrect password.");
+    echo json_encode(['success' => false, 'error' => 'Incorrect password.']);
+    exit;
 }
 
-//Delete the user's account from Database
+// Delete the user's account
 $delete_sql = "DELETE FROM Users WHERE UserID = ?";
 $delete_stmt = $conn->prepare($delete_sql);
 $delete_stmt->bind_param("i", $user_id);
 
 if($delete_stmt->execute()){
-    //Here we destroy the user's session
+    // Destroy session on success
     session_unset();
     session_destroy();
-    //Redirect user to homepage
-    header("Location: index.html");
-    exit();
 
-}else{
-    echo "Error deleting account.";
+    echo json_encode(['success' => true]);
+} else {
+    echo json_encode(['success' => false, 'error' => 'Error deleting account.']);
 }
+
 $conn->close();
+exit;
 ?>

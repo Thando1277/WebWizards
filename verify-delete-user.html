@@ -194,7 +194,7 @@
       <h1 id="menu">Menu</h1>
       <ul>
         <li>
-           <a href="#">
+           <a href="userdashboard.html">
                <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
                <span class="title">Dashboard</span>
            </a>
@@ -233,16 +233,58 @@
   <div class="confirm-container">
     <h2>Confirm Account Deletion</h2>
     <p>To confirm, please enter your account password. This action cannot be undone.</p>
-    <form action="delete-account.php" method="POST">
-      <div class="form-group">
-        <label for="password">Enter Password</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-cancel" onclick="window.location.href='user-dashboard-settings.html';">Cancel</button>
-        <button type="submit" class="btn btn-delete">Delete</button>
-      </div>
-    </form>
+
+  <form id="deleteAccountForm" method="POST">
+    <div class="form-group">
+      <label for="password">Enter Password</label>
+      <input type="password" id="password" name="password">
+      <div id="errorMessage" style="color: red; margin-top: 5px;"></div>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-cancel" onclick="window.location.href='user-dashboard-settings.html';">Cancel</button>
+      <button type="submit" class="btn btn-delete">Delete</button>
+    </div>
+  </form>
   </div>
+
+  <script>
+    document.getElementById('deleteAccountForm').addEventListener('submit', function(event) {
+  event.preventDefault();  // Stop normal form submission
+
+  const password = document.getElementById('password').value;
+  const errorDiv = document.getElementById('errorMessage');
+  errorDiv.textContent = ''; // clear previous errors
+
+  if (!confirm("Are you sure you want to delete your account?")) {
+    return; // User canceled
+  }
+
+  fetch('delete-account.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'password=' + encodeURIComponent(password)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      // Password correct, redirect or show success
+      errorDiv.textContent = 'Redirecting to Home Page...';
+      errorDiv.style.color = "white";
+
+      setTimeout(function(){
+        window.location.href= "index.html";
+      }, 2000);
+      // window.location.href = 'index.html';
+    } else {
+      // Show error message
+      errorDiv.textContent = data.error;
+      errorDiv.style.color = "red";
+    }
+  })
+  .catch(() => {
+    errorDiv.textContent = 'An unexpected error occurred. Please try again.';
+  });
+});
+  </script>
 </body>
 </html>
