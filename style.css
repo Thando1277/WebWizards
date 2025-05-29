@@ -268,3 +268,117 @@ footer .wave#wave4 {
         background-position-x: 1000px;
     }
 }
+
+
+
+/* MAking Responsinve first for Tablet and Smaller */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  header nav a {
+    margin-left: 30px;
+    font-size: 18px;
+  }
+
+  .Home {
+    padding: 0 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .text-box {
+    width: 100%;
+  }
+
+  .text-box h1 {
+    font-size: 42px;
+  }
+
+  .text-box h1:nth-child(2) {
+    font-size: 36px;
+  }
+
+  .text-box p {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .social_icon {
+    margin-top: 20px;
+  }
+
+  .social_icon li a {
+    font-size: 1.5em;
+    margin: 5px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+/* FOR Phone Screens */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  header h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav a {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .text-box h1 {
+    font-size: 32px;
+  }
+
+  .text-box h1:nth-child(2) {
+    font-size: 26px;
+  }
+
+  .text-box p {
+    font-size: 16px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer .wave {
+    display:flex; /*Here we  have an option to hide the waves(display:none)*/
+  }
+}

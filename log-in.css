@@ -336,3 +336,54 @@ color: #25252b;
   position: absolute;
   color: white;
 }
+
+/*Make responsive*/
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .form-box.Login,
+    .form-box.Register {
+        width: 100%;
+        padding: 20px;
+        position: relative;
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav a {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .curved-shape,
+    .curved-shape2,
+    .info-content {
+        display: none;
+    }
+
+    .input-box input {
+        font-size: 14px;
+    }
+
+    .form-box h2 {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 14px;
+        height: 40px;
+    }
+}

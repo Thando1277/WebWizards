@@ -196,3 +196,10 @@ function updateIssueCount() {
   // Trigger form check on text input
   issueTextarea.addEventListener("input", checkFormReady);
 });
+//For the ad
+const adsBanner = document.getElementById('ads-banner');
+  const closeBtn = adsBanner.querySelector('.close-btn');
+
+  closeBtn.addEventListener('click', () => {
+    adsBanner.style.display = 'none';
+  });

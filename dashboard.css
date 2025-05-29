@@ -5,7 +5,9 @@ body {
 }
 
 .container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
   grid-template-columns: 14rem auto 14rem;
 }
 
@@ -39,7 +41,7 @@ main input {
 .insights {
   display: grid;
   grid-template-columns: repeat(3, minmax(400px, 1fr)); /* Increased min width */
-  gap: 7rem;
+  gap: 2rem;
 }
 
 .insight-card {
@@ -155,6 +157,9 @@ main table tbody td{
 }
 .recent_reports table {
   margin-top: 1rem; 
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 main .recent_reports table {
   color: white;
@@ -180,20 +185,23 @@ main .recent_reports a{
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  flex-direction: column;
 }
 
 
 table {
-  width: 70%; /* Adjust the table's width */
+  width: 100%; /* Adjust the table's width */
   margin-right: 2rem; /* Adds space between the table and chart */
+  margin-bottom: 2rem;
 }
 .charts-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 3rem; /* Controls space between pie chart and line graph */
-  padding: 2rem;
+  gap: 2rem; /* Controls space between pie chart and line graph */
+  padding: 1rem;
   flex-wrap: nowrap; /* Prevents stacking */
+  flex-direction: column;
 }
 
 .chart-container {
@@ -245,10 +253,12 @@ canvas#lineChart {
 input[type="text"],
 input[type="select"],
 select {
+  font-size: 1rem;
   pointer-events: auto ;
   user-select: auto ;
   position: relative;
   background-color: white;
+  padding: 0.5rem;
 }
 
 td {
@@ -298,4 +308,54 @@ select {
 
 .clearB:hover {
   background-color: darkred;
+}
+
+/*Making everything Responsive*/
+@media screen and (max-width: 500px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .upload-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clearB {
+    margin-left: 0;
+  }
+}
+
+h1, h2, h3 {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .table-and-chart {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  table {
+    width: 70%;
+  }
+
+  .charts-wrapper {
+    flex-direction: row;
+  }
+
+  .chart-container, .chart-container1 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .insights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .insights {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

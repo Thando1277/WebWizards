@@ -230,3 +230,57 @@
       padding: 1rem;
     }
   }
+
+
+  /* mAKING to be REsponsive */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 480px) {
+  .premium-info h2,
+  .payment-form h2 {
+    font-size: 1.25rem;
+  }
+
+  .billing-section h3,
+  .payment-section h3 {
+    font-size: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .card-option {
+    width: 50px;
+    height: 35px;
+    padding: 0.5rem;
+  }
+
+  .card-option i {
+    font-size: 1.5rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .social-links a {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    gap: 1rem;
+  }
+
+  .payment-form, .premium-info {
+    padding: 1rem;
+  }
+}

@@ -272,3 +272,50 @@ function updateIssueCount() {
   getLocation(); // initial fetch
 });
 
+// getting the dark toogle
+const darkToggle = document.getElementById("darkModeToggle");
+const darkIcon = darkToggle.nextElementSibling.nextElementSibling;
+
+// Getting the stylish toggle
+const styleToggle = document.getElementById("styleModeToggle");
+const styleIcon = styleToggle.nextElementSibling.nextElementSibling;
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  // Getting saved settings fromstrage(localstorage)
+  const darkMode = localStorage.getItem("darkMode") === "true"; 
+  const styleMode = localStorage.getItem("styleMode") === "true";
+
+  // Appplying the dark mode setting 
+  darkToggle.checked = darkMode; 
+  if (darkMode) {
+    document.body.classList.add("light-mode"); 
+    darkIcon.textContent = "☀️"; 
+  } else {
+    darkIcon.textContent = "🌙"; 
+  }
+
+  styleToggle.checked = styleMode;
+  if (styleMode) {
+    document.body.classList.add("masterpiece-mode");  
+    styleIcon.textContent = "✨"; 
+  } else {
+    styleIcon.textContent = "🎨"; 
+  }
+});
+
+// Daark mode toggle is clicked
+darkToggle.addEventListener("change", () => {
+  const isChecked = darkToggle.checked; 
+  document.body.classList.toggle("light-mode", isChecked);
+  darkIcon.textContent = isChecked ? "☀️" : "🌙";
+
+  // Save preference in local Storage
+  localStorage.setItem("darkMode", isChecked);
+});
+styleToggle.addEventListener("change", () => {
+  const isChecked = styleToggle.checked;
+  document.body.classList.toggle("masterpiece-mode", isChecked);
+  styleIcon.textContent = isChecked ? "✨" : "🎨";
+  localStorage.setItem("styleMode", isChecked);
+});
