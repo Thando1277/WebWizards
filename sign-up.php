@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 // Database connection
 $servername = "localhost";
 $username = "root";
-$password = "LockIn_78";
+$password = "Makungu@0608";
 $dbname = "WebWizards";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

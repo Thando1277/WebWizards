@@ -16,7 +16,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 // Database configuration
 $servername = "localhost";
 $username = "root";
-$password = "LockIn_78";
+$password = "Makungu@0608";
 $dbname = "WebWizards";
 
 function debugLog($message) {

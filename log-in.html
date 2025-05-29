@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome back! Log in</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"/>
+  <title>SnapFix - Log In</title>
   <link rel="stylesheet" href="log-in.css"/>
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -16,6 +16,8 @@
       <a href="services.html">Services</a>
       <a href="contactUs.html">Contact</a>
       <a href="sign-up.html">Sign Up</a>
+      <a href="log-in.html">Log In</a>
+      <a href="passwordreset.html">Reset Password</a>
     </nav>
   </header>
 
@@ -33,20 +35,19 @@
           <small id="usernameError" style="color: #FFA333;"></small>
         </div>
 
-<div class="input-box animation">
-  <input type="password" id="passwordInput" name="password" required />
-  <label for="passwordInput">Password</label>
-  <i class='bx bx-show password-toggle' id="togglePassword" style="cursor: pointer; position: absolute; right: 30px;"></i>
-  <small id="passwordError" style="color: #FFA333;"></small>
-</div>
-
+        <div class="input-box animation">
+          <input type="password" id="passwordInput" name="password" required />
+          <label for="passwordInput">Password</label>
+          <i class='bx bx-show password-toggle' id="togglePassword" style="cursor: pointer; position: absolute; right: 30px;"></i>
+          <small id="passwordError" style="color: #FFA333;"></small>
+        </div>
 
         <div class="input-box animation">
           <h4 id="serverError" style="color: #FFA333; text-align: center; margin-top: 20px;"></h4>
           <button class="btn" type="submit">Login</button>
         </div>
-        
-          <div class="input-box animation" style="text-align: center; margin-top: 10px;">
+
+        <div class="input-box animation" style="text-align: center; margin-top: 10px;">
           <a href="forgot-password.html" style="color: #FFA333;">Forgot Password?</a>
         </div>
 
@@ -59,16 +60,14 @@
 
   <footer>
     <ul class="social_icon">
-      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-      <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-      <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-      <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+      <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+      <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
+      <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
     </ul>
-    <p>@2024 Web Wizards || All copyrights Reserved</p>
+    <p>&copy; 2025 SnapFix. All rights reserved.</p>
   </footer>
 
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="log-in.js"></script>
 </body>
 </html>
