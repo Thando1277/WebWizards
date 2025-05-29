@@ -1,44 +1,55 @@
-<?php 
-session_start(); 
-$isPremium = $_SESSION['isPremium'] ?? false;
-
-// DB connection
+<?php
+// Database connection
 $servername = "localhost";
 $username = "root";
-$password = "LockIn_78";
+$password = "LockIn_78"; // Updated to match your login code
 $dbname = "WebWizards";
 
 try {
-    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch(PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+    die("Connection failed: " . $e->getMessage() . "<br>Please check your database credentials.");
 }
 
-// Only show admin feedback
-$messageType = $_GET['type'] ?? '';
-$reportID = $_GET['report_id'] ?? null;
+// Check if user is logged in - matching your login code session variables
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    die("Please log in to view feedback.");
+}
 
-$reportDetails = null;
-$messages = [];
+$currentUserID = $_SESSION['user_id']; // Changed from 'UserID' to 'user_id' to match your login code
 
-if ($messageType === 'feedback' && $reportID) {
-    // First, get the report details including sender info
-    $reportStmt = $pdo->prepare("SELECT r.*, u.FullName AS SenderName, u.Email AS SenderEmail 
-                                FROM Reports r 
-                                JOIN Users u ON r.UserID = u.UserID 
-                                WHERE r.ReportID = ?");
-    $reportStmt->execute([$reportID]);
-    $reportDetails = $reportStmt->fetch(PDO::FETCH_ASSOC);
-    
-    // Then get all feedback messages for this report
-    $messageStmt = $pdo->prepare("SELECT m.*, a.FullName AS AdminName 
-                                 FROM Messages m 
-                                 JOIN Admins a ON m.AdminID = a.AdminID 
-                                 WHERE m.ReportID = ? AND m.AdminID IS NOT NULL
-                                 ORDER BY m.CreatedAt DESC");
-    $messageStmt->execute([$reportID]);
-    $messages = $messageStmt->fetchAll(PDO::FETCH_ASSOC);
+// Query to fetch all feedback related to the current user's reports with admin information
+// Added ROW_NUMBER() to create sequential report numbers for this user only
+$sql = "SELECT 
+    m.MessageID,
+    m.Feedback,
+    m.FeedbackImage,
+    m.CreatedAt as FeedbackTime,
+    r.ReportID,
+    r.Image as ReportImage,
+    r.Description as ReportDescription,
+    r.Location,
+    r.Status,
+    r.CreatedAt as ReportTime,
+    a.FullName as AdminName,
+    a.Email as AdminEmail,
+    ROW_NUMBER() OVER (ORDER BY r.CreatedAt ASC) as UserReportNumber
+FROM Messages m
+INNER JOIN Reports r ON m.ReportID = r.ReportID
+LEFT JOIN Admins a ON m.AdminID = a.AdminID
+WHERE r.UserID = :userID
+ORDER BY m.CreatedAt DESC";
+
+try {
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':userID', $currentUserID, PDO::PARAM_INT);
+    $stmt->execute();
+    $feedbacks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch(PDOException $e) {
+    die("Query failed: " . $e->getMessage());
 }
 ?>
 
@@ -46,261 +57,449 @@ if ($messageType === 'feedback' && $reportID) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Report Details & Admin Feedback</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Feedback - WebWizards</title>
     <style>
-        body {
-            font-family: "Segoe UI", sans-serif;
-            margin: 20px;
-            background: #f5f5f5;
-            color: #333;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #000000 50%, #33200a 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
         .container {
-            background: white;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(26, 26, 26, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid #333;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FFA333;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #FFA333, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: #ccc;
+        }
+
+        .feedback-card {
+            background: #2d2d2d;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border-left: 5px solid #FFA333;
+            border: 1px solid #404040;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feedback-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 163, 51, 0.2);
+            border-color: #FFA333;
+        }
+
+        .feedback-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .feedback-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .admin-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .admin-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #FFA333, #FF8C00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(255, 163, 51, 0.3);
+        }
+
+        .admin-details h3 {
+            color: #FFA333;
+            font-size: 1.1em;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .admin-badge {
+            background: #FFA333;
+            color: #1a1a1a;
+            font-size: 0.7em;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .admin-email {
+            color: #bbb;
+            font-size: 0.9em;
+        }
+
+        .timestamp {
+            color: #FFA333;
+            font-size: 0.9em;
+            background: #1a1a1a;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid #FFA333;
+        }
+
+        .report-info {
+            background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
+            border: 1px solid #FFA333;
         }
-        .report-header {
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .report-title {
-            color: #007bff;
+
+        .report-info h4 {
+            color: #FFA333;
             margin-bottom: 10px;
-            font-size: 1.5em;
         }
-        .report-meta {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
+
+        .report-info p {
+            color: #ccc;
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .report-id {
+            background: linear-gradient(45deg, #1a1a1a, #333);
+            color: #FFA333;
+            padding: 5px 12px;
+            border-radius: 15px;
             font-size: 0.9em;
-            color: #666;
-        }
-        .meta-item {
-            background: #f8f9fa;
-            padding: 8px 12px;
-            border-radius: 6px;
-        }
-        .meta-label {
             font-weight: bold;
-            display: inline-block;
-            min-width: 80px;
+            border: 1px solid #FFA333;
         }
-        .status {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 15px;
             font-size: 0.8em;
             font-weight: bold;
             text-transform: uppercase;
         }
-        .status.pending { background: #fff3cd; color: #856404; }
-        .status.approved { background: #d4edda; color: #155724; }
-        .status.rejected { background: #f8d7da; color: #721c24; }
-        .report-description {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            line-height: 1.6;
-        }
-        .report-image {
-            max-width: 100%;
-            max-height: 400px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin: 15px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .feedback-section {
-            margin-top: 30px;
-        }
-        .section-title {
-            color: #333;
-            border-bottom: 1px solid #dee2e6;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .feedback-container {
-            background: #f8f9fa;
-            border-left: 4px solid #007bff;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        .feedback-header {
+
+        .status-pending { background: #4D2800; color: #FFA333; border: 1px solid #FFA333; }
+        .status-resolved { background: #1B4D1B; color: #4CAF50; border: 1px solid #4CAF50; }
+        .status-in-progress { background: #2D1F00; color: #FFD700; border: 1px solid #FFD700; }
+
+        .image-gallery {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: #555;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
         }
-        .admin-name {
-            color: #007bff;
+
+        .image-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 163, 51, 0.2);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
         }
-        .feedback-time {
-            color: #6c757d;
-            font-size: 0.9em;
+
+        .image-container:hover {
+            border-color: #FFA333;
+            box-shadow: 0 6px 20px rgba(255, 163, 51, 0.3);
         }
-        .feedback-content {
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-        .feedback-image {
-            max-width: 100%;
-            max-height: 300px;
-            border-radius: 6px;
+
+        .report-image, .feedback-image {
+            max-width: 200px;
+            max-height: 150px;
+            object-fit: cover;
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .report-image:hover, .feedback-image:hover {
+            transform: scale(1.05);
+        }
+
+        .image-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(26, 26, 26, 0.8));
+            color: #FFA333;
+            padding: 8px;
+            font-size: 0.8em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .feedback-content {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 3px solid #FFA333;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid #333;
+        }
+
+        .feedback-content h4 {
+            color: #FFA333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .feedback-text {
+            color: #ffffff;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        .location-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #bbb;
             margin-top: 10px;
         }
+
         .no-feedback {
             text-align: center;
-            margin-top: 40px;
-            color: #777;
+            padding: 60px 20px;
+            color: #666;
+            background: linear-gradient(145deg, #FFF8F0, #FFFAF5);
+            border-radius: 15px;
+            border: 2px dashed #FFA333;
+        }
+
+        .no-feedback h2 {
+            color: #BF6B00;
+            margin-bottom: 15px;
+        }
+
+        .no-feedback img {
+            width: 100px;
+            opacity: 0.5;
+            margin-bottom: 20px;
+        }
+
+        .no-admin-info {
+            color: #999;
             font-style: italic;
         }
-        .BackBtn {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-bottom: 20px;
-            font-size: 0.9em;
-            transition: background-color 0.2s;
-        }
-        .BackBtn:hover {
-            background: #0056b3;
-        }
-        .not-found {
-            text-align: center;
-            margin-top: 40px;
-            color: #dc3545;
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .feedback-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .report-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .image-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
-
-    <button class="BackBtn" onclick="window.location.href='<?= $isPremium ? 'premium-dashboard.html' : 'userdashboard.html' ?>'">← Back to Dashboard</button>
-
-    <?php if (!$reportDetails): ?>
-        <div class="not-found">
-            <h3>Report Not Found</h3>
-            <p>The requested report could not be found or you don't have permission to view it.</p>
-        </div>
-    <?php else: ?>
-        <!-- Report Details Section -->
-        <div class="container">
-            <div class="report-header">
-                <h2 class="report-title">Report #<?= htmlspecialchars($reportID) ?></h2>
-                <div class="report-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Sender:</span>
-                        <?= htmlspecialchars($reportDetails['SenderName']) ?>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Email:</span>
-                        <?= htmlspecialchars($reportDetails['SenderEmail']) ?>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Location:</span>
-                        <?= htmlspecialchars($reportDetails['Location']) ?>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Status:</span>
-                        <span class="status <?= strtolower($reportDetails['Status']) ?>">
-                            <?= htmlspecialchars($reportDetails['Status']) ?>
-                        </span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Submitted:</span>
-                        <?= date('M j, Y g:i A', strtotime($reportDetails['CreatedAt'])) ?>
-                    </div>
-                </div>
-            </div>
-
-            <h4>Report Description:</h4>
-            <div class="report-description">
-                <?= nl2br(htmlspecialchars($reportDetails['Description'])) ?>
-            </div>
-
-            <?php if (!empty($reportDetails['Image'])): ?>
-                <h4>Report Image:</h4>
-                <img src="<?= htmlspecialchars($reportDetails['Image']) ?>" 
-                     class="report-image" 
-                     onclick="openModal(this.src)"
-                     alt="Report Image">
-            <?php endif; ?>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Report Feedback</h1>
+            <p>View feedback and responses for your submitted reports</p>
         </div>
 
-        <!-- Admin Feedback Section -->
-        <div class="container feedback-section">
-            <h3 class="section-title">Admin Feedback</h3>
-            
-            <?php if (empty($messages)): ?>
-                <div class="no-feedback">
-                    <p>No admin feedback has been provided for this report yet.</p>
-                </div>
-            <?php else: ?>
-                <?php foreach ($messages as $message): ?>
-                    <div class="feedback-container">
-                        <div class="feedback-header">
-                            <span class="admin-name"><?= htmlspecialchars($message['AdminName']) ?></span>
-                            <span class="feedback-time"><?= date('M j, Y g:i A', strtotime($message['CreatedAt'])) ?></span>
+        <?php if (empty($feedbacks)): ?>
+            <div class="no-feedback">
+                <h2>No Feedback Available</h2>
+                <p>You haven't received any feedback on your reports yet.</p>
+            </div>
+        <?php else: ?>
+            <?php foreach ($feedbacks as $feedback): ?>
+                <div class="feedback-card">
+                    <!-- Feedback Header -->
+                    <div class="feedback-header">
+                        <div class="admin-info">
+                            <div class="admin-avatar">
+                                <?php 
+                                if (!empty($feedback['AdminName'])) {
+                                    echo strtoupper(substr($feedback['AdminName'], 0, 1)); 
+                                } else {
+                                    echo '?';
+                                }
+                                ?>
+                            </div>
+                            <div class="admin-details">
+                                <?php if (!empty($feedback['AdminName'])): ?>
+                                    <h3>
+                                        <?php echo htmlspecialchars($feedback['AdminName']); ?>
+                                        <span class="admin-badge">ADMIN</span>
+                                    </h3>
+                                    <div class="admin-email"><?php echo htmlspecialchars($feedback['AdminEmail']); ?></div>
+                                <?php else: ?>
+                                    <h3 class="no-admin-info">System Response</h3>
+                                    <div class="admin-email no-admin-info">Automated feedback</div>
+                                <?php endif; ?>
+                            </div>
                         </div>
+                        <div class="timestamp">
+                            📅 <?php echo date('M d, Y • H:i', strtotime($feedback['FeedbackTime'])); ?>
+                        </div>
+                    </div>
+
+                    <!-- Original Report Info -->
+                    <div class="report-info">
+                        <div class="report-header">
+                            <div class="report-id">Report #<?php echo $feedback['UserReportNumber']; ?></div>
+                            <div class="status-badge status-<?php echo strtolower(str_replace(' ', '-', $feedback['Status'])); ?>">
+                                <?php echo htmlspecialchars($feedback['Status']); ?>
+                            </div>
+                        </div>
+                        
+                        <h4>📝 Report Description:</h4>
+                        <p><?php echo htmlspecialchars($feedback['ReportDescription']); ?></p>
+                        
+                        <div class="location-info">
+                            <span>📍</span>
+                            <span><?php echo htmlspecialchars($feedback['Location']); ?></span>
+                            <span style="margin-left: auto; color: #999;">
+                                Reported: <?php echo date('M d, Y', strtotime($feedback['ReportTime'])); ?>
+                            </span>
+                        </div>
+
+                        <!-- Images -->
+                        <div class="image-gallery">
+                            <?php if (!empty($feedback['ReportImage'])): ?>
+                                <div class="image-container">
+                                    <img src="<?php echo htmlspecialchars($feedback['ReportImage']); ?>" 
+                                         alt="Report Image" 
+                                         class="report-image"
+                                         onclick="openImageModal('<?php echo htmlspecialchars($feedback['ReportImage']); ?>')"
+                                         onerror="this.style.display='none'; this.nextElementSibling.innerHTML='❌ Report Image Not Found';">
+                                    <div class="image-label">Original Report</div>
+                                </div>
+                            <?php else: ?>
+                                <div class="image-container" style="background: #2d2d2d; padding: 20px; text-align: center; color: #bbb; border: 1px dashed #555;">
+                                    <p>📷 No Report Image</p>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($feedback['FeedbackImage'])): ?>
+                                <div class="image-container">
+                                    <?php 
+                                    // Fix the feedback image path
+                                    $feedbackImagePath = $feedback['FeedbackImage'];
+                                    // Check if the path already contains a directory, if not add 'uploads/'
+                                    if (!str_contains($feedbackImagePath, '/')) {
+                                        $feedbackImagePath = 'uploads/' . $feedbackImagePath;
+                                    }
+                                    ?>
+                                    <img src="<?php echo htmlspecialchars($feedbackImagePath); ?>" 
+                                         alt="Feedback Image" 
+                                         class="feedback-image"
+                                         onclick="openImageModal('<?php echo htmlspecialchars($feedbackImagePath); ?>')"
+                                         onerror="this.style.display='none'; this.nextElementSibling.innerHTML='❌ Feedback Image Not Found';">
+                                    <div class="image-label">Feedback Image</div>
+                                </div>
+                            <?php else: ?>
+                                <div class="image-container" style="background: #2d2d2d; padding: 20px; text-align: center; color: #bbb; border: 1px dashed #555;">
+                                    <p>📷 No Feedback Image</p>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Content -->
+                    <?php if (!empty($feedback['Feedback'])): ?>
                         <div class="feedback-content">
-                            <?= nl2br(htmlspecialchars($message['Feedback'])) ?>
+                            <h4>💬 Admin Feedback:</h4>
+                            <div class="feedback-text">
+                                <?php echo nl2br(htmlspecialchars($feedback['Feedback'])); ?>
+                            </div>
                         </div>
-                        <?php if (!empty($message['FeedbackImage'])): ?>
-                            <img src="<?= htmlspecialchars($message['FeedbackImage']) ?>" 
-                                 class="feedback-image" 
-                                 onclick="openModal(this.src)"
-                                 alt="Feedback Image">
-                        <?php endif; ?>
-                    </div>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-    <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
 
     <!-- Image Modal -->
-    <div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); text-align:center; z-index:1000; padding-top:50px;">
-        <div style="position:relative; display:inline-block;">
-            <img id="modalImage" style="max-width:90%; max-height:80%; border-radius:8px;">
-            <button onclick="closeModal()" style="position:absolute; top:10px; right:10px; background:rgba(0,0,0,0.7); color:white; border:none; padding:8px 12px; border-radius:4px; cursor:pointer;">✕</button>
+    <div id="imageModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); cursor: pointer;" onclick="closeImageModal()">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <img id="modalImage" style="max-width: 90vw; max-height: 90vh; border-radius: 8px;">
         </div>
-        <br><br>
-        <button onclick="closeModal()" style="background:#fff; padding:10px 20px; border:none; border-radius:6px; cursor:pointer; margin-top:20px;">Close</button>
+        <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="closeImageModal()">&times;</span>
     </div>
 
     <script>
-        function openModal(src) {
-            document.getElementById("modalImage").src = src;
-            document.getElementById("imageModal").style.display = "block";
-            document.body.style.overflow = "hidden"; // Prevent background scrolling
+        function openImageModal(src) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = src;
         }
 
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-            document.body.style.overflow = "auto"; // Restore scrolling
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
         }
-
-        // Close modal when clicking outside the image
-        document.getElementById("imageModal").addEventListener("click", function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
 
         // Close modal with Escape key
-        document.addEventListener("keydown", function(e) {
-            if (e.key === "Escape") {
-                closeModal();
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
             }
         });
     </script>

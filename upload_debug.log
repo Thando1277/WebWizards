@@ -2994,3 +2994,531 @@
 )
 
 [29-May-2025 02:35:18 Europe/Berlin] [DEBUG] 2025-05-29 02:35:18 - Processing GET request for dashboard data
+[29-May-2025 06:01:12 Europe/Berlin] [DEBUG] 2025-05-29 06:01:12 - Request Method: GET
+[29-May-2025 06:01:12 Europe/Berlin] [DEBUG] 2025-05-29 06:01:12 - Content Type: Not set
+[29-May-2025 06:01:12 Europe/Berlin] [DEBUG] 2025-05-29 06:01:12 - FILES array: Array
+(
+)
+
+[29-May-2025 06:01:12 Europe/Berlin] [DEBUG] 2025-05-29 06:01:12 - POST array: Array
+(
+)
+
+[29-May-2025 06:01:12 Europe/Berlin] [DEBUG] 2025-05-29 06:01:12 - Processing GET request for dashboard data
+[29-May-2025 06:01:42 Europe/Berlin] [DEBUG] 2025-05-29 06:01:42 - Request Method: GET
+[29-May-2025 06:01:42 Europe/Berlin] [DEBUG] 2025-05-29 06:01:42 - Content Type: Not set
+[29-May-2025 06:01:42 Europe/Berlin] [DEBUG] 2025-05-29 06:01:42 - FILES array: Array
+(
+)
+
+[29-May-2025 06:01:42 Europe/Berlin] [DEBUG] 2025-05-29 06:01:42 - POST array: Array
+(
+)
+
+[29-May-2025 06:01:42 Europe/Berlin] [DEBUG] 2025-05-29 06:01:42 - Processing GET request for dashboard data
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - Request Method: POST
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryKkjJZHVjZdb6RaOs
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => thisOne.avif
+            [full_path] => thisOne.avif
+            [type] => image/avif
+            [tmp_name] => C:\xampp\tmp\phpDDBF.tmp
+            [error] => 0
+            [size] => 8132
+        )
+
+)
+
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - POST array: Array
+(
+    [reportId] => 5
+    [action] => uploadImage
+)
+
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryKkjJZHVjZdb6RaOs
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - Image upload detected
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - File details: Array
+(
+    [name] => thisOne.avif
+    [full_path] => thisOne.avif
+    [type] => image/avif
+    [tmp_name] => C:\xampp\tmp\phpDDBF.tmp
+    [error] => 0
+    [size] => 8132
+)
+
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - Error: Invalid file type. Only JPEG, PNG, GIF, and WebP are allowed.
+[29-May-2025 06:01:59 Europe/Berlin] [DEBUG] 2025-05-29 06:01:59 - Stack trace: #0 {main}
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - Request Method: POST
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - Content Type: application/json
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - FILES array: Array
+(
+)
+
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - POST array: Array
+(
+)
+
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - Processing POST request with content type: application/json
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - JSON request with action: updateStatus
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - Update request - ReportID: 5, Status: Completed, Feedback: i suuceded
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - Request Method: GET
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - Content Type: Not set
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - FILES array: Array
+(
+)
+
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - POST array: Array
+(
+)
+
+[29-May-2025 06:02:00 Europe/Berlin] [DEBUG] 2025-05-29 06:02:00 - Processing GET request for dashboard data
+[29-May-2025 06:02:12 Europe/Berlin] [DEBUG] 2025-05-29 06:02:12 - Request Method: GET
+[29-May-2025 06:02:12 Europe/Berlin] [DEBUG] 2025-05-29 06:02:12 - Content Type: Not set
+[29-May-2025 06:02:12 Europe/Berlin] [DEBUG] 2025-05-29 06:02:12 - FILES array: Array
+(
+)
+
+[29-May-2025 06:02:12 Europe/Berlin] [DEBUG] 2025-05-29 06:02:12 - POST array: Array
+(
+)
+
+[29-May-2025 06:02:12 Europe/Berlin] [DEBUG] 2025-05-29 06:02:12 - Processing GET request for dashboard data
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - Request Method: POST
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - Content Type: multipart/form-data; boundary=----WebKitFormBoundarylJsKQWORT4wY1d1J
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => thisOne.avif
+            [full_path] => thisOne.avif
+            [type] => image/avif
+            [tmp_name] => C:\xampp\tmp\php3D26.tmp
+            [error] => 0
+            [size] => 8132
+        )
+
+)
+
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - POST array: Array
+(
+    [reportId] => 5
+    [action] => uploadImage
+)
+
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundarylJsKQWORT4wY1d1J
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - Image upload detected
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - File details: Array
+(
+    [name] => thisOne.avif
+    [full_path] => thisOne.avif
+    [type] => image/avif
+    [tmp_name] => C:\xampp\tmp\php3D26.tmp
+    [error] => 0
+    [size] => 8132
+)
+
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - Error: Invalid file type. Only JPEG, PNG, GIF, and WebP are allowed.
+[29-May-2025 06:02:24 Europe/Berlin] [DEBUG] 2025-05-29 06:02:24 - Stack trace: #0 {main}
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - Request Method: POST
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryAtMRZofstWdmChw3
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => thisOne.avif
+            [full_path] => thisOne.avif
+            [type] => image/avif
+            [tmp_name] => C:\xampp\tmp\php7D6C.tmp
+            [error] => 0
+            [size] => 8132
+        )
+
+)
+
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - POST array: Array
+(
+    [reportId] => 5
+    [action] => uploadImage
+)
+
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryAtMRZofstWdmChw3
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - Image upload detected
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - File details: Array
+(
+    [name] => thisOne.avif
+    [full_path] => thisOne.avif
+    [type] => image/avif
+    [tmp_name] => C:\xampp\tmp\php7D6C.tmp
+    [error] => 0
+    [size] => 8132
+)
+
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - Error: Invalid file type. Only JPEG, PNG, GIF, and WebP are allowed.
+[29-May-2025 06:02:40 Europe/Berlin] [DEBUG] 2025-05-29 06:02:40 - Stack trace: #0 {main}
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - Request Method: POST
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - Content Type: application/json
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - FILES array: Array
+(
+)
+
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - POST array: Array
+(
+)
+
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - Processing POST request with content type: application/json
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - JSON request with action: updateStatus
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - Update request - ReportID: 5, Status: , Feedback: i suceded poi
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - Error: Missing status
+[29-May-2025 06:02:41 Europe/Berlin] [DEBUG] 2025-05-29 06:02:41 - Stack trace: #0 {main}
+[29-May-2025 06:02:42 Europe/Berlin] [DEBUG] 2025-05-29 06:02:42 - Request Method: GET
+[29-May-2025 06:02:42 Europe/Berlin] [DEBUG] 2025-05-29 06:02:42 - Content Type: Not set
+[29-May-2025 06:02:42 Europe/Berlin] [DEBUG] 2025-05-29 06:02:42 - FILES array: Array
+(
+)
+
+[29-May-2025 06:02:42 Europe/Berlin] [DEBUG] 2025-05-29 06:02:42 - POST array: Array
+(
+)
+
+[29-May-2025 06:02:42 Europe/Berlin] [DEBUG] 2025-05-29 06:02:42 - Processing GET request for dashboard data
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - Request Method: POST
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryOHeahfQvkCVcHz1H
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => wavy-black-white-background.png
+            [full_path] => wavy-black-white-background.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpD5AF.tmp
+            [error] => 0
+            [size] => 425515
+        )
+
+)
+
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - POST array: Array
+(
+    [reportId] => 5
+    [action] => uploadImage
+)
+
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryOHeahfQvkCVcHz1H
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - Image upload detected
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - File details: Array
+(
+    [name] => wavy-black-white-background.png
+    [full_path] => wavy-black-white-background.png
+    [type] => image/png
+    [tmp_name] => C:\xampp\tmp\phpD5AF.tmp
+    [error] => 0
+    [size] => 425515
+)
+
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - Attempting to move file from C:\xampp\tmp\phpD5AF.tmp to uploads/report_5_1748491383_6837dc771c885.png
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - File moved successfully to: uploads/report_5_1748491383_6837dc771c885.png
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - Updated existing message ID 4 with image: report_5_1748491383_6837dc771c885.png
+[29-May-2025 06:03:03 Europe/Berlin] [DEBUG] 2025-05-29 06:03:03 - Image stored successfully in Messages table with filename: report_5_1748491383_6837dc771c885.png
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - Request Method: POST
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - Content Type: application/json
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - FILES array: Array
+(
+)
+
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - POST array: Array
+(
+)
+
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - Processing POST request with content type: application/json
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - JSON request with action: updateStatus
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - Update request - ReportID: 5, Status: In Progress, Feedback: i suuceded after
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - Request Method: GET
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - Content Type: Not set
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - FILES array: Array
+(
+)
+
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - POST array: Array
+(
+)
+
+[29-May-2025 06:03:04 Europe/Berlin] [DEBUG] 2025-05-29 06:03:04 - Processing GET request for dashboard data
+[29-May-2025 14:01:29 Europe/Berlin] [DEBUG] 2025-05-29 14:01:29 - Request Method: GET
+[29-May-2025 14:01:29 Europe/Berlin] [DEBUG] 2025-05-29 14:01:29 - Content Type: Not set
+[29-May-2025 14:01:29 Europe/Berlin] [DEBUG] 2025-05-29 14:01:29 - FILES array: Array
+(
+)
+
+[29-May-2025 14:01:29 Europe/Berlin] [DEBUG] 2025-05-29 14:01:29 - POST array: Array
+(
+)
+
+[29-May-2025 14:01:29 Europe/Berlin] [DEBUG] 2025-05-29 14:01:29 - Processing GET request for dashboard data
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - Request Method: POST
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - Content Type: application/json
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - FILES array: Array
+(
+)
+
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - POST array: Array
+(
+)
+
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - Processing POST request with content type: application/json
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - JSON request with action: updateStatus
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - Update request - ReportID: 6, Status: In Progress, Feedback: 
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - Request Method: GET
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - Content Type: Not set
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - FILES array: Array
+(
+)
+
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - POST array: Array
+(
+)
+
+[29-May-2025 14:01:51 Europe/Berlin] [DEBUG] 2025-05-29 14:01:51 - Processing GET request for dashboard data
+[29-May-2025 14:01:59 Europe/Berlin] [DEBUG] 2025-05-29 14:01:59 - Request Method: GET
+[29-May-2025 14:01:59 Europe/Berlin] [DEBUG] 2025-05-29 14:01:59 - Content Type: Not set
+[29-May-2025 14:01:59 Europe/Berlin] [DEBUG] 2025-05-29 14:01:59 - FILES array: Array
+(
+)
+
+[29-May-2025 14:01:59 Europe/Berlin] [DEBUG] 2025-05-29 14:01:59 - POST array: Array
+(
+)
+
+[29-May-2025 14:01:59 Europe/Berlin] [DEBUG] 2025-05-29 14:01:59 - Processing GET request for dashboard data
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Request Method: POST
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Content Type: application/json
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - FILES array: Array
+(
+)
+
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - POST array: Array
+(
+)
+
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Processing POST request with content type: application/json
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - JSON request with action: updateStatus
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Update request - ReportID: 5, Status: Completed, Feedback: 
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Request Method: POST
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Content Type: application/json
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - FILES array: Array
+(
+)
+
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - POST array: Array
+(
+)
+
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Processing POST request with content type: application/json
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - JSON request with action: updateStatus
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Update request - ReportID: 6, Status: Completed, Feedback: 
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Request Method: GET
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Content Type: Not set
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - FILES array: Array
+(
+)
+
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - POST array: Array
+(
+)
+
+[29-May-2025 14:02:04 Europe/Berlin] [DEBUG] 2025-05-29 14:02:04 - Processing GET request for dashboard data
+[29-May-2025 14:02:40 Europe/Berlin] [DEBUG] 2025-05-29 14:02:40 - Request Method: GET
+[29-May-2025 14:02:40 Europe/Berlin] [DEBUG] 2025-05-29 14:02:40 - Content Type: Not set
+[29-May-2025 14:02:40 Europe/Berlin] [DEBUG] 2025-05-29 14:02:40 - FILES array: Array
+(
+)
+
+[29-May-2025 14:02:40 Europe/Berlin] [DEBUG] 2025-05-29 14:02:40 - POST array: Array
+(
+)
+
+[29-May-2025 14:02:40 Europe/Berlin] [DEBUG] 2025-05-29 14:02:40 - Processing GET request for dashboard data
+[29-May-2025 14:02:59 Europe/Berlin] [DEBUG] 2025-05-29 14:02:59 - Request Method: GET
+[29-May-2025 14:02:59 Europe/Berlin] [DEBUG] 2025-05-29 14:02:59 - Content Type: Not set
+[29-May-2025 14:02:59 Europe/Berlin] [DEBUG] 2025-05-29 14:02:59 - FILES array: Array
+(
+)
+
+[29-May-2025 14:02:59 Europe/Berlin] [DEBUG] 2025-05-29 14:02:59 - POST array: Array
+(
+)
+
+[29-May-2025 14:02:59 Europe/Berlin] [DEBUG] 2025-05-29 14:02:59 - Processing GET request for dashboard data
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - Request Method: POST
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryAmMY3UsZ5DoQ7vA3
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php8179.tmp
+            [error] => 0
+            [size] => 100229
+        )
+
+)
+
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - POST array: Array
+(
+    [reportId] => 6
+    [action] => uploadImage
+)
+
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryAmMY3UsZ5DoQ7vA3
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - Image upload detected
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - File details: Array
+(
+    [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+    [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php8179.tmp
+    [error] => 0
+    [size] => 100229
+)
+
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - Attempting to move file from C:\xampp\tmp\php8179.tmp to uploads/report_6_1748520197_68384d055c4b9.jpg
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - File moved successfully to: uploads/report_6_1748520197_68384d055c4b9.jpg
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - Created new message with image: report_6_1748520197_68384d055c4b9.jpg
+[29-May-2025 14:03:17 Europe/Berlin] [DEBUG] 2025-05-29 14:03:17 - Image stored successfully in Messages table with filename: report_6_1748520197_68384d055c4b9.jpg
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Request Method: POST
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Content Type: application/json
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - FILES array: Array
+(
+)
+
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - POST array: Array
+(
+)
+
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Processing POST request with content type: application/json
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - JSON request with action: updateStatus
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Update request - ReportID: 6, Status: , Feedback: It's ok now
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Error: Missing status
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Stack trace: #0 {main}
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Request Method: GET
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Content Type: Not set
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - FILES array: Array
+(
+)
+
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - POST array: Array
+(
+)
+
+[29-May-2025 14:03:18 Europe/Berlin] [DEBUG] 2025-05-29 14:03:18 - Processing GET request for dashboard data
+[29-May-2025 14:03:29 Europe/Berlin] [DEBUG] 2025-05-29 14:03:29 - Request Method: GET
+[29-May-2025 14:03:29 Europe/Berlin] [DEBUG] 2025-05-29 14:03:29 - Content Type: Not set
+[29-May-2025 14:03:29 Europe/Berlin] [DEBUG] 2025-05-29 14:03:29 - FILES array: Array
+(
+)
+
+[29-May-2025 14:03:29 Europe/Berlin] [DEBUG] 2025-05-29 14:03:29 - POST array: Array
+(
+)
+
+[29-May-2025 14:03:29 Europe/Berlin] [DEBUG] 2025-05-29 14:03:29 - Processing GET request for dashboard data
+[29-May-2025 14:06:39 Europe/Berlin] [DEBUG] 2025-05-29 14:06:39 - Request Method: GET
+[29-May-2025 14:06:39 Europe/Berlin] [DEBUG] 2025-05-29 14:06:39 - Content Type: Not set
+[29-May-2025 14:06:39 Europe/Berlin] [DEBUG] 2025-05-29 14:06:39 - FILES array: Array
+(
+)
+
+[29-May-2025 14:06:39 Europe/Berlin] [DEBUG] 2025-05-29 14:06:39 - POST array: Array
+(
+)
+
+[29-May-2025 14:06:39 Europe/Berlin] [DEBUG] 2025-05-29 14:06:39 - Processing GET request for dashboard data
+[29-May-2025 14:07:09 Europe/Berlin] [DEBUG] 2025-05-29 14:07:09 - Request Method: GET
+[29-May-2025 14:07:09 Europe/Berlin] [DEBUG] 2025-05-29 14:07:09 - Content Type: Not set
+[29-May-2025 14:07:09 Europe/Berlin] [DEBUG] 2025-05-29 14:07:09 - FILES array: Array
+(
+)
+
+[29-May-2025 14:07:09 Europe/Berlin] [DEBUG] 2025-05-29 14:07:09 - POST array: Array
+(
+)
+
+[29-May-2025 14:07:09 Europe/Berlin] [DEBUG] 2025-05-29 14:07:09 - Processing GET request for dashboard data
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - Request Method: POST
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryGBHpvKg06yz5jXmJ
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => attack_on_titan_by_rinlain_d78iysd-350t-2x.jpg
+            [full_path] => attack_on_titan_by_rinlain_d78iysd-350t-2x.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5845.tmp
+            [error] => 0
+            [size] => 151323
+        )
+
+)
+
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - POST array: Array
+(
+    [reportId] => 7
+    [action] => uploadImage
+)
+
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryGBHpvKg06yz5jXmJ
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - Image upload detected
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - File details: Array
+(
+    [name] => attack_on_titan_by_rinlain_d78iysd-350t-2x.jpg
+    [full_path] => attack_on_titan_by_rinlain_d78iysd-350t-2x.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php5845.tmp
+    [error] => 0
+    [size] => 151323
+)
+
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - Attempting to move file from C:\xampp\tmp\php5845.tmp to uploads/report_7_1748520448_68384e00ecb2f.jpg
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - File moved successfully to: uploads/report_7_1748520448_68384e00ecb2f.jpg
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - Created new message with image: report_7_1748520448_68384e00ecb2f.jpg
+[29-May-2025 14:07:28 Europe/Berlin] [DEBUG] 2025-05-29 14:07:28 - Image stored successfully in Messages table with filename: report_7_1748520448_68384e00ecb2f.jpg
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - Request Method: POST
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - Content Type: application/json
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - FILES array: Array
+(
+)
+
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - POST array: Array
+(
+)
+
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - Processing POST request with content type: application/json
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - JSON request with action: updateStatus
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - Update request - ReportID: 7, Status: In Progress, Feedback: we are still on it
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - Request Method: GET
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - Content Type: Not set
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - FILES array: Array
+(
+)
+
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - POST array: Array
+(
+)
+
+[29-May-2025 14:07:30 Europe/Berlin] [DEBUG] 2025-05-29 14:07:30 - Processing GET request for dashboard data
+[29-May-2025 14:07:39 Europe/Berlin] [DEBUG] 2025-05-29 14:07:39 - Request Method: GET
+[29-May-2025 14:07:39 Europe/Berlin] [DEBUG] 2025-05-29 14:07:39 - Content Type: Not set
+[29-May-2025 14:07:39 Europe/Berlin] [DEBUG] 2025-05-29 14:07:39 - FILES array: Array
+(
+)
+
+[29-May-2025 14:07:39 Europe/Berlin] [DEBUG] 2025-05-29 14:07:39 - POST array: Array
+(
+)
+
+[29-May-2025 14:07:39 Europe/Berlin] [DEBUG] 2025-05-29 14:07:39 - Processing GET request for dashboard data
