@@ -1,132 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="dashboard.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
 </head>
 <body>
   <div class="container">
     <main>
       <h1>Admin</h1>
-    
-      <div class="date">
-        <input type="date">
-      </div>
-    
+      <div class="date"><input type="date" /></div>
+
       <div class="insights">
-        <!-- Insight 1 -->
+        <!-- Insight Cards -->
         <div class="insight-card">
-          <span class="material-symbols-sharp">
-            <ion-icon name="receipt-outline"></ion-icon>
-          </span>
+          <span class="material-symbols-sharp"><ion-icon name="receipt-outline"></ion-icon></span>
           <div class="middle">
             <div class="left">
               <h3>Total Reports</h3>
-              <h1 id="totalReports">80</h1>
+              <h1 id="totalReports">0</h1>
             </div>
             <div class="progress">
               <svg><circle r="30" cy="40" cx="40"></circle></svg>
-              <div class="number">40%</div>
+              <div class="number">0%</div>
             </div>
             <small>Last 24 hours</small>
           </div>
         </div>
-    
-        <!-- Insight 2 -->
         <div class="insight-card">
-          <span class="material-symbols-sharp">
-            <ion-icon name="trending-up-outline"></ion-icon> 
-          </span>
+          <span class="material-symbols-sharp"><ion-icon name="trending-up-outline"></ion-icon></span>
           <div class="middle">
             <div class="left">
               <h3>Total Progress</h3>
-              <h1 id="totalProgress">60</h1>
+              <h1 id="totalProgress">0</h1>
             </div>
             <div class="progress">
               <svg><circle r="30" cy="40" cx="40"></circle></svg>
-              <div class="number">30%</div>
+              <div class="number">0%</div>
             </div>
             <small>Last 24 hours</small>
           </div>
         </div>
-    
-        <!-- Insight 3 -->
         <div class="insight-card">
-          <span class="material-symbols-sharp">
-            <ion-icon name="checkmark-done-outline"></ion-icon> 
-          </span>
+          <span class="material-symbols-sharp"><ion-icon name="checkmark-done-outline"></ion-icon></span>
           <div class="middle">
             <div class="left">
               <h3>Total Completed</h3>
-              <h1 id="totalCompleted">15</h1>
+              <h1 id="totalCompleted">0</h1>
             </div>
             <div class="progress">
               <svg><circle r="30" cy="40" cx="40"></circle></svg>
-              <div class="number">15%</div>
+              <div class="number">0%</div>
             </div>
             <small>Last 24 hours</small>
           </div>
         </div>
       </div>
-    
-      <!-- Recent Reports -->
+
+      <!-- Recent Reports Section -->
       <div class="recent_reports">
         <h1>Recent Reports</h1>
         <div class="table-and-chart">
-          <form>
-          <table>
-            <thead>
-              <tr>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Email</th>
-                <th>PhoneNumber</th>
-                <th>Status</th>
-                <th>Action</th>
-                <th>Feedback</th>
-                <th>Upload Image</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                  <select name="status" onchange="storeStatus(this.value)">
-                    <option value="none">None</option>
-                    <option value="pending">Pending</option>
-                    <option value="submitted">Submitted</option>
-                  </select>
-                </td>
-                <td class="primary"><a href="details.html">Details</a></td>
-                <td class="feedback"><input type="text" name="feedback" id="feedbackInput"></td>
-                <td>
-                  <div class="upload-wrapper">
-                  <input type="file" id="fileInput" style="display: none;" />
-                  <a href="#" id="uploadIcon">
-                    <ion-icon name="images-outline"></ion-icon>
-                  </a>
-                  <button class="clearB" id="clearBtn">Clear Image</button> 
-                </div>
-                </td>                
-              </tr>
-            </tbody>
-         
-          </table>
-         <button onclick="saveFeedback()">Save</button>
-        </form>
-          <!-- Charts side by side -->
+          <form id="reportsForm">
+            <table>
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Email</th>
+                  <th>PhoneNumber</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                  <th>Feedback</th>
+                  <th>Upload Image</th>
+                </tr>
+              </thead>
+              <tbody id="reportsTableBody">
+                <!-- Reports will be loaded here dynamically -->
+              </tbody>
+            </table>
+            <button type="button" id="saveAllBtn">Save All Changes</button>
+          </form>
+
+          <!-- Charts Section -->
           <div class="charts-wrapper">
             <div class="chart-container">
               <h2>Total Reports%</h2>
               <canvas id="reportChart" width="300" height="300"></canvas>
             </div>
-    
             <div class="chart-container1">
               <h2>Raw value data</h2>
               <canvas id="lineChart"></canvas>
@@ -135,17 +97,16 @@
         </div>
       </div>
     </main>
-    
-    <div class="right">
-      
-    </div>
+    <div class="right"></div>
   </div>
 
+  <!-- External Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Local JavaScript -->
   <script src="dashboard.js"></script>
 </body>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

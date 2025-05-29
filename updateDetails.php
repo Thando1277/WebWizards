@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_id'])) {
 // Database config
 $servername = "localhost";
 $db_username = "root";
-$db_password = "";
+$db_password = "LockIn_78";
 $dbname = "WebWizards";
 
 // DB connection

@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 // Database credentials
 $servername = "localhost";
 $db_username = "root";
-$db_password = "";
+$db_password = "LockIn_78";
 $dbname = "WebWizards";
 
 // Create connection

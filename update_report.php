@@ -1,95 +1,81 @@
 <?php
-// update_report.php - Handles report status updates and feedback
-
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
+session_start();
+
 // Database configuration
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "LockIn_78";
 $dbname = "WebWizards";
-
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(['success' => false, 'error' => 'Method not allowed']);
-    exit;
-}
 
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $input = json_decode(file_get_contents('php://input'), true);
-    
-    if (!$input) {
-        throw new Exception('Invalid JSON input');
+    // Verify CSRF token for POST requests
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $requestToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? $_POST['csrf_token'] ?? '';
+        if (!hash_equals($_SESSION['csrf_token'] ?? '', $requestToken)) {
+            http_response_code(403);
+            die(json_encode(['success' => false, 'error' => 'Invalid CSRF token']));
+        }
     }
 
-    $action = $input['action'] ?? '';
+    // Check if it's a file upload
+    if (!empty($_FILES['image'])) {
+        $input = $_POST;
+        $action = $input['action'] ?? '';
+    } else {
+        // Read JSON input for non-file requests
+        $input = json_decode(file_get_contents('php://input'), true);
+        $action = $input['action'] ?? '';
+    }
 
     switch ($action) {
         case 'updateStatus':
             $reportId = $input['reportId'] ?? null;
             $newStatus = $input['status'] ?? null;
             $feedback = $input['feedback'] ?? '';
+            $adminId = 1; // Hardcoded for demo
 
             if (!$reportId || !$newStatus) {
-                throw new Exception('Report ID and status are required');
+                throw new Exception('Missing reportId or status.');
             }
 
-            // Validate status
             $validStatuses = ['Pending', 'In Progress', 'Completed', 'Rejected'];
             if (!in_array($newStatus, $validStatuses)) {
-                throw new Exception('Invalid status value');
+                throw new Exception('Invalid status value: ' . $newStatus);
             }
+
+            $pdo->beginTransaction();
 
             // Update report status
-            $updateQuery = "UPDATE Reports SET Status = ? WHERE ReportID = ?";
-            $stmt = $pdo->prepare($updateQuery);
-            $result = $stmt->execute([$newStatus, $reportId]);
+            $updateQuery = "UPDATE Reports SET Status = ?, UpdatedAt = NOW() WHERE ReportID = ?";
+            $updateStmt = $pdo->prepare($updateQuery);
+            $updateStmt->execute([$newStatus, $reportId]);
 
-            if (!$result) {
-                throw new Exception('Failed to update report status');
+            if ($updateStmt->rowCount() === 0) {
+                throw new Exception('No rows updated - report may not exist.');
             }
 
-            // If feedback provided, you might want to store it
-            // This assumes you have a feedback table or column
+            // Insert feedback into Messages table if provided
             if (!empty($feedback)) {
-                // Add feedback storage logic here
-                // For example, if you have a Feedback table:
-                /*
-                $feedbackQuery = "INSERT INTO Feedback (ReportID, FeedbackText, CreatedAt) VALUES (?, ?, NOW())";
-                $feedbackStmt = $pdo->prepare($feedbackQuery);
-                $feedbackStmt->execute([$reportId, $feedback]);
-                */
+                $userQuery = "SELECT UserID FROM Reports WHERE ReportID = ?";
+                $userStmt = $pdo->prepare($userQuery);
+                $userStmt->execute([$reportId]);
+                $userId = $userStmt->fetchColumn();
+
+                $insertMsgQuery = "INSERT INTO Messages (ReportID, UserID, AdminID, Feedback, CreatedAt) 
+                                  VALUES (?, ?, ?, ?, NOW())";
+                $messageStmt = $pdo->prepare($insertMsgQuery);
+                $messageStmt->execute([$reportId, $userId, $adminId, $feedback]);
             }
 
-            // If status is completed, award points to user
-            if ($newStatus === 'Completed') {
-                $pointsQuery = "
-                    INSERT INTO Points (UserID, ReportID, PointsEarned) 
-                    SELECT r.UserID, r.ReportID, 20 
-                    FROM Reports r 
-                    WHERE r.ReportID = ? 
-                    ON DUPLICATE KEY UPDATE PointsEarned = PointsEarned
-                ";
-                $pointsStmt = $pdo->prepare($pointsQuery);
-                $pointsStmt->execute([$reportId]);
-
-                // Update premium user points balance
-                $updatePointsQuery = "
-                    UPDATE PremiumUser p 
-                    JOIN Reports r ON p.UserID = r.UserID 
-                    SET p.PointsBalance = p.PointsBalance + 20,
-                        p.TotalReports = p.TotalReports + 1
-                    WHERE r.ReportID = ? AND p.UserID = r.UserID
-                ";
-                $updatePointsStmt = $pdo->prepare($updatePointsQuery);
-                $updatePointsStmt->execute([$reportId]);
-            }
+            $pdo->commit();
 
             echo json_encode([
                 'success' => true,
@@ -99,76 +85,92 @@ try {
             ]);
             break;
 
-        case 'saveFeedback':
-            $reportId = $input['reportId'] ?? null;
-            $feedback = $input['feedback'] ?? '';
-
-            if (!$reportId || empty($feedback)) {
-                throw new Exception('Report ID and feedback are required');
-            }
-
-            // Store feedback (assuming you create a Feedback table)
-            // For now, we'll update the Reports table with a feedback column
-            // You might want to alter your Reports table to add a Feedback column:
-            // ALTER TABLE Reports ADD COLUMN Feedback TEXT;
+        case 'uploadImage':
+            $reportId = $_POST['reportId'] ?? null;
             
-            $feedbackQuery = "UPDATE Reports SET Description = CONCAT(Description, '\n\nAdmin Feedback: ', ?) WHERE ReportID = ?";
-            $stmt = $pdo->prepare($feedbackQuery);
-            $result = $stmt->execute([$feedback, $reportId]);
-
-            if (!$result) {
-                throw new Exception('Failed to save feedback');
-            }
-
-            echo json_encode([
-                'success' => true,
-                'message' => 'Feedback saved successfully'
-            ]);
-            break;
-
-        case 'getReportDetails':
-            $reportId = $input['reportId'] ?? null;
-
             if (!$reportId) {
                 throw new Exception('Report ID is required');
             }
 
-            $query = "
-                SELECT r.*, u.FullName, u.Email, u.PhoneNumber, u.Username
-                FROM Reports r
-                JOIN Users u ON r.UserID = u.UserID
-                WHERE r.ReportID = ?
-            ";
-            
-            $stmt = $pdo->prepare($query);
-            $stmt->execute([$reportId]);
-            $report = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            if (!$report) {
-                throw new Exception('Report not found');
+            if (!isset($_FILES['image']) || $_FILES['image']['error'] !== UPLOAD_ERR_OK) {
+                throw new Exception('No file uploaded or upload error occurred');
             }
+
+            // Validate file type
+            $allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+            $fileType = $_FILES['image']['type'];
+            if (!in_array($fileType, $allowedTypes)) {
+                throw new Exception('Invalid file type. Only JPEG, PNG, GIF, and WebP are allowed.');
+            }
+
+            // Set upload directory
+            $uploadDir = __DIR__ . '/uploads/';
+            if (!is_dir($uploadDir)) {
+                if (!mkdir($uploadDir, 0755, true)) {
+                    throw new Exception('Failed to create upload directory');
+                }
+            }
+
+            // Generate unique filename
+            $fileExtension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+            $filename = 'report_' . $reportId . '_' . uniqid() . '.' . $fileExtension;
+            $destination = $uploadDir . $filename;
+
+            // Move uploaded file
+            if (!move_uploaded_file($_FILES['image']['tmp_name'], $destination)) {
+                throw new Exception('Failed to save uploaded file');
+            }
+
+            // Update database with image reference
+            $stmt = $pdo->prepare("UPDATE Reports SET FeedbackImage = ? WHERE ReportID = ?");
+            $stmt->execute([$filename, $reportId]);
 
             echo json_encode([
                 'success' => true,
-                'data' => $report
+                'message' => 'Image uploaded successfully',
+                'fileName' => $filename,
+                'filePath' => 'uploads/' . $filename
+            ]);
+            break;
+
+        case 'clearImage':
+            $reportId = $input['reportId'] ?? null;
+            
+            if (!$reportId) {
+                throw new Exception('Report ID is required');
+            }
+
+            // First get current image to delete it
+            $stmt = $pdo->prepare("SELECT FeedbackImage FROM Reports WHERE ReportID = ?");
+            $stmt->execute([$reportId]);
+            $currentImage = $stmt->fetchColumn();
+
+            if ($currentImage) {
+                $filePath = __DIR__ . '/uploads/' . $currentImage;
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+
+            // Clear from database
+            $stmt = $pdo->prepare("UPDATE Reports SET FeedbackImage = NULL WHERE ReportID = ?");
+            $stmt->execute([$reportId]);
+
+            echo json_encode([
+                'success' => true,
+                'message' => 'Image cleared successfully'
             ]);
             break;
 
         default:
-            throw new Exception('Invalid action');
+            throw new Exception('Invalid action specified.');
     }
-
-} catch (PDOException $e) {
-    http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'error' => 'Database error: ' . $e->getMessage()
-    ]);
 } catch (Exception $e) {
     http_response_code(400);
     echo json_encode([
         'success' => false,
-        'error' => $e->getMessage()
+        'error' => $e->getMessage(),
+        'trace' => $e->getTrace()
     ]);
 }
 ?>

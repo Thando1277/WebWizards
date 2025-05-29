@@ -11,8 +11,15 @@ if(!isset($_SESSION['user_id'])) {
 // Database connection
 $host = 'localhost';
 $username = 'root';
+<<<<<<< Updated upstream
 $password = '';
 $database = 'WebWizards';
+=======
+$password = 'LockIn_78';
+$databse = 'WebWizards';
+
+$conn = new mysqli($host, $username, $password, $databse);
+>>>>>>> Stashed changes
 
 $conn = new mysqli($host, $username, $password, $database);
 

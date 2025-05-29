@@ -10,13 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".container").classList.add("active");
 });
 
-(function() {
-    emailjs.init("ALFssTcDRmb8yBusM");
-})();
 
 document.getElementById('signUpForm').addEventListener('submit', function (e) {
     e.preventDefault();
     
+    const fullname = document.getElementById('fullnameInput').value.trim();
     const username = document.getElementById('usernameInput').value.trim();
     const password = document.getElementById('passwordInput').value.trim();
     const email = document.getElementById('emailInput').value.trim();
@@ -60,7 +58,7 @@ document.getElementById('signUpForm').addEventListener('submit', function (e) {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+            body: `fullname=${encodeURIComponent(fullname)}&username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}&phone=${encodeURIComponent(phone)}`
         })
         .then(response => response.text())
         .then(result => {

@@ -4,7 +4,7 @@
 // Database configuration
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "LockIn_78";
 $dbname = "WebWizards";
 
 try {
