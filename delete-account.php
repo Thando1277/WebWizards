@@ -12,9 +12,13 @@ if(!isset($_SESSION['user_id'])) {
 $host = 'localhost';
 $username = 'root';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 $password = 'LockIn_78';
 =======
 $password = 'Makungu@0608';
+>>>>>>> Stashed changes
+=======
+$password = '';
 >>>>>>> Stashed changes
 $database = 'WebWizards';
 

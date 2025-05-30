@@ -3,9 +3,13 @@
 $servername = "localhost";
 $username = "root";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 $password = "LockIn_78"; // Updated to match your login code
 =======
 $password = "Makungu@0608";
+>>>>>>> Stashed changes
+=======
+$password = ""; // Updated to match your login code
 >>>>>>> Stashed changes
 $dbname = "WebWizards";
 
@@ -19,6 +23,7 @@ try {
 
 // Check if user is logged in - matching your login code session variables
 session_start();
+$isPremium = $_SESSION['isPremium'] ?? false;
 if (!isset($_SESSION['user_id'])) {
     die("Please log in to view feedback.");
 }
@@ -77,6 +82,55 @@ try {
             padding: 20px;
         }
 
+        /* Back Button Styling */
+        .BackBtn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #FFA333, #FF8C00);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 163, 51, 0.3);
+            border: 2px solid transparent;
+        }
+
+        .BackBtn:hover {
+            background: linear-gradient(135deg, #FF8C00, #FFA333);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 163, 51, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .BackBtn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(255, 163, 51, 0.3);
+        }
+
+        .BackBtn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            transition: transform 0.3s ease;
+        }
+
+        .BackBtn:hover svg {
+            transform: translateX(-2px);
+        }
+
+        .BackBtn span {
+            font-family: inherit;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -85,6 +139,7 @@ try {
             padding: 30px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             border: 1px solid #333;
+            margin-top: 80px; /* Add top margin to account for fixed back button */
         }
 
         .header {
@@ -121,11 +176,6 @@ try {
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(255, 163, 51, 0.2);
             border-color: #FFA333;
-        }
-
-        .feedback-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
         }
 
         .feedback-header {
@@ -316,13 +366,13 @@ try {
             text-align: center;
             padding: 60px 20px;
             color: #666;
-            background: linear-gradient(145deg, #FFF8F0, #FFFAF5);
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
             border-radius: 15px;
             border: 2px dashed #FFA333;
         }
 
         .no-feedback h2 {
-            color: #BF6B00;
+            color: #FFA333;
             margin-bottom: 15px;
         }
 
@@ -338,9 +388,18 @@ try {
         }
 
         @media (max-width: 768px) {
+            .BackBtn {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin-bottom: 20px;
+                width: fit-content;
+            }
+
             .container {
                 padding: 20px;
                 margin: 10px;
+                margin-top: 20px;
             }
 
             .feedback-header {
@@ -362,6 +421,13 @@ try {
     </style>
 </head>
 <body>
+    <button class="BackBtn" id="BackBtn">
+        <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
+            <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
+        </svg>
+        <span>Back</span>
+    </button>
+
     <div class="container">
         <div class="header">
             <h1>📋 Report Feedback</h1>
@@ -491,6 +557,11 @@ try {
     </div>
 
     <script>
+        const isPremium = <?php echo json_encode($isPremium); ?>;
+        document.getElementById('BackBtn').addEventListener('click', () => {
+          window.location.href = isPremium ? 'premium-dashboard.html' : 'userdashboard.html';
+        });
+        
         function openImageModal(src) {
             document.getElementById('imageModal').style.display = 'block';
             document.getElementById('modalImage').src = src;

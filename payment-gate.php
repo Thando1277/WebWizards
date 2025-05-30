@@ -4,7 +4,11 @@ header('Content-Type: application/json');
 $host = 'localhost';
 $dbname = 'WebWizards';
 $username = 'root';
+<<<<<<< Updated upstream
 $password = 'Makungu@0608';
+=======
+$password = '';
+>>>>>>> Stashed changes
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);

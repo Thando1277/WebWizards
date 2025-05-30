@@ -2,13 +2,15 @@
 session_start();
 header('Content-Type: application/json');
 
-// Database credentials
 $servername = "localhost";
 $db_username = "root";
+<<<<<<< Updated upstream
 $db_password = "Makungu@0608";
+=======
+$db_password = "";
+>>>>>>> Stashed changes
 $dbname = "WebWizards";
 
-// Create connection
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
 if ($conn->connect_error) {
@@ -16,7 +18,6 @@ if ($conn->connect_error) {
     exit();
 }
 
-// Query to get all reports with address-based location
 $sql = "SELECT Location, Description, Status FROM Reports";
 $result = $conn->query($sql);
 

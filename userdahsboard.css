@@ -134,6 +134,7 @@ p{
   justify-content: space-between;
   align-items: center;
   padding:0 10px;
+     background: #1a1a1a;
 }
 
 .toggle{
@@ -161,6 +162,8 @@ p{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 30px;
+    border: 2px solid transparent;
+    background: #1a1a1a;
 }
 .cardBox .card{
   position: relative;
@@ -185,7 +188,14 @@ p{
   align-items: center;
   gap: 10px; 
   padding: 20px;
-  background-color:#111 ;
+  background-color:#1a1a1a ;
+    box-shadow: 
+        0 20px 40px var(--shadow-dark),
+        0 0 0 1px var(--border-color),
+        0 0 20px rgba(255, 163, 51, 0.05),
+        inset 0 1px 0 rgba(255, 163, 51, 0.1),
+        inset 0 -1px 0 var(--black-accent);
+  border: 2px solid transparent;
 }
 
 .upload-section {
@@ -226,6 +236,7 @@ display: flex;
   font-size: 36px;
   color: orange;
   transition: color 0.3s ease;
+  margin-left: 15px;
 }
 
 
@@ -407,6 +418,7 @@ display: flex;
 .back-button:focus:not(:focus-visible) {
   outline: none;
 }
+<<<<<<< Updated upstream
 
     #ads-banner {
     position: fixed;
@@ -494,4 +506,18 @@ body {
   .submit button {
     width: 90%;
   }
+=======
+.startVoice{
+  padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:orange;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
+}
+.startVoice:hover{
+  background: #3e290f;
+>>>>>>> Stashed changes
 }

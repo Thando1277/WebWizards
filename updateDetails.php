@@ -11,20 +11,18 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-// Database config
+
 $servername = "localhost";
 $db_username = "root";
+<<<<<<< Updated upstream
 $db_password = "Makungu@0608";
+=======
+$db_password = "";
+>>>>>>> Stashed changes
 $dbname = "WebWizards";
 
-// DB connection
-$conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
-// if ($conn->connect_error) {
-//     $response['message'] = "Database connection failed: " . $conn->connect_error;
-//     echo json_encode($response);
-//     exit;
-// }
+$conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
 
 $currentPassword = trim($_POST['currentPassword'] ?? '');

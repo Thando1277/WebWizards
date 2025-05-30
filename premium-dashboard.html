@@ -54,12 +54,12 @@
     </ul>
   </nav>
 
-  <main>
-    <h2> Welcome to Premium SnapFix premium! SA</h2>
-  </main>
+  
+    
   <div class="main">
+ 
     <div class="topbar">
-       
+          <h2 style="margin-top: 35px; margin-left: 185px;"> Welcome to Premium SnapFix premium! SA</h2>
        <div class="user">
         
        </div>
@@ -84,32 +84,32 @@
                <ion-icon name="document-outline"></ion-icon>
            </div>
        </div>
-       <div class="status">
-        <h4 id="status">Status: No issues reported</h4>
+       <div>
 
     </div>
    </div>
    <div class="main-wrapper">
     <div class="upload-section">
-      <h3>Upload a picture</h3>
+      <h3>Take a picture</h3>
 
       <div class = "pic">
-       <div style="font-size: 40px; margin-bottom: 10px;">📷</div>
-      <button id="startCameraBtn">📷 Start Camera</button>
+       <div class="cameraicon"><ion-icon name="camera-outline"></ion-icon></div>
+      <button class="startCameraBtn" id="startCameraBtn">Start Camera</button>
       <button id="takePhotoBtn" style="display:none;">📸 Capture Photo</button>
       <button id="stopCameraBtn" style="display:none;">✖️ Stop Camera</button>
       <video id="camera" autoplay playsinline style="display:none;"></video>
       <canvas id="snapshot" style="display:none;"></canvas>
       </div>
 
+      <h3>Upload a Picture</h3>
       <input type="file" id="fileInput" style="display: none;" />
       <a href="#" id="uploadIcon">
         <ion-icon name="images-outline"></ion-icon>
       </a>
 
-      <p>Upload a Picture</style></p>
+      
 
-      <button id="clearBtn">Clear Image</button>
+      <button class="clearBtn" id="clearBtn">Clear Image</button>
     </div>
     
      
@@ -122,19 +122,20 @@
            <p class="myLocation"></p>
          </div>
          <div class="button">
-           <button id="getLocationBtn">Get Location</button>
+           <button id="getLocationBtn" onclick="getLocation()">Get Location</button>
          </div>
        </div>
        <div class="IssuesCard">
            <h3>Report the issue</h3>
            <ion-icon name="hammer-outline"></ion-icon>
-           <textarea id="issue" placeholder="Describe the issue here..."></textarea>
-           <button id="startVoice">🎤 Speak</button>
+           <textarea id="issue" placeholder="Describe the issue here..."rows="8" cols="60"></textarea>
+           <button class="startVoice" id="startVoice">🎤 Record</button>
          </div>
-     </div>
-     <div class="submit">
+           <div class="submit">
       <button id="submitReportBtn" type="submit" disabled>Submit</button>
     </div>
+     </div>
+   
 
     <script src="aa_rewards.js"></script>
     

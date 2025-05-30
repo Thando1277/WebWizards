@@ -164,9 +164,6 @@ function updateIssueCount() {
           checkFormReadiness();
           updateIssueCount();    // refresh count from server
 
-          statusText.textContent = `Status: Pending Verification`;
-          statusText.style.color = "orange";
-
           let currentPoints = parseInt(localStorage.getItem("points")) || 0;
           currentPoints += 20;
           localStorage.setItem("points", currentPoints);
@@ -261,15 +258,6 @@ function updateIssueCount() {
   });
 
   stopCameraBtn.addEventListener("click", stopCamera);
-
-  const savedStatus = localStorage.getItem("status");
-  if (savedStatus) {
-    const formattedStatus = savedStatus.charAt(0).toUpperCase() + savedStatus.slice(1);
-    statusText.innerText = `Status: ${formattedStatus}`;
-    statusText.style.color = "orange";
-  }
-
-  getLocation(); // initial fetch
 });
 
 // getting the dark toogle

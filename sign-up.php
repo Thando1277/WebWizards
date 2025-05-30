@@ -1,12 +1,12 @@
 <?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
 // Database connection
 $servername = "localhost";
 $username = "root";
+<<<<<<< Updated upstream
 $password = "Makungu@0608";
+=======
+$password = "";
+>>>>>>> Stashed changes
 $dbname = "WebWizards";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -55,32 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssss", $fullname, $username, $email, $hashedPassword, $phone);
     $success = $stmt->execute();
 
-    if ($success) {
-        // Email section
-        require 'PHPMailer/src/Exception.php';
-        require 'PHPMailer/src/PHPMailer.php';
-        require 'PHPMailer/src/SMTP.php';
-
-        $mail = new PHPMailer(true);
-        try {
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'webwizards0011@gmail.com';
-            $mail->Password   = 'xkur bfpm kbko bujq'; // ✅ Move this to env variable
-            $mail->SMTPSecure = 'tls';
-            $mail->Port       = 587;
-
-            $mail->setFrom('webwizards0011@gmail.com', 'WebWizards');
-            $mail->addAddress($email, $fullname);
-            $mail->isHTML(true);
-            $mail->Subject = 'Welcome to WebWizards!';
-            $mail->Body    = "Hi <strong>$fullname</strong>,<br>Thanks for signing up!";
-
-            $mail->send();
-        } catch (Exception $e) {
-            echo "<script>alert('Email could not be sent: {$mail->ErrorInfo}');</script>";
-        }
 
         echo "<script>
             alert('User registered successfully.');
@@ -94,7 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $stmt->close();
-}
 
 $conn->close();
 ?>

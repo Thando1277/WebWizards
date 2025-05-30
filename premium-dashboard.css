@@ -1,4 +1,23 @@
 
+:root {
+    --primary-bg: #0f0f0f;
+    --secondary-bg: #1a1a1a;
+    --card-bg: #232323;
+    --accent-color: #FFA333;
+    --accent-hover: #ffb366;
+    --accent-dark: #cc7f00;
+    --orange-glow: rgba(255, 163, 51, 0.3);
+    --orange-shadow: rgba(255, 163, 51, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #333333;
+    --black-accent: #000000;
+    --shadow-light: rgba(255, 163, 51, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.8);
+    --border-radius: 16px;
+    --border-radius-small: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 * {
     margin: 0;
@@ -123,7 +142,8 @@
     width:calc(100%-300px);
     left:300px;
     min-height: 100vh;
-    transition: .5s;
+  
+
 }
 .main.active{
     width:calc(100%-80px);
@@ -137,6 +157,8 @@
     justify-content: space-between;
     align-items: center;
     padding:0 10px;
+    background: #1a1a1a;
+    border: 2px solid transparent;
 }
 
 .toggle{
@@ -164,6 +186,8 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 30px;
+    border: 2px solid transparent;
+    background: #1a1a1a;
 }
 .cardBox .card{
     position: relative;
@@ -174,7 +198,9 @@
     justify-content: space-between;
     box-shadow: 0 7px 25px #3e290f;
     min-width: 30vw;
-    top:-50
+    top:-50;
+     
+  
 }
 .cardBox .numbers{
     position: relative;
@@ -188,7 +214,14 @@
     align-items: center;
     gap: 10px; 
     padding: 20px;
-    background-color:#111 ;
+    background-color:#1a1a1a ;
+     box-shadow: 
+        0 20px 40px var(--shadow-dark),
+        0 0 0 1px var(--border-color),
+        0 0 20px rgba(255, 163, 51, 0.05),
+        inset 0 1px 0 rgba(255, 163, 51, 0.1),
+        inset 0 -1px 0 var(--black-accent);
+    border: 2px solid transparent;
   }
   
 .upload-section {
@@ -207,9 +240,10 @@
   }
   
   .upload-section a ion-icon {
-    font-size: 2.5rem; 
-    color: orange;
-    cursor: pointer;
+      font-size: 2.5rem;
+  color: orange;
+  cursor: pointer;
+  margin-left: -15px; 
     
   }
   
@@ -226,9 +260,11 @@
   }
   
   .LocationWrap ion-icon {
-    font-size: 36px;
-    color: orange;
-    transition: color 0.3s ease;
+       font-size: 2.5rem;
+  color: orange;
+  cursor: pointer;
+  margin-left: 15px; 
+   margin-top: -1px;
   }
   
   
@@ -238,7 +274,7 @@
 
 .location-header h3{
     color: white;
-
+  margin-top: -30px;
 }
 .button button {
     padding: 6px 12px;
@@ -338,6 +374,7 @@
   height: 100vh;
   width: 100%;
 }
+<<<<<<< Updated upstream
 
 body {
   background-color: #121212;
@@ -587,4 +624,54 @@ body {
   #hamburger {
     left: 10px;
   }
+=======
+.cameraicon{
+     font-size: 2.5rem;
+  color: orange;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-left: 38px; 
+}
+.cameraicon:hover{
+  color: #3e290f;
+}
+.clearBtn{
+   padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:orange;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
+}
+.clearBtn:hover{
+  background: #3e290f;
+}
+.startCameraBtn{
+  padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:orange;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
+}
+.startCameraBtn:hover{
+  background: #3e290f;
+}
+.startVoice{
+  padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:orange;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
+}
+.startVoice:hover{
+  background: #3e290f;
+>>>>>>> Stashed changes
 }

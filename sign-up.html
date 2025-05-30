@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" />
   <link rel="stylesheet" href="sign-up.css" />
 
-  <script type="text/javascript"
+<script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function(){
-        emailjs.init({
-          publicKey: "bxSeFbRYzmoVuNblW",
-        });
-    })();
-  </script>
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "WGXfkFJ3DAITmYlCH",
+      });
+   })();
+</script>
 </head>
 <body>
   <header>
@@ -84,6 +84,13 @@
     </div>
   </div>
 
+  <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="popupMessage"></p>
+        </div>
+  </div>
+
   <footer>
     <ul class="social_icon">
       <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
@@ -96,13 +103,7 @@
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  
-  <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init("bxSeFbRYzmoVuNblW");
-    })();
-  </script>
+
   
   <script src="sign-up.js"></script>
 </body>

@@ -12,8 +12,8 @@
       <h1>Admin</h1>
       <div class="date"><input type="date" /></div>
 
+      <!-- Insights -->
       <div class="insights">
-        <!-- Insight Cards -->
         <div class="insight-card">
           <span class="material-symbols-sharp"><ion-icon name="receipt-outline"></ion-icon></span>
           <div class="middle">
@@ -60,41 +60,41 @@
 
       <!-- Recent Reports Section -->
       <div class="recent_reports">
-        <h1>Recent Reports</h1>
-        <div class="table-and-chart">
-          <form id="reportsForm">
-            <table>
-              <thead>
-                <tr>
-                  <th>Username</th>
-                  <th>Password</th>
-                  <th>Email</th>
-                  <th>PhoneNumber</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                  <th>Feedback</th>
-                  <th>Upload Image</th>
-                </tr>
-              </thead>
-              <tbody id="reportsTableBody">
-                <!-- Reports will be loaded here dynamically -->
-              </tbody>
-            </table>
-            <button type="button" id="saveAllBtn">Save All Changes</button>
-          </form>
 
-          <!-- Charts Section -->
-          <div class="charts-wrapper">
-            <div class="chart-container">
-              <h2>Total Reports%</h2>
-              <canvas id="reportChart" width="300" height="300"></canvas>
-            </div>
-            <div class="chart-container1">
-              <h2>Raw value data</h2>
-              <canvas id="lineChart"></canvas>
-            </div>
+        <!-- Charts first -->
+        <div class="charts-wrapper">
+          <div class="chart-container">
+            <h2>Total Reports%</h2>
+            <canvas id="reportChart" width="300" height="300"></canvas>
+          </div>
+          <div class="chart-container1">
+            <h2>Raw value data</h2>
+            <canvas id="lineChart"></canvas>
           </div>
         </div>
+
+        <h1>Recent Reports</h1>
+        <!-- Then the reports table -->
+        <form id="reportsForm">
+          <table>
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>PhoneNumber</th>
+                <th>Status</th>
+                <th>Action</th>
+                <th>Feedback</th>
+                <th>Upload Image</th>
+              </tr>
+            </thead>
+            <tbody id="reportsTableBody">
+              <!-- Dynamic rows go here -->
+            </tbody>
+          </table>
+          <button type="button" id="saveAllBtn">Save All Changes</button>
+        </form>
       </div>
     </main>
     <div class="right"></div>
@@ -106,7 +106,7 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <!-- Local JavaScript -->
+  <!-- Local Script -->
   <script src="dashboard.js"></script>
 </body>
 </html>

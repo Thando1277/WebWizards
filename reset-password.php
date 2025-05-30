@@ -2,7 +2,11 @@
 session_start();
 $servername = "localhost";
 $username = "root";
+<<<<<<< Updated upstream
 $password = "Makungu@0608";
+=======
+$password = "";
+>>>>>>> Stashed changes
 $dbname = "WebWizards";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

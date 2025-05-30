@@ -2,15 +2,15 @@ let map;
 let geocoder;
 
 function initMap() {
-  const defaultLoc = { lat: -26.2041, lng: 28.0473 }; // Johannesburg
+  const defaultLocation = { lat: -26.2041, lng: 28.0473 }; // Johannesburg
   map = new google.maps.Map(document.getElementById("map"), {
-    center: defaultLoc,
+    center: defaultLocation,
     zoom: 12,
   });
 
   geocoder = new google.maps.Geocoder();
 
-  // Button to search by address
+  // Search location manually
   document.getElementById("searchBtn").addEventListener("click", () => {
     const address = document.getElementById("location").value;
     if (address.trim() !== "") {
@@ -20,7 +20,7 @@ function initMap() {
     }
   });
 
-  // Button to use geolocation
+  // Use current location
   document.getElementById("geoBtn").addEventListener("click", () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, () => {
@@ -31,41 +31,41 @@ function initMap() {
     }
   });
 
-  // Fetch and show all reports from your backend
-  fetch("get-reports.php")
-    .then(res => res.json())
+  // Load report markers from PHP
+  fetch("http://localhost:8080/WebWizards/get-reports.php")
+    .then(response => response.json())
     .then(data => {
+      console.log("Reports loaded:", data);
       data.forEach(report => {
-        geocoder.geocode({ address: report.Location }, (results, status) => {
-          if (status === "OK" && results[0]) {
-            const marker = new google.maps.Marker({
-              map: map,
-              position: results[0].geometry.location,
-              title: report.Description,
-            });
-
-            const infoWindow = new google.maps.InfoWindow({
-              content: `
-                <div>
-                  <strong>Description:</strong> ${report.Description}<br>
-                  <strong>Status:</strong> ${report.Status}
-                </div>
-              `
-            });
-
-            marker.addListener("click", () => {
-              infoWindow.open(map, marker);
-            });
-          } else {
-            console.error("Geocode failed for:", report.Location, status);
-          }
-        });
+        if (report.Location) {
+          geocoder.geocode({ address: report.Location }, (results, status) => {
+            console.log("Geocode status for", report.Location, ":", status);
+            if (status === "OK" && results[0]) {
+              const marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location,
+                title: report.Description || "No Description"
+              });
+              const infoWindow = new google.maps.InfoWindow({
+                content: `
+                  <div style="color: black;">
+                    <strong>Description:</strong> ${report.Description || "N/A"}<br>
+                    <strong>Status:</strong> ${report.Status || "Unknown"}
+                  </div>
+                `
+              });
+              marker.addListener("click", () => {
+                infoWindow.open(map, marker);
+              });
+            } else {
+              console.error("Geocode failed for:", report.Location, status);
+            }
+          });
+        }
       });
     })
-    .catch(err => console.error("Error loading reports:", err));
-}  // <--- end of initMap
-
-// Helper functions outside initMap
+    .catch(error => console.error("Error fetching reports:", error));
+}
 
 function geocodeAddress(address) {
   geocoder.geocode({ address: address }, (results, status) => {
@@ -94,3 +94,7 @@ function showPosition(position) {
     title: "You are here!",
   });
 }
+
+document.getElementById('BackBtn').addEventListener('click', () => {
+  window.location.href = 'premium-dashboard.html';
+});

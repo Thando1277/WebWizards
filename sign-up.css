@@ -314,6 +314,7 @@ footer p {
     align-items: center;
 }
 
+<<<<<<< Updated upstream
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
@@ -363,3 +364,37 @@ footer p {
         font-size: 1.5em;
     }
 }
+=======
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6); /* Dim background */
+}
+
+.popup-content {
+  background-color: black;
+  margin: 15% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  color: orange;
+  font-family: 'poppins', 'consolas', 'sans-serif';
+}
+
+.popup-content .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+>>>>>>> Stashed changes

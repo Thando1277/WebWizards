@@ -10,7 +10,11 @@ if (!isset($_SESSION['user_id'])) {
 
 $servername = "localhost";
 $db_username = "root";
+<<<<<<< Updated upstream
 $db_password = "Makungu@0608";
+=======
+$db_password = "";
+>>>>>>> Stashed changes
 $dbname = "WebWizards";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
