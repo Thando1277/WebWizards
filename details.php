@@ -1,6 +1,10 @@
 <?php
 // Database connection
+<<<<<<< Updated upstream
 $conn = new mysqli("localhost", "root", "Makungu@0608", "WebWizards");
+=======
+$conn = new mysqli("localhost", "root", "", "WebWizards");
+>>>>>>> Stashed changes
 
 // Check connection
 if ($conn->connect_error) {

@@ -140,6 +140,7 @@ function updateIssueCount() {
     } else {
       alert("Please upload or take a photo before submitting.");
     }
+    window.dispatchEvent(new Event("storage"));
   });
 
   function sendFormData(formData) {
@@ -155,6 +156,7 @@ function updateIssueCount() {
           canvas.style.display = "none";
           stopCamera();
 
+          
           imageUploaded = false;
           photoTaken = false;
           issueFilled = false;
@@ -164,13 +166,21 @@ function updateIssueCount() {
           checkFormReadiness();
           updateIssueCount();    // refresh count from server
 
+<<<<<<< Updated upstream
           let currentPoints = parseInt(localStorage.getItem("points")) || 0;
           currentPoints += 20;
           localStorage.setItem("points", currentPoints);
           localStorage.setItem("availablePoints", currentPoints);
           localStorage.setItem("status", `Pending Verification`);
+=======
+          statusText.textContent = `Status: Pending Verification`;
+          statusText.style.color = "orange";
 
-          alert("Issue reported successfully!");
+          // REPLACE the localStorage code with this:
+          awardPoints(); // This will add points to the database
+>>>>>>> Stashed changes
+
+          alert("Issue reported successfully! You earned 20 points!");
         } else {
           alert("Error: " + (data.error || "Unknown error"));
         }

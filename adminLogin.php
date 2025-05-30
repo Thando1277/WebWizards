@@ -11,7 +11,11 @@ error_reporting(E_ALL);
 $servername = "localhost";
 $db_username = "root";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 $db_password = "Makungu@0608";
+=======
+$db_password = "";
+>>>>>>> Stashed changes
 =======
 $db_password = "";
 >>>>>>> Stashed changes

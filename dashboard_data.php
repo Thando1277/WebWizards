@@ -16,7 +16,11 @@ header('Access-Control-Allow-Headers: Content-Type');
 // Database configuration
 $servername = "localhost";
 $username = "root";
+<<<<<<< Updated upstream
 $password = "Makungu@0608";
+=======
+$password = "";
+>>>>>>> Stashed changes
 $dbname = "WebWizards";
 
 function debugLog($message) {
