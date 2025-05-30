@@ -1,0 +1,134 @@
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(270deg, #00ffc8,purple);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #111;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #f9c74f;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: #bbb;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #f9c74f;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-card {
+      background: #222;
+      border-left: 5px solid #577590;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .info-card p {
+      margin: 0.5rem 0;
+    }
+
+    .volunteer-box {
+      background: #222;
+      border-left: 5px solid #f94144;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      padding-left: 100px;
+      padding-right: 100px;
+      background: #111;
+      border-top: 1px solid #444;
+
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #f9c74f;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .info-card, .volunteer-box {
+        padding: 1.5rem;
+      }
+    }
+    
+    .social_icon{
+        position: relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+    .social_icon li{
+        list-style: none;
+    }
+    .social_icon li a{
+       font-size: 2em;
+       color: white;
+       margin: 0 10px;
+       display: inline-block;
+       transition: 0.5s;
+    }
+    .social_icon li a:hover{
+        transform:translateY(-10px);
+    }
+    footer p{
+        color: white;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 10px 0;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+     .container {
+    position: relative;
+  }
+  
+  .container a {
+    position: absolute; 
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color:orange;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .container a:hover {
+    color:orange;
+   background-color: grey;
+  }
