@@ -314,7 +314,6 @@ footer p {
     align-items: center;
 }
 
-<<<<<<< Updated upstream
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
@@ -364,7 +363,6 @@ footer p {
         font-size: 1.5em;
     }
 }
-=======
 .popup {
   display: none; /* Initially hidden */
   position: fixed;
@@ -397,4 +395,3 @@ footer p {
   font-weight: bold;
   cursor: pointer;
 }
->>>>>>> Stashed changes

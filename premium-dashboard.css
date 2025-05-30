@@ -374,7 +374,6 @@
   height: 100vh;
   width: 100%;
 }
-<<<<<<< Updated upstream
 
 body {
   background-color: #121212;
@@ -624,54 +623,4 @@ body {
   #hamburger {
     left: 10px;
   }
-=======
-.cameraicon{
-     font-size: 2.5rem;
-  color: orange;
-  cursor: pointer;
-  margin-right: 30px;
-  margin-left: 38px; 
-}
-.cameraicon:hover{
-  color: #3e290f;
-}
-.clearBtn{
-   padding: 6px 12px;
-    border: none;
-    border-radius: 6px;
-    background-color:orange;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    margin: 8px;
-}
-.clearBtn:hover{
-  background: #3e290f;
-}
-.startCameraBtn{
-  padding: 6px 12px;
-    border: none;
-    border-radius: 6px;
-    background-color:orange;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    margin: 8px;
-}
-.startCameraBtn:hover{
-  background: #3e290f;
-}
-.startVoice{
-  padding: 6px 12px;
-    border: none;
-    border-radius: 6px;
-    background-color:orange;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    margin: 8px;
-}
-.startVoice:hover{
-  background: #3e290f;
->>>>>>> Stashed changes
 }

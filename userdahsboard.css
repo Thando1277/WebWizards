@@ -418,7 +418,6 @@ display: flex;
 .back-button:focus:not(:focus-visible) {
   outline: none;
 }
-<<<<<<< Updated upstream
 
     #ads-banner {
     position: fixed;
@@ -506,7 +505,6 @@ body {
   .submit button {
     width: 90%;
   }
-=======
 .startVoice{
   padding: 6px 12px;
     border: none;
@@ -519,5 +517,5 @@ body {
 }
 .startVoice:hover{
   background: #3e290f;
->>>>>>> Stashed changes
+}
 }
