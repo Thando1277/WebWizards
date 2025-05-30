@@ -2,7 +2,7 @@
 session_start();
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "LockIn_78";
 $dbname = "WebWizards";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

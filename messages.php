@@ -2,11 +2,7 @@
 // Database connection
 $servername = "localhost";
 $username = "root";
-<<<<<<< Updated upstream
-$password = ""; // Updated to match your login code
-=======
-$password = "";
->>>>>>> Stashed changes
+$password = "LockIn_78"; // Updated to match your login code
 $dbname = "WebWizards";
 
 try {

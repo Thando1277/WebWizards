@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Connect to MySQL database
-$conn = new mysqli("localhost", "root", "", "WebWizards");
+$conn = new mysqli("localhost", "root", "LockIn_78", "WebWizards");
 
 // Check connection
 if ($conn->connect_error) {

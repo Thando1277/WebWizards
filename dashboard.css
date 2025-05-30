@@ -56,9 +56,11 @@ main .insights>div{
   transition: all .3s ease;
 }
 
+
 main .insights > div:hover {
   box-shadow: 0 2px 8px gold;
 }
+
 
 main .insights>div span{
   color: gold;
@@ -66,11 +68,13 @@ main .insights>div span{
   font-size: 2rem;
 }
 
+
 main .insights>div .middle{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 
 main .insights>div .middle h1{
   font-size: 1.6rem;
@@ -86,6 +90,19 @@ main .insights>div .middle h1{
   stroke-width: 5;
   transform: rotate(-90deg);
   transform-origin: center;
+}
+
+/* Individual colors for each insight card's progress ring to match pie chart */
+.insights > div:nth-child(1) .progress svg circle {
+  stroke: #00BFFF; /* Blue for Total Reports */
+}
+
+.insights > div:nth-child(2) .progress svg circle {
+  stroke: #FF8C00; /* Orange for Total Progress */
+}
+
+.insights > div:nth-child(3) .progress svg circle {
+  stroke: #32CD32; /* Green for Total Completed */
 }
 
 /* Individual colors for each insight card's progress ring to match pie chart */
@@ -128,11 +145,13 @@ main .insights>div .middle h1{
   text-align: center;
 }
 
+
 /* Center the numbers and headings */
 .middle h1 {
   font-size: 2.5rem;
   margin: 0.5rem 0;
 }
+
 
 .number {
   font-weight: bold;
@@ -140,13 +159,16 @@ main .insights>div .middle h1{
   font-size: 1.2rem;
 }
 
+
 main .recent_reports{
   margin-top: 2rem;
 }
 
+
 main .recent_reports h2{
   color:white;
 }
+
 
 main .recent_reports table{
   width: 100%;
@@ -157,25 +179,26 @@ main .recent_reports table{
   color: #f9f9f9;
 }
 
+
 main .recent_reports table:hover{
   box-shadow: none;
 }
 
+
 main table tbody tr{
   height: 3.8rem;
 }
+
 
 main table tbody td{
   height: 3.8rem;
   color: #f9f9f9;
 }
 
+
 .recent_reports {
   margin-top: 2rem;
   margin-bottom: 2rem; 
-}
-.recent_reports h1{
-  
 }
 .recent_reports table {
   margin-top: 1rem; 
@@ -183,6 +206,7 @@ main table tbody td{
   overflow-x: auto;
   white-space: nowrap;
 }
+
 
 main .recent_reports table {
   color: white;
@@ -192,11 +216,13 @@ main table tbody td {
   color: white; 
 }
 
+
 main table tbody tr,
 main table tbody td {
   height: 3rem;
   width: 20rem; 
 }
+
 
 main .recent_reports a{
   text-align: center;
@@ -218,18 +244,16 @@ table {
   margin-bottom: 2rem;
 }
 
+
 .charts-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 2rem; /* Controls space between pie chart and line graph */
   padding: 1rem;
   flex-wrap: nowrap; /* Prevents stacking */
-<<<<<<< Updated upstream
   flex-direction: column;
-=======
   justify-content: center; /* Keep charts centered relative to available space */
   margin-right: -980px; /* Shift the entire chart group to the right */
->>>>>>> Stashed changes
 }
 
 .chart-container {
@@ -237,6 +261,8 @@ table {
   width: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: center; 
+  align-items: center;
   justify-content: center; 
   align-items: center;
   height: 100%; 
@@ -266,8 +292,11 @@ canvas#reportChart {
   margin: 0 auto;
   width: 500px;      /* Increased width */
   height: 500px;
+  width: 500px;      /* Increased width */
+  height: 500px;
   height: auto;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.379);
+  
   
 }
 
@@ -277,6 +306,7 @@ canvas#lineChart {
   height: auto;
   display: block;
 }
+
 
 input[type="text"],
 input[type="select"],
@@ -293,12 +323,14 @@ td {
   overflow: visible ;
 }
 
+
 .primary,
 select {
   pointer-events: auto ;
   user-select: auto ;
   position: relative;
 }
+
 
 .clearB{
   pointer-events: auto ;
@@ -338,7 +370,6 @@ select {
 
 .clearB:hover {
   background-color: darkred;
-<<<<<<< Updated upstream
 }
 
 /*Making everything Responsive*/
@@ -390,6 +421,3 @@ h1, h2, h3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-=======
-}
->>>>>>> Stashed changes

@@ -374,253 +374,52 @@
   height: 100vh;
   width: 100%;
 }
-
-body {
-  background-color: #121212;
-  color: white;
-  font-family: Arial, sans-serif;
-  transition: background-color 0.4s, color 0.4s;
-  margin: 0;
-  padding: 0;
-}
-/*for light toggle*/
-body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
-/*Main body and colors of the stylish toggle*/
-body.masterpiece-mode {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-  color: #fdfdfd;
-  overflow-x: hidden;
-}
-
-.toggle-wrapper {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 999;
-}
-.toggle-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: #fff;
-}
-.toggle-container input[type="checkbox"] {
-  appearance: none;
-  width: 34px;
-  height: 18px;
-  background-color: #888;
-  border-radius: 20px;
-  position: relative;
+.cameraicon{
+     font-size: 2.5rem;
+  color: orange;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-right: 30px;
+  margin-left: 38px; 
 }
-
-.toggle-container input[type="checkbox"]::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 14px;
-  height: 14px;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+.cameraicon:hover{
+  color: #3e290f;
 }
-
-.toggle-container input[type="checkbox"]:checked {
-  background-color: #4CAF50;
+.clearBtn{
+   padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:orange;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
 }
-
-.toggle-container input[type="checkbox"]:checked::before {
-  transform: translateX(16px);
+.clearBtn:hover{
+  background: #3e290f;
 }
-.toggle-icon {
-  font-size: 1.2rem;
-  animation: bounce 2s infinite;
+.startCameraBtn{
+  padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:orange;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
 }
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
+.startCameraBtn:hover{
+  background: #3e290f;
 }
-
-body.masterpiece-mode .card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  animation: popIn 1s ease forwards;
+.startVoice{
+  padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:orange;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
 }
-
-@keyframes popIn {
-  0% { transform: translateY(30px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-body.masterpiece-mode button {
-  background: linear-gradient(45deg, #ff6ec4, #7873f5);
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  font-size: 16px;
-  border-radius: 25px;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 110, 196, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: pulse 2s infinite;
-}
-
-body.masterpiece-mode button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 110, 196, 0.8);
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-body.masterpiece-mode::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 50%),
-                    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.03), transparent 50%);
-  background-repeat: repeat;
-  pointer-events: none;
-  z-index: 0;
-  animation: sparkle 10s linear infinite;
-}
-
-@keyframes sparkle {
-  0% { background-position: 0 0, 100% 100%; }
-  100% { background-position: 100% 100%, 0 0; }
-}
-
-#menu {
-  text-align: center;
-  margin-bottom: 20px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.toggle-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding-left: 5px;
-  margin-bottom: 20px;
-}
-
-
-.toggle-container {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: white;
-  font-size: 14px;
-}
-.toggle-container input[type="checkbox"] {
-  appearance: none;
-  width: 32px;
-  height: 16px;
-  background-color: #555;
-  border-radius: 16px;
-  position: relative;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.toggle-container input[type="checkbox"]::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
-  background-color: white;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.toggle-container input[type="checkbox"]:checked {
-  background-color: orange;
-}
-
-.toggle-container input[type="checkbox"]:checked::before {
-  transform: translateX(16px);
-}
-
-.toggle-icon {
-  font-size: 1rem;
-}
-
-/******Make Responsive*/
-/*##- Prevent horizontal scrolling */
-body {
-  overflow-x: hidden;
-}
-@media screen and (max-width: 768px) {
-  .main {
-    position: relative;
-    width: 100%;
-    left: 0;
-    padding: 10px;
-  }
-
-  .cardBox {
-    grid-template-columns: 1fr;
-    padding: 10px;
-  }
-
-  .cardBox .card {
-    min-width: unset;
-    width: 100%;
-  }
-
-  .upload-section,
-  .LocationWrap,
-  .IssuesCard {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .topbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .topbar h2 {
-    position: static;
-    margin: 10px 0;
-    font-size: 16px;
-  }
-
-  .submit button {
-    width: 90%;
-  }
-
-  main {
-    padding: 20px;
-    margin-left: 0;
-  }
-
-  #hamburger {
-    left: 10px;
-  }
+.startVoice:hover{
+  background: #3e290f;
 }

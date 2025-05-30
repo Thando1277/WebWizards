@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-$conn = new mysqli('localhost', 'root', '', 'WebWizards');
+$conn = new mysqli('localhost', 'root', 'LockIn_78', 'WebWizards');
 if ($conn->connect_error) {
     echo json_encode(['error' => 'DB connection failed']);
     exit;

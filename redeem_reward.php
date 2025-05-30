@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $host = 'localhost';
 $username = 'root';
-$password = '';
+$password = 'LockIn_78';
 $database = 'WebWizards';
 
 $conn = new mysqli($host, $username, $password, $database);

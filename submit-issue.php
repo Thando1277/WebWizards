@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
 // DB config
 $servername = "localhost";
 $db_username = "root";
-$db_password = "";
+$db_password = "LockIn_78";
 $dbname = "WebWizards";
 
 // Connect to DB
