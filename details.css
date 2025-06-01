@@ -36,13 +36,13 @@ background: linear-gradient(135deg, var(--primary-bg) 0%, var(--black-accent) 50
  -moz-osx-font-smoothing: grayscale;
 }
 .container {
-  width: 100%;                    /* full width with constraint below */
-  max-width: 900px;               /* increased from 750px */
-  min-height: 600px;              /* added height for more vertical space */
+  width: 100%;  
+  max-width: 900px;            
+  min-height: 600px;             
   margin: auto;
   border: 1px solid #ccc;
   border-radius: var(--border-radius);
-  padding: 40px;                  /* more inner space */
+  padding: 40px;                  
   background-color: var(--card-bg);
   box-shadow: 0 0 30px var(--shadow-dark);
 

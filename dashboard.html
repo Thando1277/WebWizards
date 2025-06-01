@@ -9,6 +9,9 @@
 <body>
   <div class="container">
     <main>
+        <a href="log-in.html" class="logout-link">
+          <i class="fa-solid fa-chart-simple"></i> Log out
+        </a>
       <h1>Admin</h1>
       <div class="date"><input type="date" /></div>
 
@@ -58,10 +61,8 @@
         </div>
       </div>
 
-      <!-- Recent Reports Section -->
       <div class="recent_reports">
 
-        <!-- Charts first -->
         <div class="charts-wrapper">
           <div class="chart-container">
             <h2>Total Reports%</h2>
@@ -74,8 +75,8 @@
         </div>
 
         <h1>Recent Reports</h1>
-        <!-- Then the reports table -->
         <form id="reportsForm">
+          <button type="button" id="saveAllBtn">Save All Changes</button>
           <table>
             <thead>
               <tr>
@@ -93,20 +94,17 @@
               <!-- Dynamic rows go here -->
             </tbody>
           </table>
-          <button type="button" id="saveAllBtn">Save All Changes</button>
         </form>
       </div>
     </main>
     <div class="right"></div>
   </div>
 
-  <!-- External Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <!-- Local Script -->
   <script src="dashboard.js"></script>
 </body>
 </html>

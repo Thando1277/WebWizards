@@ -6,7 +6,6 @@
     color: white;
 }
 
-
 header {
     position: fixed;
     top: 0;
@@ -21,6 +20,7 @@ header {
     opacity: 0;
     animation: to-bottom 2s ease forwards;
 }
+
 @keyframes to-bottom {
     0% {
         opacity: 0;
@@ -31,7 +31,6 @@ header {
         transform: translateY(0);
     }
 }
-
 
 header h4 {
     color: white;
@@ -54,7 +53,6 @@ header nav .Active,
 header nav a:hover {
     color: orange;
 }
-
 
 body {
     display: flex;
@@ -94,6 +92,7 @@ body {
     position: absolute;
     transition: none; 
 }
+
 .container .form-box {
     position: absolute;
     top: 0;
@@ -103,6 +102,7 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+
 .form-box.Login {
     left:0;
     padding: 0 40px;
@@ -114,6 +114,7 @@ body {
     opacity: 1;
     transition-delay: calc(.1s*var(--D)) ;
 }
+
 .container.active .form-box.Login.animation{
     transform: translateX(-120%);
     opacity: 0;
@@ -124,17 +125,20 @@ body {
     right: 0;
     padding:0 60px;
 }
+
 .form-box h2{
     font-size: 28px;
     color: white;
     text-align: center;
 }
+
 .form-box .input-box{
     position: relative;
     width:100%;
     height: 50px;
     margin-top: 25px;
 }
+
 .input-box input{
     width: 100%;
     height: 100%;
@@ -148,10 +152,12 @@ body {
     padding-right: 23px;
     transition: .5s;
 }
+
 .input-box input:focus,
 .input-box input:valid{
     border-bottom: 2px solid  #FFA333;
 }
+
 .input-box label{
     position: absolute;
     top:50%;
@@ -161,11 +167,13 @@ body {
     color:white;
     transition: .5s;
 }
+
 .input-box input:focus~label,
 .input-box input:valid~label{
     top: -5px;
     color: #FFA333;
 }
+
 .input-box i{
     position: absolute;
     top:50%;
@@ -174,10 +182,12 @@ body {
     transform: translateY(-50%);
     color: white;
 }
+
 .input-box input:focus~i,
 .input-box input:valid~i{
     color: #FFA333;
 }
+
 .btn{
     position: relative;
     width:100%;
@@ -191,6 +201,7 @@ body {
     overflow: hidden;
     z-index: 1;
 }
+
 .btn::before{
     content:" ";
     position: absolute;
@@ -202,22 +213,27 @@ body {
     z-index: -1;
     transition: .5S;
 }
+
 .btn:hover:before{
     top:0;
 }
+
 .regi-link{
     font-size: 13px;
     text-align: center;
     margin: 20px 0 10px;
 }
+
 .regi-link a{
     text-decoration: none;
     color: orange;
     font-weight: 600;
 }
+
 .regi-link a:hover{
     text-decoration: underline;
 }
+
 .info-content{
     position: absolute;
     top:0;
@@ -227,18 +243,22 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+
 .info-content.Login{
     right: 22%;
     text-align: right;
     text-transform: uppercase;
     padding:0 40px 60px 150px;
 }
+
 .info-content.Login.animation{
     transform: translateX(0%);
 }
+
 .container.active .info-content.Login.animation{
     opacity: 0;
 }
+
 .info-content.Register{
     right: 22%;
     text-align: right;
@@ -246,14 +266,17 @@ body {
     padding:0 40px 60px 150px;
     display: none;
 }
+
 .info-content h2{
     text-transform: uppercase;
     font-size: 36px;
     line-height: 1.3;
 }
+
 .info-content p{
     font-size: 15px;
 }
+
 .container .curved-shape{
     position: absolute;
     right:0;
@@ -265,10 +288,12 @@ body {
     transform-origin: bottom right;
     transition: 1.3s ease;
 }
+
 .container.active .curved-shape{ 
     transform: rotate(0deg) skewY(0deg);
     color: #25252b;
 }
+
 .container .curved-shape2{
     position: absolute;
     left: 250px;
@@ -281,10 +306,12 @@ body {
     transform-origin: bottom left;
     transition: 2s ease;
 }
+
 .container.active .curved-shape2{ 
     transform: rotate(-11deg) skewY(-41deg);
     transition-delay: 2s;
 }
+
 .social_icon{
     position: relative;
     display:flex;
@@ -293,9 +320,11 @@ body {
     margin: 10px 0;
     flex-wrap: wrap;
 }
+
 .social_icon li{
     list-style: none;
 }
+
 .social_icon li a{
     font-size: 2em;
     color: white;
@@ -303,9 +332,11 @@ body {
     display: inline-block;
     transition: 0.5s;
 }
+
 .social_icon li a:hover{
     transform:translateY(-10px);
 }
+
 footer p {
     color: white;
     text-align: center;
@@ -314,104 +345,152 @@ footer p {
     align-items: center;
 }
 
-/* From Uiverse.io by KSAplay */ 
-.loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
+/* Popup Styles - ADDED */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
 }
 
-.loading-text {
-  color: white;
-  font-size: 14pt;
-  font-weight: 600;
-  margin-left: 10px;
+.popup-content {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    margin: 15% auto;
+    padding: 30px;
+    border: 2px solid #FFA333;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 163, 51, 0.3);
+    animation: popupSlide 0.3s ease-out;
 }
+
+@keyframes popupSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.popup-content p {
+    color: white;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #FFA333;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff8c00;
+    transform: scale(1.1);
+}
+
 
 .dot {
-  margin-left: 3px;
-  animation: blink 1.5s infinite;
+    margin-left: 3px;
+    animation: blink 1.5s infinite;
 }
+
 .dot:nth-child(2) {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .dot:nth-child(3) {
-  animation-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 
 .loading-bar-background {
-  --height: 20px;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 5px;
-  width: 15px;
-  height: var(--height);
-  background-color: #212121 /*change this*/;
-  box-shadow: #0c0c0c -2px 2px 4px 0px inset;
-  border-radius: calc(var(--height) / 2);
+    --height: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 15px;
+    height: var(--height);
+    background-color: #212121;
+    box-shadow: #0c0c0c -2px 2px 4px 0px inset;
+    border-radius: calc(var(--height) / 2);
 }
 
 .loading-bar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  --height: 20px;
-  width: 0%;
-  height: var(--height);
-  overflow: hidden;
-  background: rgb(222, 74, 15);
-  background: linear-gradient(
-    0deg,
-    rgba(222, 74, 15, 1) 0%,
-    rgba(249, 199, 79, 1) 100%
-  );
-  border-radius: calc(var(--height) / 2);
-  animation: loading 4s ease-out infinite;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    --height: 20px;
+    width: 0%;
+    height: var(--height);
+    overflow: hidden;
+    background: rgb(222, 74, 15);
+    background: linear-gradient(
+        0deg,
+        rgba(222, 74, 15, 1) 0%,
+        rgba(249, 199, 79, 1) 100%
+    );
+    border-radius: calc(var(--height) / 2);
+    animation: loading 4s ease-out infinite;
 }
 
 .white-bars-container {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 18px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
 .white-bar {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  width: 1px;
-  height: 4px;
-  opacity: 0.3;
-  rotate: 45deg;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    width: 1px;
+    height: 4px;
+    opacity: 0.3;
+    rotate: 45deg;
 }
 
 @keyframes loading {
-  0% {
-    width: 0;
-  }
-  80% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
+    0% {
+        width: 0;
+    }
+    80% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 @keyframes blink {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }

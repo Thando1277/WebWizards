@@ -35,7 +35,6 @@ nav a:hover{
   background-color: white;
 }
 
-/* Section spacing */
 section {
   margin-bottom: 40px;
 }
@@ -46,7 +45,6 @@ h2 {
   color: orange;
 }
 
-/* Vision/Missionand purpos image layout */
 .vm-section {
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +61,6 @@ h2 {
   flex: 1;
 }
 
-/* Team Members Slider */
 .team {
   display: flex;
   overflow-x: auto;

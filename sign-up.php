@@ -1,5 +1,4 @@
 <?php
-// Database connection
 $servername = "localhost";
 $username = "root";
 $password = "LockIn_78";
@@ -18,19 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
     $phone = trim($_POST['phone']);
 
-    // Validate required fields
     if (empty($fullname) || empty($username) || empty($password) || empty($email) || empty($phone)) {
         echo "<script>alert('All fields are required.'); window.history.back();</script>";
         exit;
     }
 
-    // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<script>alert('Invalid email format.'); window.history.back();</script>";
         exit;
     }
 
-    // Check for duplicates
     $stmt = $conn->prepare("SELECT * FROM Users WHERE Email = ? OR PhoneNumber = ? OR Username = ?");
     $stmt->bind_param("sss", $email, $phone, $username);
     $stmt->execute();
@@ -43,10 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $stmt->close();
 
-    // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert user
     $stmt = $conn->prepare("INSERT INTO Users (FullName, Username, Email, Password, PhoneNumber) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $fullname, $username, $email, $hashedPassword, $phone);
     $success = $stmt->execute();

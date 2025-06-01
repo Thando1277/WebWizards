@@ -37,7 +37,6 @@ if (!$user) {
 
 $userID = $user['UserID'];
 
-// Validation (as before)
 $errors = [];
 
 if (empty($fullName)) $errors[] = "Full name is required.";
@@ -52,7 +51,6 @@ if (!empty($errors)) {
     exit();
 }
 
-// Check expiration
 $expDateObj = DateTime::createFromFormat('Y-m', $expDate);
 $expDateObj->modify('last day of this month');
 $now = new DateTime();
@@ -63,14 +61,11 @@ if ($expDateObj < $now) {
     exit();
 }
 
-// Store expiration as YYYY-MM-01
 $expirationDate = $expDate . "-01";
 $cardLast4 = substr($cardNumber, -4);
 
 try {
     $pdo->beginTransaction();
-
-    // Insert payment
     $stmt = $pdo->prepare("INSERT INTO Payments (UserID, CardNumber, ExpirationDate, CVV, Amount) 
                            VALUES (:userID, :cardNumber, :expirationDate, :cvv, :amount)");
     $stmt->execute([
@@ -80,8 +75,6 @@ try {
         ':cvv' => $cvv,
         ':amount' => $amount
     ]);
-
-    // Promote to PremiumUser
     $stmt = $pdo->prepare("INSERT INTO PremiumUser (UserID) VALUES (:userID)");
     $stmt->execute([':userID' => $userID]);
 

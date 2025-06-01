@@ -1,12 +1,6 @@
 <?php
-// Database connection
-<<<<<<< Updated upstream
-$conn = new mysqli("localhost", "root", "Makungu@0608", "WebWizards");
-=======
-$conn = new mysqli("localhost", "root", "", "WebWizards");
->>>>>>> Stashed changes
+$conn = new mysqli("localhost", "root", "LockIn_78", "WebWizards");
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -14,7 +8,6 @@ if ($conn->connect_error) {
 $report = null;
 $reportID = null;
 
-// Get report ID from POST or GET
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['report_id'])) {
     $reportID = $_POST['report_id'];
 } elseif ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['report_id'])) {
@@ -22,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['report_id'])) {
 }
 
 if ($reportID !== null) {
-    // Select columns including CreatedAt (report time)
     $stmt = $conn->prepare("SELECT Image, Location, Description, CreatedAt FROM Reports WHERE ReportID = ?");
     $stmt->bind_param("i", $reportID);
     $stmt->execute();
@@ -41,7 +33,6 @@ if ($reportID !== null) {
     <title>Report Details</title>
     <link rel="stylesheet" href="details.css" />
     <style>
-        /* Basic styling to ensure image scales nicely */
         img {
             max-width: 100%;
             height: auto;
@@ -77,10 +68,8 @@ if ($reportID !== null) {
             <div class="section">
                 <h3>📷 Captured Image</h3>
                 <?php 
-                    // Use the Image path exactly as stored in the DB
                     $imagePath = htmlspecialchars($report['Image']);
                 ?>
-                <!-- Debug link to check image URL -->
                 <p><small>Image URL: <a href="<?php echo $imagePath; ?>" target="_blank"><?php echo $imagePath; ?></a></small></p>
                 <img 
                     src="<?php echo $imagePath; ?>" 

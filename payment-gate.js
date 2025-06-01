@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize EmailJS with your public key
-  emailjs.init("WGXfkFJ3DAITmYlCH"); // Replace with your actual EmailJS public key
+  emailjs.init("WGXfkFJ3DAITmYlCH"); 
   
   const paymentForm = document.getElementById('payment-form');
   const cardOptions = document.querySelectorAll('.card-option');
   let selectedCardType = null;
 
-  // Card type selection
   cardOptions.forEach(option => {
     option.addEventListener('click', function () {
       cardOptions.forEach(opt => opt.classList.remove('selected'));
@@ -15,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Function to send welcome email using EmailJS
   function sendWelcomeEmail(userName, userEmail) {
     const templateParams = {
       user_name: userName,
@@ -34,18 +31,15 @@ document.addEventListener('DOMContentLoaded', function () {
   paymentForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Show loading state
     const submitBtn = paymentForm.querySelector('.submit-btn');
     const originalBtnText = submitBtn.textContent;
     submitBtn.textContent = 'Processing...';
     submitBtn.disabled = true;
 
-    // Gather form data
     const formData = new FormData(paymentForm);
     const userName = formData.get('full-name').trim();
     const userEmail = formData.get('email').trim();
 
-    // Basic front-end validation
     if (
       !userName ||
       !userEmail ||
@@ -65,28 +59,24 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // Send form data to server
     fetch('payment-gate.php', {
       method: 'POST',
       body: formData
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data); // Debugging: shows server response in browser console
+        console.log(data);
 
         if (data.error) {
           showError(data.error);
           resetSubmitButton(submitBtn, originalBtnText);
         } else if (data.redirect) {
-          // Payment successful, now send welcome email
           submitBtn.textContent = 'Sending welcome email...';
           
           sendWelcomeEmail(userName, userEmail)
             .then((emailResponse) => {
               console.log('Welcome email sent successfully:', emailResponse);
               showSuccess('Payment successful! Welcome email sent. Redirecting...');
-              
-              // Redirect after a short delay to show success message
               setTimeout(() => {
                 window.location.href = data.redirect;
               }, 2000);
@@ -94,8 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch((emailError) => {
               console.error('Failed to send welcome email:', emailError);
               showError('Payment successful, but welcome email failed to send. Redirecting...');
-              
-              // Still redirect even if email fails
               setTimeout(() => {
                 window.location.href = data.redirect;
               }, 3000);

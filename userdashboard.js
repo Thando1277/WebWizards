@@ -26,7 +26,7 @@ function updateIssueCount() {
     .then(res => res.json())
     .then(data => {
       if (data.total !== undefined) {
-        issueCount = data.total;  // total reports count
+        issueCount = data.total;
         reportedCounter.textContent = data.total;
         solvedCounter.textContent = data.completed;
       }
@@ -36,7 +36,6 @@ function updateIssueCount() {
     });
 }
   updateIssueCount()
-  // Upload image
   uploadIcon.addEventListener("click", function (e) {
     e.preventDefault();
     if (imageUploaded) {
@@ -105,14 +104,13 @@ function updateIssueCount() {
     startVoiceBtn.textContent = "Not supported";
   }
 
-  // Get location
   window.getLocation = function () {
     if (navigator.geolocation) {
       locationElement.textContent = "Getting location...";
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          const apiKey = "AIzaSyBozgzhXv7ZTh9OYVmZQ3N3dw6J-ml389s"; // Replace with your own key
+          const apiKey = "AIzaSyBozgzhXv7ZTh9OYVmZQ3N3dw6J-ml389s";
           const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
 
           fetch(url)
@@ -142,7 +140,6 @@ function updateIssueCount() {
     }
   };
 
-  // Submit report
   submitBtn.addEventListener("click", function (e) {
     e.preventDefault();
 

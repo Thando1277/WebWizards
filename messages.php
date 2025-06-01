@@ -1,8 +1,8 @@
 <?php
-// Database connection
+
 $servername = "localhost";
 $username = "root";
-$password = "LockIn_78"; // Updated to match your login code
+$password = "LockIn_78";
 $dbname = "WebWizards";
 
 try {
@@ -13,17 +13,14 @@ try {
     die("Connection failed: " . $e->getMessage() . "<br>Please check your database credentials.");
 }
 
-// Check if user is logged in - matching your login code session variables
 session_start();
 $isPremium = $_SESSION['isPremium'] ?? false;
 if (!isset($_SESSION['user_id'])) {
     die("Please log in to view feedback.");
 }
 
-$currentUserID = $_SESSION['user_id']; // Changed from 'UserID' to 'user_id' to match your login code
+$currentUserID = $_SESSION['user_id'];
 
-// Query to fetch all feedback related to the current user's reports with admin information
-// Added ROW_NUMBER() to create sequential report numbers for this user only
 $sql = "SELECT 
     m.MessageID,
     m.Feedback,
@@ -74,7 +71,6 @@ try {
             padding: 20px;
         }
 
-        /* Back Button Styling */
         .BackBtn {
             position: fixed;
             top: 20px;
@@ -131,7 +127,7 @@ try {
             padding: 30px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             border: 1px solid #333;
-            margin-top: 80px; /* Add top margin to account for fixed back button */
+            margin-top: 80px;
         }
 
         .header {

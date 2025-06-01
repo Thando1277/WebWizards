@@ -1,26 +1,17 @@
 <?php
-// dashboard_data.php - Fixed version with proper Messages table image storage
-
-// Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', 'upload_debug.log');
 
-// Set headers first
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
-// Database configuration
 $servername = "localhost";
 $username = "root";
-<<<<<<< Updated upstream
-$password = "Makungu@0608";
-=======
-$password = "";
->>>>>>> Stashed changes
+$password = "LockIn_78";
 $dbname = "WebWizards";
 
 function debugLog($message) {
@@ -34,7 +25,6 @@ function sendJsonResponse($data, $httpCode = 200) {
 }
 
 try {
-    // Database connection
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -43,12 +33,10 @@ try {
     debugLog("FILES array: " . print_r($_FILES, true));
     debugLog("POST array: " . print_r($_POST, true));
 
-    // Handle POST requests
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
         debugLog("Processing POST request with content type: " . $contentType);
-        
-        // Handle file uploads FIRST (multipart/form-data)
+
         if (isset($_FILES['feedbackImage']) && isset($_POST['action']) && $_POST['action'] === 'uploadImage') {
             debugLog("Image upload detected");
             
@@ -61,7 +49,6 @@ try {
             $file = $_FILES['feedbackImage'];
             debugLog("File details: " . print_r($file, true));
 
-            // Check for upload errors
             if ($file['error'] !== UPLOAD_ERR_OK) {
                 $errorMessages = [
                     UPLOAD_ERR_INI_SIZE => 'File exceeds upload_max_filesize',
@@ -77,18 +64,15 @@ try {
                 throw new Exception('Upload error: ' . $errorMsg);
             }
 
-            // Validate file type
             $allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
             if (!in_array($file['type'], $allowedTypes)) {
                 throw new Exception('Invalid file type. Only JPEG, PNG, GIF, and WebP are allowed.');
             }
 
-            // Validate file size (2MB limit)
             if ($file['size'] > 2 * 1024 * 1024) {
                 throw new Exception('File size must be less than 2MB.');
             }
 
-            // Create upload directory if it doesn't exist
             $uploadDir = 'uploads/';
             if (!is_dir($uploadDir)) {
                 if (!mkdir($uploadDir, 0755, true)) {
@@ -96,30 +80,25 @@ try {
                 }
             }
 
-            // Check if directory is writable
             if (!is_writable($uploadDir)) {
                 throw new Exception('Upload directory is not writable. Please check permissions.');
             }
 
-            // Generate safe filename
             $fileExtension = pathinfo($file['name'], PATHINFO_EXTENSION);
             $safeFileName = 'report_' . $reportId . '_' . time() . '_' . uniqid() . '.' . $fileExtension;
             $destPath = $uploadDir . $safeFileName;
 
             debugLog("Attempting to move file from " . $file['tmp_name'] . " to " . $destPath);
 
-            // Move uploaded file
             if (!move_uploaded_file($file['tmp_name'], $destPath)) {
                 throw new Exception('Failed to save uploaded file. Check directory permissions.');
             }
 
             debugLog("File moved successfully to: " . $destPath);
 
-            // FIXED: Store image in Messages table, try to update existing recent message first
             $pdo->beginTransaction();
             
             try {
-                // Get UserID from Reports table
                 $userQuery = "SELECT UserID FROM Reports WHERE ReportID = ?";
                 $userStmt = $pdo->prepare($userQuery);
                 $userStmt->execute([$reportId]);
@@ -299,11 +278,9 @@ try {
     // Handle GET request for dashboard data
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         debugLog("Processing GET request for dashboard data");
-        
-        // Calculate date range (last 24 hours)
+
         $yesterday = date('Y-m-d H:i:s', strtotime('-24 hours'));
 
-        // Get counts for last 24 hours
         $stmt = $pdo->prepare("SELECT COUNT(*) FROM Reports WHERE CreatedAt >= ?");
         $stmt->execute([$yesterday]);
         $totalReports = (int)$stmt->fetchColumn();
@@ -316,18 +293,15 @@ try {
         $stmt->execute([$yesterday]);
         $totalCompleted = (int)$stmt->fetchColumn();
 
-        // Get all-time totals for percentage calculation
         $stmt = $pdo->query("SELECT COUNT(*) FROM Reports");
         $allTimeReports = max((int)$stmt->fetchColumn(), 1);
 
-        // Calculate percentages
         $percentages = [
             'reportsPercent' => round(($totalReports / $allTimeReports) * 100),
             'progressPercent' => round(($totalProgress / $allTimeReports) * 100),
             'completedPercent' => round(($totalCompleted / $allTimeReports) * 100),
         ];
 
-        // FIXED: Get recent reports with latest feedback image from Messages table
         $recentReportsQuery = "
             SELECT 
                 r.ReportID, 
@@ -381,7 +355,6 @@ try {
         sendJsonResponse($response);
     }
 
-    // Invalid request method
     throw new Exception('Invalid request method: ' . $_SERVER['REQUEST_METHOD']);
 
 } catch (Exception $e) {
@@ -389,7 +362,7 @@ try {
     debugLog("Stack trace: " . $e->getTraceAsString());
     
     sendJsonResponse([
-        'success' => false,
+        'success' => false, 
         'error' => $e->getMessage(),
         'data' => []
     ], 500);

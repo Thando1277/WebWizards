@@ -10,7 +10,6 @@ function initMap() {
 
   geocoder = new google.maps.Geocoder();
 
-  // Search location manually
   document.getElementById("searchBtn").addEventListener("click", () => {
     const address = document.getElementById("location").value;
     if (address.trim() !== "") {
@@ -20,7 +19,6 @@ function initMap() {
     }
   });
 
-  // Use current location
   document.getElementById("geoBtn").addEventListener("click", () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, () => {
@@ -31,7 +29,6 @@ function initMap() {
     }
   });
 
-  // Load report markers from PHP
   fetch("http://localhost:8080/WebWizards/get-reports.php")
     .then(response => response.json())
     .then(data => {

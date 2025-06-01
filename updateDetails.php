@@ -4,7 +4,6 @@ header('Content-Type: application/json');
 
 $response = ['success' => false, 'message' => ''];
 
-// Ensure user is logged in
 if (!isset($_SESSION['user_id'])) {
     $response['message'] = "Unauthorized access.";
     echo json_encode($response);
@@ -25,7 +24,6 @@ $currentPassword = trim($_POST['currentPassword'] ?? '');
 $newPassword     = trim($_POST['newPassword'] ?? '');
 $confirmPassword = trim($_POST['confirmPassword'] ?? '');
 
-// Validate inputs
 if (empty($currentPassword) || empty($newPassword) || empty($confirmPassword)) {
     $response['message'] = "All fields are required.";
     echo json_encode($response);
@@ -44,7 +42,6 @@ if ($newPassword !== $confirmPassword) {
     exit;
 }
 
-// Fetch current hashed password
 $userId = $_SESSION['user_id'];
 $stmt = $conn->prepare("SELECT password FROM Users WHERE userID = ?");
 $stmt->bind_param("i", $userId);
@@ -63,7 +60,6 @@ $stmt->bind_result($hashedPassword);
 $stmt->fetch();
 $stmt->close();
 
-// Verify current password
 if (!password_verify($currentPassword, $hashedPassword)) {
     $response['message'] = "Current password is incorrect.";
     echo json_encode($response);
@@ -71,7 +67,7 @@ if (!password_verify($currentPassword, $hashedPassword)) {
     exit;
 }
 
-// Hash new password and update
+
 $newHashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 $updateStmt = $conn->prepare("UPDATE Users SET password = ? WHERE userID = ?");
 $updateStmt->bind_param("si", $newHashedPassword, $userId);

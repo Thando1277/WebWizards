@@ -22,7 +22,6 @@ if ($conn->connect_error) {
 
 $userID = $_SESSION['user_id'];
 
-// Get total reports count for user
 $sql_total = "SELECT COUNT(*) AS total FROM Reports WHERE UserID = ?";
 $stmt_total = $conn->prepare($sql_total);
 $stmt_total->bind_param("i", $userID);
@@ -31,7 +30,6 @@ $stmt_total->bind_result($total);
 $stmt_total->fetch();
 $stmt_total->close();
 
-// Get completed reports count for user
 $sql_completed = "SELECT COUNT(*) AS completed FROM Reports WHERE UserID = ? AND Status = 'Completed'";
 $stmt_completed = $conn->prepare($sql_completed);
 $stmt_completed->bind_param("i", $userID);

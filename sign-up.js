@@ -85,7 +85,6 @@ function closePopup() {
     document.getElementById("myPopup").style.display = "none";
 }
 
-// ✅ Actual sign-up request
 function handleSignUp(fullname, username, email, password, phone) {
     fetch("sign-up.php", {
         method: "POST",

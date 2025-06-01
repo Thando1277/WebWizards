@@ -423,3 +423,124 @@
 .startVoice:hover{
   background: #3e290f;
 }
+/* Light mode (used when darkModeToggle is ON) */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #111;
+}
+
+body.light-mode .topbar,
+body.light-mode .main-wrapper,
+body.light-mode .cardBox,
+body.light-mode .upload-section,
+body.light-mode .LocationWrap,
+body.light-mode .IssuesCard {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.light-mode .cardBox .card {
+  background-color: #f8f8f8;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode h2,
+body.light-mode p,
+body.light-mode .status,
+body.light-mode .myLocation {
+  color: #111;
+}
+
+/* Style/Theme mode (used when styleModeToggle is ON) */
+body.masterpiece-mode {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+body.masterpiece-mode .topbar,
+body.masterpiece-mode .main-wrapper,
+body.masterpiece-mode .cardBox,
+body.masterpiece-mode .upload-section,
+body.masterpiece-mode .LocationWrap,
+body.masterpiece-mode .IssuesCard {
+  background-color: #fffaf0;
+  color: #000;
+  border-radius: 20px;
+  border: 2px dashed orange;
+  box-shadow: 0 0 20px rgba(255, 163, 51, 0.3);
+}
+
+body.masterpiece-mode .cardBox .card {
+  background: #fff5e6;
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+}
+
+body.masterpiece-mode .status,
+body.masterpiece-mode .myLocation {
+  color: #000;
+}
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.popup-content {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    margin: 15% auto;
+    padding: 30px;
+    border: 2px solid #FFA333;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 163, 51, 0.3);
+    animation: popupSlide 0.3s ease-out;
+}
+
+@keyframes popupSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.popup-content p {
+    color: white;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #FFA333;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff8c00;
+    transform: scale(1.1);
+}

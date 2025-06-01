@@ -66,7 +66,6 @@ try {
         throw new Exception('Not enough points');
     }
 
-    // Deduct points
     $stmt = $conn->prepare("UPDATE user_points SET AvailablePoints = AvailablePoints - ? WHERE UserID = ?");
     $stmt->bind_param("ii", $requiredPoints, $userId);
     $stmt->execute();
@@ -75,7 +74,6 @@ try {
         throw new Exception('Failed to deduct points');
     }
 
-    // Generate reward code and expiry depending on reward type
     $rewardCode = '';
     $expiryDate = null;
 
@@ -96,7 +94,6 @@ try {
         $expiryDate = date('Y-m-d', strtotime('+90 days'));
     }
 
-    // Insert reward history with generated code and expiry
     $stmt = $conn->prepare("INSERT INTO reward_history (UserID, RewardType, PointsUsed, RewardCode, ExpiryDate) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("isiss", $userId, $reward, $requiredPoints, $rewardCode, $expiryDate);
     $stmt->execute();

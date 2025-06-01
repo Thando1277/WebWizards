@@ -16,7 +16,6 @@ if ($conn->connect_error) {
 $user_id = $_SESSION['user_id'];
 $response = [];
 
-// Get points
 $pointsSql = "SELECT TotalPoints, AvailablePoints FROM user_points WHERE UserID = ?";
 $pointsStmt = $conn->prepare($pointsSql);
 $pointsStmt->bind_param("i", $user_id);
@@ -30,7 +29,6 @@ if ($pointsResult->num_rows === 0) {
     $response = $pointsResult->fetch_assoc();
 }
 
-// Get reward history - UPDATED QUERY
 $historySql = "SELECT 
                 RewardType, 
                 PointsUsed, 

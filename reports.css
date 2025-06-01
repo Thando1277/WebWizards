@@ -76,7 +76,7 @@
   }
   
   .container a {
-    position: absolute; /* or use fixed if you want it to stay visible on scroll */
+    position: absolute;
     top: 20px;
     left: 20px;
     padding: 10px 20px;

@@ -6,7 +6,6 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 session_start();
 
-// Database configuration
 $servername = "localhost";
 $username = "root";
 $password = "LockIn_78";
@@ -16,7 +15,6 @@ try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Verify CSRF token for POST requests
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $requestToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? $_POST['csrf_token'] ?? '';
         if (!hash_equals($_SESSION['csrf_token'] ?? '', $requestToken)) {
@@ -25,65 +23,65 @@ try {
         }
     }
 
-    // Check if it's a file upload
     if (!empty($_FILES['image'])) {
         $input = $_POST;
         $action = $input['action'] ?? '';
     } else {
-        // Read JSON input for non-file requests
         $input = json_decode(file_get_contents('php://input'), true);
         $action = $input['action'] ?? '';
     }
 
     switch ($action) {
-        case 'updateStatus':
-            $reportId = $input['reportId'] ?? null;
-            $newStatus = $input['status'] ?? null;
-            $feedback = $input['feedback'] ?? '';
-            $adminId = 1; // Hardcoded for demo
+            case 'updateStatus':
+        $reportId = $input['reportId'] ?? null;
+        $newStatus = $input['status'] ?? null;
+        $feedback = $input['feedback'] ?? '';
 
-            if (!$reportId || !$newStatus) {
-                throw new Exception('Missing reportId or status.');
-            }
+        $adminId = $_SESSION['admin_id'] ?? null;
+        if (!$adminId) {
+            throw new Exception('Admin not authenticated.');
+        }
 
-            $validStatuses = ['Pending', 'In Progress', 'Completed', 'Rejected'];
-            if (!in_array($newStatus, $validStatuses)) {
-                throw new Exception('Invalid status value: ' . $newStatus);
-            }
+        if (!$reportId || !$newStatus) {
+            throw new Exception('Missing reportId or status.');
+        }
 
-            $pdo->beginTransaction();
+        $validStatuses = ['Pending', 'In Progress', 'Completed', 'Rejected'];
+        if (!in_array($newStatus, $validStatuses)) {
+            throw new Exception('Invalid status value: ' . $newStatus);
+        }
 
-            // Update report status
-            $updateQuery = "UPDATE Reports SET Status = ?, UpdatedAt = NOW() WHERE ReportID = ?";
-            $updateStmt = $pdo->prepare($updateQuery);
-            $updateStmt->execute([$newStatus, $reportId]);
+        $pdo->beginTransaction();
 
-            if ($updateStmt->rowCount() === 0) {
-                throw new Exception('No rows updated - report may not exist.');
-            }
+        $updateQuery = "UPDATE Reports SET Status = ?, UpdatedAt = NOW() WHERE ReportID = ?";
+        $updateStmt = $pdo->prepare($updateQuery);
+        $updateStmt->execute([$newStatus, $reportId]);
 
-            // Insert feedback into Messages table if provided
-            if (!empty($feedback)) {
-                $userQuery = "SELECT UserID FROM Reports WHERE ReportID = ?";
-                $userStmt = $pdo->prepare($userQuery);
-                $userStmt->execute([$reportId]);
-                $userId = $userStmt->fetchColumn();
+        if ($updateStmt->rowCount() === 0) {
+            throw new Exception('No rows updated - report may not exist.');
+        }
+        if (!empty($feedback)) {
+            $userQuery = "SELECT UserID FROM Reports WHERE ReportID = ?";
+            $userStmt = $pdo->prepare($userQuery);
+            $userStmt->execute([$reportId]);
+            $userId = $userStmt->fetchColumn();
 
-                $insertMsgQuery = "INSERT INTO Messages (ReportID, UserID, AdminID, Feedback, CreatedAt) 
-                                  VALUES (?, ?, ?, ?, NOW())";
-                $messageStmt = $pdo->prepare($insertMsgQuery);
-                $messageStmt->execute([$reportId, $userId, $adminId, $feedback]);
-            }
+            $insertMsgQuery = "INSERT INTO Messages (ReportID, UserID, AdminID, Feedback, CreatedAt) 
+                            VALUES (?, ?, ?, ?, NOW())";
+            $messageStmt = $pdo->prepare($insertMsgQuery);
+            $messageStmt->execute([$reportId, $userId, $adminId, $feedback]);
+        }
 
-            $pdo->commit();
+        $pdo->commit();
 
-            echo json_encode([
-                'success' => true,
-                'message' => 'Report status updated successfully',
-                'reportId' => $reportId,
-                'newStatus' => $newStatus
-            ]);
-            break;
+        echo json_encode([
+            'success' => true,
+            'message' => 'Report status updated successfully',
+            'reportId' => $reportId,
+            'newStatus' => $newStatus
+        ]);
+        break;
+
 
         case 'uploadImage':
             $reportId = $_POST['reportId'] ?? null;
@@ -140,7 +138,6 @@ try {
                 throw new Exception('Report ID is required');
             }
 
-            // First get current image to delete it
             $stmt = $pdo->prepare("SELECT FeedbackImage FROM Reports WHERE ReportID = ?");
             $stmt->execute([$reportId]);
             $currentImage = $stmt->fetchColumn();
@@ -152,7 +149,6 @@ try {
                 }
             }
 
-            // Clear from database
             $stmt = $pdo->prepare("UPDATE Reports SET FeedbackImage = NULL WHERE ReportID = ?");
             $stmt->execute([$reportId]);
 

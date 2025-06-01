@@ -1,7 +1,7 @@
 let pieChart, lineChart;
 let dashboardData = null;
 let autoRefreshInterval = null;
-let pendingChanges = []; // Stores all changes until save
+let pendingChanges = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeCharts();

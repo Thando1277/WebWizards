@@ -1,0 +1,2641 @@
+[01-Jun-2025 00:22:42 Europe/Berlin] [DEBUG] 2025-06-01 00:22:42 - Request Method: GET
+[01-Jun-2025 00:22:42 Europe/Berlin] [DEBUG] 2025-06-01 00:22:42 - Content Type: Not set
+[01-Jun-2025 00:22:42 Europe/Berlin] [DEBUG] 2025-06-01 00:22:42 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:22:42 Europe/Berlin] [DEBUG] 2025-06-01 00:22:42 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:22:42 Europe/Berlin] [DEBUG] 2025-06-01 00:22:42 - Processing GET request for dashboard data
+[01-Jun-2025 00:23:12 Europe/Berlin] [DEBUG] 2025-06-01 00:23:12 - Request Method: GET
+[01-Jun-2025 00:23:12 Europe/Berlin] [DEBUG] 2025-06-01 00:23:12 - Content Type: Not set
+[01-Jun-2025 00:23:12 Europe/Berlin] [DEBUG] 2025-06-01 00:23:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:23:12 Europe/Berlin] [DEBUG] 2025-06-01 00:23:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:23:12 Europe/Berlin] [DEBUG] 2025-06-01 00:23:12 - Processing GET request for dashboard data
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - Request Method: POST
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - Content Type: application/json
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - Processing POST request with content type: application/json
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - JSON request with action: updateStatus
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - Update request - ReportID: 16, Status: In Progress, Feedback: 
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - Request Method: GET
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - Content Type: Not set
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:23:14 Europe/Berlin] [DEBUG] 2025-06-01 00:23:14 - Processing GET request for dashboard data
+[01-Jun-2025 00:23:24 Europe/Berlin] [DEBUG] 2025-06-01 00:23:24 - Request Method: GET
+[01-Jun-2025 00:23:24 Europe/Berlin] [DEBUG] 2025-06-01 00:23:24 - Content Type: Not set
+[01-Jun-2025 00:23:24 Europe/Berlin] [DEBUG] 2025-06-01 00:23:24 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:23:24 Europe/Berlin] [DEBUG] 2025-06-01 00:23:24 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:23:24 Europe/Berlin] [DEBUG] 2025-06-01 00:23:24 - Processing GET request for dashboard data
+[01-Jun-2025 00:23:26 Europe/Berlin] [DEBUG] 2025-06-01 00:23:26 - Request Method: GET
+[01-Jun-2025 00:23:26 Europe/Berlin] [DEBUG] 2025-06-01 00:23:26 - Content Type: Not set
+[01-Jun-2025 00:23:26 Europe/Berlin] [DEBUG] 2025-06-01 00:23:26 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:23:26 Europe/Berlin] [DEBUG] 2025-06-01 00:23:26 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:23:26 Europe/Berlin] [DEBUG] 2025-06-01 00:23:26 - Processing GET request for dashboard data
+[01-Jun-2025 00:24:38 Europe/Berlin] [DEBUG] 2025-06-01 00:24:38 - Request Method: GET
+[01-Jun-2025 00:24:38 Europe/Berlin] [DEBUG] 2025-06-01 00:24:38 - Content Type: Not set
+[01-Jun-2025 00:24:38 Europe/Berlin] [DEBUG] 2025-06-01 00:24:38 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:24:38 Europe/Berlin] [DEBUG] 2025-06-01 00:24:38 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:24:38 Europe/Berlin] [DEBUG] 2025-06-01 00:24:38 - Processing GET request for dashboard data
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Request Method: POST
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Content Type: application/json
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Processing POST request with content type: application/json
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - JSON request with action: updateStatus
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Update request - ReportID: 17, Status: Completed, Feedback: 
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Request Method: POST
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Content Type: application/json
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Processing POST request with content type: application/json
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - JSON request with action: updateStatus
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Update request - ReportID: 16, Status: Completed, Feedback: 
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Request Method: GET
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Content Type: Not set
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:24:51 Europe/Berlin] [DEBUG] 2025-06-01 00:24:51 - Processing GET request for dashboard data
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - Request Method: POST
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - Content Type: application/json
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - Processing POST request with content type: application/json
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - JSON request with action: updateStatus
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - Update request - ReportID: 8, Status: Completed, Feedback: 
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - Request Method: GET
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - Content Type: Not set
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:25:01 Europe/Berlin] [DEBUG] 2025-06-01 00:25:01 - Processing GET request for dashboard data
+[01-Jun-2025 00:25:08 Europe/Berlin] [DEBUG] 2025-06-01 00:25:08 - Request Method: GET
+[01-Jun-2025 00:25:08 Europe/Berlin] [DEBUG] 2025-06-01 00:25:08 - Content Type: Not set
+[01-Jun-2025 00:25:08 Europe/Berlin] [DEBUG] 2025-06-01 00:25:08 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:25:08 Europe/Berlin] [DEBUG] 2025-06-01 00:25:08 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:25:08 Europe/Berlin] [DEBUG] 2025-06-01 00:25:08 - Processing GET request for dashboard data
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - Request Method: POST
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - Content Type: application/json
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - Processing POST request with content type: application/json
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - JSON request with action: updateStatus
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - Update request - ReportID: 8, Status: In Progress, Feedback: 
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - Request Method: GET
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - Content Type: Not set
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:25:32 Europe/Berlin] [DEBUG] 2025-06-01 00:25:32 - Processing GET request for dashboard data
+[01-Jun-2025 00:25:38 Europe/Berlin] [DEBUG] 2025-06-01 00:25:38 - Request Method: GET
+[01-Jun-2025 00:25:38 Europe/Berlin] [DEBUG] 2025-06-01 00:25:38 - Content Type: Not set
+[01-Jun-2025 00:25:38 Europe/Berlin] [DEBUG] 2025-06-01 00:25:38 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:25:38 Europe/Berlin] [DEBUG] 2025-06-01 00:25:38 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:25:38 Europe/Berlin] [DEBUG] 2025-06-01 00:25:38 - Processing GET request for dashboard data
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - Request Method: POST
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - Content Type: application/json
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - Processing POST request with content type: application/json
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - JSON request with action: updateStatus
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - Update request - ReportID: 15, Status: In Progress, Feedback: 
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - Request Method: GET
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - Content Type: Not set
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:25:40 Europe/Berlin] [DEBUG] 2025-06-01 00:25:40 - Processing GET request for dashboard data
+[01-Jun-2025 00:26:08 Europe/Berlin] [DEBUG] 2025-06-01 00:26:08 - Request Method: GET
+[01-Jun-2025 00:26:08 Europe/Berlin] [DEBUG] 2025-06-01 00:26:08 - Content Type: Not set
+[01-Jun-2025 00:26:08 Europe/Berlin] [DEBUG] 2025-06-01 00:26:08 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:26:08 Europe/Berlin] [DEBUG] 2025-06-01 00:26:08 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:26:08 Europe/Berlin] [DEBUG] 2025-06-01 00:26:08 - Processing GET request for dashboard data
+[01-Jun-2025 00:26:39 Europe/Berlin] [DEBUG] 2025-06-01 00:26:39 - Request Method: GET
+[01-Jun-2025 00:26:39 Europe/Berlin] [DEBUG] 2025-06-01 00:26:39 - Content Type: Not set
+[01-Jun-2025 00:26:39 Europe/Berlin] [DEBUG] 2025-06-01 00:26:39 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:26:39 Europe/Berlin] [DEBUG] 2025-06-01 00:26:39 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:26:39 Europe/Berlin] [DEBUG] 2025-06-01 00:26:39 - Processing GET request for dashboard data
+[01-Jun-2025 00:27:09 Europe/Berlin] [DEBUG] 2025-06-01 00:27:09 - Request Method: GET
+[01-Jun-2025 00:27:09 Europe/Berlin] [DEBUG] 2025-06-01 00:27:09 - Content Type: Not set
+[01-Jun-2025 00:27:09 Europe/Berlin] [DEBUG] 2025-06-01 00:27:09 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:27:09 Europe/Berlin] [DEBUG] 2025-06-01 00:27:09 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:27:09 Europe/Berlin] [DEBUG] 2025-06-01 00:27:09 - Processing GET request for dashboard data
+[01-Jun-2025 00:27:36 Europe/Berlin] [DEBUG] 2025-06-01 00:27:36 - Request Method: GET
+[01-Jun-2025 00:27:36 Europe/Berlin] [DEBUG] 2025-06-01 00:27:36 - Content Type: Not set
+[01-Jun-2025 00:27:36 Europe/Berlin] [DEBUG] 2025-06-01 00:27:36 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:27:36 Europe/Berlin] [DEBUG] 2025-06-01 00:27:36 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:27:36 Europe/Berlin] [DEBUG] 2025-06-01 00:27:36 - Processing GET request for dashboard data
+[01-Jun-2025 00:28:02 Europe/Berlin] [DEBUG] 2025-06-01 00:28:02 - Request Method: GET
+[01-Jun-2025 00:28:02 Europe/Berlin] [DEBUG] 2025-06-01 00:28:02 - Content Type: Not set
+[01-Jun-2025 00:28:02 Europe/Berlin] [DEBUG] 2025-06-01 00:28:02 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:28:02 Europe/Berlin] [DEBUG] 2025-06-01 00:28:02 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:28:02 Europe/Berlin] [DEBUG] 2025-06-01 00:28:02 - Processing GET request for dashboard data
+[01-Jun-2025 00:28:32 Europe/Berlin] [DEBUG] 2025-06-01 00:28:32 - Request Method: GET
+[01-Jun-2025 00:28:32 Europe/Berlin] [DEBUG] 2025-06-01 00:28:32 - Content Type: Not set
+[01-Jun-2025 00:28:32 Europe/Berlin] [DEBUG] 2025-06-01 00:28:32 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:28:32 Europe/Berlin] [DEBUG] 2025-06-01 00:28:32 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:28:32 Europe/Berlin] [DEBUG] 2025-06-01 00:28:32 - Processing GET request for dashboard data
+[01-Jun-2025 00:28:41 Europe/Berlin] [DEBUG] 2025-06-01 00:28:41 - Request Method: GET
+[01-Jun-2025 00:28:41 Europe/Berlin] [DEBUG] 2025-06-01 00:28:41 - Content Type: Not set
+[01-Jun-2025 00:28:41 Europe/Berlin] [DEBUG] 2025-06-01 00:28:41 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:28:41 Europe/Berlin] [DEBUG] 2025-06-01 00:28:41 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:28:41 Europe/Berlin] [DEBUG] 2025-06-01 00:28:41 - Processing GET request for dashboard data
+[01-Jun-2025 00:29:12 Europe/Berlin] [DEBUG] 2025-06-01 00:29:12 - Request Method: GET
+[01-Jun-2025 00:29:12 Europe/Berlin] [DEBUG] 2025-06-01 00:29:12 - Content Type: Not set
+[01-Jun-2025 00:29:12 Europe/Berlin] [DEBUG] 2025-06-01 00:29:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:29:12 Europe/Berlin] [DEBUG] 2025-06-01 00:29:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:29:12 Europe/Berlin] [DEBUG] 2025-06-01 00:29:12 - Processing GET request for dashboard data
+[01-Jun-2025 00:29:42 Europe/Berlin] [DEBUG] 2025-06-01 00:29:42 - Request Method: GET
+[01-Jun-2025 00:29:42 Europe/Berlin] [DEBUG] 2025-06-01 00:29:42 - Content Type: Not set
+[01-Jun-2025 00:29:42 Europe/Berlin] [DEBUG] 2025-06-01 00:29:42 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:29:42 Europe/Berlin] [DEBUG] 2025-06-01 00:29:42 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:29:42 Europe/Berlin] [DEBUG] 2025-06-01 00:29:42 - Processing GET request for dashboard data
+[01-Jun-2025 00:30:01 Europe/Berlin] [DEBUG] 2025-06-01 00:30:01 - Request Method: GET
+[01-Jun-2025 00:30:01 Europe/Berlin] [DEBUG] 2025-06-01 00:30:01 - Content Type: Not set
+[01-Jun-2025 00:30:01 Europe/Berlin] [DEBUG] 2025-06-01 00:30:01 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:30:01 Europe/Berlin] [DEBUG] 2025-06-01 00:30:01 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:30:01 Europe/Berlin] [DEBUG] 2025-06-01 00:30:01 - Processing GET request for dashboard data
+[01-Jun-2025 00:30:31 Europe/Berlin] [DEBUG] 2025-06-01 00:30:31 - Request Method: GET
+[01-Jun-2025 00:30:31 Europe/Berlin] [DEBUG] 2025-06-01 00:30:31 - Content Type: Not set
+[01-Jun-2025 00:30:31 Europe/Berlin] [DEBUG] 2025-06-01 00:30:31 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:30:32 Europe/Berlin] [DEBUG] 2025-06-01 00:30:32 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:30:32 Europe/Berlin] [DEBUG] 2025-06-01 00:30:32 - Processing GET request for dashboard data
+[01-Jun-2025 00:31:01 Europe/Berlin] [DEBUG] 2025-06-01 00:31:01 - Request Method: GET
+[01-Jun-2025 00:31:02 Europe/Berlin] [DEBUG] 2025-06-01 00:31:02 - Content Type: Not set
+[01-Jun-2025 00:31:02 Europe/Berlin] [DEBUG] 2025-06-01 00:31:02 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:31:02 Europe/Berlin] [DEBUG] 2025-06-01 00:31:02 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:31:02 Europe/Berlin] [DEBUG] 2025-06-01 00:31:02 - Processing GET request for dashboard data
+[01-Jun-2025 00:31:31 Europe/Berlin] [DEBUG] 2025-06-01 00:31:32 - Request Method: GET
+[01-Jun-2025 00:31:31 Europe/Berlin] [DEBUG] 2025-06-01 00:31:32 - Content Type: Not set
+[01-Jun-2025 00:31:31 Europe/Berlin] [DEBUG] 2025-06-01 00:31:32 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:31:31 Europe/Berlin] [DEBUG] 2025-06-01 00:31:32 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:31:31 Europe/Berlin] [DEBUG] 2025-06-01 00:31:32 - Processing GET request for dashboard data
+[01-Jun-2025 00:32:02 Europe/Berlin] [DEBUG] 2025-06-01 00:32:02 - Request Method: GET
+[01-Jun-2025 00:32:02 Europe/Berlin] [DEBUG] 2025-06-01 00:32:02 - Content Type: Not set
+[01-Jun-2025 00:32:02 Europe/Berlin] [DEBUG] 2025-06-01 00:32:02 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:32:02 Europe/Berlin] [DEBUG] 2025-06-01 00:32:02 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:32:02 Europe/Berlin] [DEBUG] 2025-06-01 00:32:02 - Processing GET request for dashboard data
+[01-Jun-2025 00:32:32 Europe/Berlin] [DEBUG] 2025-06-01 00:32:32 - Request Method: GET
+[01-Jun-2025 00:32:32 Europe/Berlin] [DEBUG] 2025-06-01 00:32:32 - Content Type: Not set
+[01-Jun-2025 00:32:32 Europe/Berlin] [DEBUG] 2025-06-01 00:32:32 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:32:32 Europe/Berlin] [DEBUG] 2025-06-01 00:32:32 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:32:32 Europe/Berlin] [DEBUG] 2025-06-01 00:32:32 - Processing GET request for dashboard data
+[01-Jun-2025 00:33:02 Europe/Berlin] [DEBUG] 2025-06-01 00:33:02 - Request Method: GET
+[01-Jun-2025 00:33:02 Europe/Berlin] [DEBUG] 2025-06-01 00:33:02 - Content Type: Not set
+[01-Jun-2025 00:33:02 Europe/Berlin] [DEBUG] 2025-06-01 00:33:02 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:33:02 Europe/Berlin] [DEBUG] 2025-06-01 00:33:02 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:33:02 Europe/Berlin] [DEBUG] 2025-06-01 00:33:02 - Processing GET request for dashboard data
+[01-Jun-2025 00:33:31 Europe/Berlin] [DEBUG] 2025-06-01 00:33:31 - Request Method: GET
+[01-Jun-2025 00:33:31 Europe/Berlin] [DEBUG] 2025-06-01 00:33:31 - Content Type: Not set
+[01-Jun-2025 00:33:31 Europe/Berlin] [DEBUG] 2025-06-01 00:33:31 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:33:31 Europe/Berlin] [DEBUG] 2025-06-01 00:33:31 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:33:31 Europe/Berlin] [DEBUG] 2025-06-01 00:33:31 - Processing GET request for dashboard data
+[01-Jun-2025 00:33:39 Europe/Berlin] [DEBUG] 2025-06-01 00:33:39 - Request Method: GET
+[01-Jun-2025 00:33:39 Europe/Berlin] [DEBUG] 2025-06-01 00:33:39 - Content Type: Not set
+[01-Jun-2025 00:33:39 Europe/Berlin] [DEBUG] 2025-06-01 00:33:39 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:33:39 Europe/Berlin] [DEBUG] 2025-06-01 00:33:39 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:33:39 Europe/Berlin] [DEBUG] 2025-06-01 00:33:39 - Processing GET request for dashboard data
+[01-Jun-2025 00:34:09 Europe/Berlin] [DEBUG] 2025-06-01 00:34:09 - Request Method: GET
+[01-Jun-2025 00:34:09 Europe/Berlin] [DEBUG] 2025-06-01 00:34:09 - Content Type: Not set
+[01-Jun-2025 00:34:09 Europe/Berlin] [DEBUG] 2025-06-01 00:34:09 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:34:09 Europe/Berlin] [DEBUG] 2025-06-01 00:34:09 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:34:09 Europe/Berlin] [DEBUG] 2025-06-01 00:34:09 - Processing GET request for dashboard data
+[01-Jun-2025 00:34:39 Europe/Berlin] [DEBUG] 2025-06-01 00:34:39 - Request Method: GET
+[01-Jun-2025 00:34:39 Europe/Berlin] [DEBUG] 2025-06-01 00:34:39 - Content Type: Not set
+[01-Jun-2025 00:34:39 Europe/Berlin] [DEBUG] 2025-06-01 00:34:39 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:34:39 Europe/Berlin] [DEBUG] 2025-06-01 00:34:39 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:34:39 Europe/Berlin] [DEBUG] 2025-06-01 00:34:39 - Processing GET request for dashboard data
+[01-Jun-2025 00:35:10 Europe/Berlin] [DEBUG] 2025-06-01 00:35:10 - Request Method: GET
+[01-Jun-2025 00:35:10 Europe/Berlin] [DEBUG] 2025-06-01 00:35:10 - Content Type: Not set
+[01-Jun-2025 00:35:10 Europe/Berlin] [DEBUG] 2025-06-01 00:35:10 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:35:10 Europe/Berlin] [DEBUG] 2025-06-01 00:35:10 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:35:10 Europe/Berlin] [DEBUG] 2025-06-01 00:35:10 - Processing GET request for dashboard data
+[01-Jun-2025 00:35:39 Europe/Berlin] [DEBUG] 2025-06-01 00:35:40 - Request Method: GET
+[01-Jun-2025 00:35:39 Europe/Berlin] [DEBUG] 2025-06-01 00:35:40 - Content Type: Not set
+[01-Jun-2025 00:35:39 Europe/Berlin] [DEBUG] 2025-06-01 00:35:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:35:39 Europe/Berlin] [DEBUG] 2025-06-01 00:35:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:35:40 Europe/Berlin] [DEBUG] 2025-06-01 00:35:40 - Processing GET request for dashboard data
+[01-Jun-2025 00:36:09 Europe/Berlin] [DEBUG] 2025-06-01 00:36:09 - Request Method: GET
+[01-Jun-2025 00:36:09 Europe/Berlin] [DEBUG] 2025-06-01 00:36:09 - Content Type: Not set
+[01-Jun-2025 00:36:09 Europe/Berlin] [DEBUG] 2025-06-01 00:36:10 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:36:09 Europe/Berlin] [DEBUG] 2025-06-01 00:36:10 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:36:09 Europe/Berlin] [DEBUG] 2025-06-01 00:36:10 - Processing GET request for dashboard data
+[01-Jun-2025 00:36:39 Europe/Berlin] [DEBUG] 2025-06-01 00:36:40 - Request Method: GET
+[01-Jun-2025 00:36:39 Europe/Berlin] [DEBUG] 2025-06-01 00:36:40 - Content Type: Not set
+[01-Jun-2025 00:36:39 Europe/Berlin] [DEBUG] 2025-06-01 00:36:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:36:39 Europe/Berlin] [DEBUG] 2025-06-01 00:36:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:36:39 Europe/Berlin] [DEBUG] 2025-06-01 00:36:40 - Processing GET request for dashboard data
+[01-Jun-2025 00:37:10 Europe/Berlin] [DEBUG] 2025-06-01 00:37:10 - Request Method: GET
+[01-Jun-2025 00:37:10 Europe/Berlin] [DEBUG] 2025-06-01 00:37:10 - Content Type: Not set
+[01-Jun-2025 00:37:10 Europe/Berlin] [DEBUG] 2025-06-01 00:37:10 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:37:10 Europe/Berlin] [DEBUG] 2025-06-01 00:37:10 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:37:10 Europe/Berlin] [DEBUG] 2025-06-01 00:37:10 - Processing GET request for dashboard data
+[01-Jun-2025 00:37:28 Europe/Berlin] [DEBUG] 2025-06-01 00:37:28 - Request Method: GET
+[01-Jun-2025 00:37:28 Europe/Berlin] [DEBUG] 2025-06-01 00:37:28 - Content Type: Not set
+[01-Jun-2025 00:37:28 Europe/Berlin] [DEBUG] 2025-06-01 00:37:28 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:37:28 Europe/Berlin] [DEBUG] 2025-06-01 00:37:28 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:37:28 Europe/Berlin] [DEBUG] 2025-06-01 00:37:28 - Processing GET request for dashboard data
+[01-Jun-2025 00:37:48 Europe/Berlin] [DEBUG] 2025-06-01 00:37:48 - Request Method: GET
+[01-Jun-2025 00:37:48 Europe/Berlin] [DEBUG] 2025-06-01 00:37:48 - Content Type: Not set
+[01-Jun-2025 00:37:48 Europe/Berlin] [DEBUG] 2025-06-01 00:37:48 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:37:48 Europe/Berlin] [DEBUG] 2025-06-01 00:37:48 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:37:48 Europe/Berlin] [DEBUG] 2025-06-01 00:37:48 - Processing GET request for dashboard data
+[01-Jun-2025 00:38:18 Europe/Berlin] [DEBUG] 2025-06-01 00:38:18 - Request Method: GET
+[01-Jun-2025 00:38:18 Europe/Berlin] [DEBUG] 2025-06-01 00:38:18 - Content Type: Not set
+[01-Jun-2025 00:38:18 Europe/Berlin] [DEBUG] 2025-06-01 00:38:18 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:38:18 Europe/Berlin] [DEBUG] 2025-06-01 00:38:19 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:38:18 Europe/Berlin] [DEBUG] 2025-06-01 00:38:19 - Processing GET request for dashboard data
+[01-Jun-2025 00:38:32 Europe/Berlin] [DEBUG] 2025-06-01 00:38:32 - Request Method: GET
+[01-Jun-2025 00:38:32 Europe/Berlin] [DEBUG] 2025-06-01 00:38:32 - Content Type: Not set
+[01-Jun-2025 00:38:32 Europe/Berlin] [DEBUG] 2025-06-01 00:38:32 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:38:32 Europe/Berlin] [DEBUG] 2025-06-01 00:38:32 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:38:32 Europe/Berlin] [DEBUG] 2025-06-01 00:38:32 - Processing GET request for dashboard data
+[01-Jun-2025 00:38:34 Europe/Berlin] [DEBUG] 2025-06-01 00:38:34 - Request Method: GET
+[01-Jun-2025 00:38:34 Europe/Berlin] [DEBUG] 2025-06-01 00:38:34 - Content Type: Not set
+[01-Jun-2025 00:38:34 Europe/Berlin] [DEBUG] 2025-06-01 00:38:34 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:38:34 Europe/Berlin] [DEBUG] 2025-06-01 00:38:34 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:38:34 Europe/Berlin] [DEBUG] 2025-06-01 00:38:34 - Processing GET request for dashboard data
+[01-Jun-2025 00:39:04 Europe/Berlin] [DEBUG] 2025-06-01 00:39:04 - Request Method: GET
+[01-Jun-2025 00:39:04 Europe/Berlin] [DEBUG] 2025-06-01 00:39:04 - Content Type: Not set
+[01-Jun-2025 00:39:04 Europe/Berlin] [DEBUG] 2025-06-01 00:39:04 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:39:04 Europe/Berlin] [DEBUG] 2025-06-01 00:39:04 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:39:04 Europe/Berlin] [DEBUG] 2025-06-01 00:39:04 - Processing GET request for dashboard data
+[01-Jun-2025 00:39:09 Europe/Berlin] [DEBUG] 2025-06-01 00:39:09 - Request Method: GET
+[01-Jun-2025 00:39:09 Europe/Berlin] [DEBUG] 2025-06-01 00:39:09 - Content Type: Not set
+[01-Jun-2025 00:39:09 Europe/Berlin] [DEBUG] 2025-06-01 00:39:09 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:39:09 Europe/Berlin] [DEBUG] 2025-06-01 00:39:09 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:39:09 Europe/Berlin] [DEBUG] 2025-06-01 00:39:09 - Processing GET request for dashboard data
+[01-Jun-2025 00:39:11 Europe/Berlin] [DEBUG] 2025-06-01 00:39:11 - Request Method: GET
+[01-Jun-2025 00:39:11 Europe/Berlin] [DEBUG] 2025-06-01 00:39:11 - Content Type: Not set
+[01-Jun-2025 00:39:11 Europe/Berlin] [DEBUG] 2025-06-01 00:39:11 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:39:11 Europe/Berlin] [DEBUG] 2025-06-01 00:39:11 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:39:11 Europe/Berlin] [DEBUG] 2025-06-01 00:39:11 - Processing GET request for dashboard data
+[01-Jun-2025 00:39:41 Europe/Berlin] [DEBUG] 2025-06-01 00:39:41 - Request Method: GET
+[01-Jun-2025 00:39:41 Europe/Berlin] [DEBUG] 2025-06-01 00:39:41 - Content Type: Not set
+[01-Jun-2025 00:39:41 Europe/Berlin] [DEBUG] 2025-06-01 00:39:41 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:39:41 Europe/Berlin] [DEBUG] 2025-06-01 00:39:41 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:39:41 Europe/Berlin] [DEBUG] 2025-06-01 00:39:41 - Processing GET request for dashboard data
+[01-Jun-2025 00:40:12 Europe/Berlin] [DEBUG] 2025-06-01 00:40:12 - Request Method: GET
+[01-Jun-2025 00:40:12 Europe/Berlin] [DEBUG] 2025-06-01 00:40:12 - Content Type: Not set
+[01-Jun-2025 00:40:12 Europe/Berlin] [DEBUG] 2025-06-01 00:40:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:40:12 Europe/Berlin] [DEBUG] 2025-06-01 00:40:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:40:12 Europe/Berlin] [DEBUG] 2025-06-01 00:40:12 - Processing GET request for dashboard data
+[01-Jun-2025 00:40:16 Europe/Berlin] [DEBUG] 2025-06-01 00:40:16 - Request Method: GET
+[01-Jun-2025 00:40:16 Europe/Berlin] [DEBUG] 2025-06-01 00:40:16 - Content Type: Not set
+[01-Jun-2025 00:40:16 Europe/Berlin] [DEBUG] 2025-06-01 00:40:16 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:40:16 Europe/Berlin] [DEBUG] 2025-06-01 00:40:16 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:40:16 Europe/Berlin] [DEBUG] 2025-06-01 00:40:16 - Processing GET request for dashboard data
+[01-Jun-2025 00:40:46 Europe/Berlin] [DEBUG] 2025-06-01 00:40:46 - Request Method: GET
+[01-Jun-2025 00:40:46 Europe/Berlin] [DEBUG] 2025-06-01 00:40:46 - Content Type: Not set
+[01-Jun-2025 00:40:46 Europe/Berlin] [DEBUG] 2025-06-01 00:40:46 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:40:46 Europe/Berlin] [DEBUG] 2025-06-01 00:40:46 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:40:46 Europe/Berlin] [DEBUG] 2025-06-01 00:40:46 - Processing GET request for dashboard data
+[01-Jun-2025 00:41:17 Europe/Berlin] [DEBUG] 2025-06-01 00:41:17 - Request Method: GET
+[01-Jun-2025 00:41:17 Europe/Berlin] [DEBUG] 2025-06-01 00:41:17 - Content Type: Not set
+[01-Jun-2025 00:41:17 Europe/Berlin] [DEBUG] 2025-06-01 00:41:17 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:41:17 Europe/Berlin] [DEBUG] 2025-06-01 00:41:17 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:41:17 Europe/Berlin] [DEBUG] 2025-06-01 00:41:17 - Processing GET request for dashboard data
+[01-Jun-2025 00:41:46 Europe/Berlin] [DEBUG] 2025-06-01 00:41:46 - Request Method: GET
+[01-Jun-2025 00:41:46 Europe/Berlin] [DEBUG] 2025-06-01 00:41:46 - Content Type: Not set
+[01-Jun-2025 00:41:46 Europe/Berlin] [DEBUG] 2025-06-01 00:41:46 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:41:46 Europe/Berlin] [DEBUG] 2025-06-01 00:41:46 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:41:46 Europe/Berlin] [DEBUG] 2025-06-01 00:41:46 - Processing GET request for dashboard data
+[01-Jun-2025 00:42:16 Europe/Berlin] [DEBUG] 2025-06-01 00:42:16 - Request Method: GET
+[01-Jun-2025 00:42:16 Europe/Berlin] [DEBUG] 2025-06-01 00:42:16 - Content Type: Not set
+[01-Jun-2025 00:42:16 Europe/Berlin] [DEBUG] 2025-06-01 00:42:16 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:42:16 Europe/Berlin] [DEBUG] 2025-06-01 00:42:16 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:42:16 Europe/Berlin] [DEBUG] 2025-06-01 00:42:16 - Processing GET request for dashboard data
+[01-Jun-2025 00:42:47 Europe/Berlin] [DEBUG] 2025-06-01 00:42:47 - Request Method: GET
+[01-Jun-2025 00:42:47 Europe/Berlin] [DEBUG] 2025-06-01 00:42:47 - Content Type: Not set
+[01-Jun-2025 00:42:47 Europe/Berlin] [DEBUG] 2025-06-01 00:42:47 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:42:47 Europe/Berlin] [DEBUG] 2025-06-01 00:42:47 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:42:47 Europe/Berlin] [DEBUG] 2025-06-01 00:42:47 - Processing GET request for dashboard data
+[01-Jun-2025 00:42:52 Europe/Berlin] [DEBUG] 2025-06-01 00:42:52 - Request Method: GET
+[01-Jun-2025 00:42:52 Europe/Berlin] [DEBUG] 2025-06-01 00:42:52 - Content Type: Not set
+[01-Jun-2025 00:42:52 Europe/Berlin] [DEBUG] 2025-06-01 00:42:52 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:42:52 Europe/Berlin] [DEBUG] 2025-06-01 00:42:52 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:42:52 Europe/Berlin] [DEBUG] 2025-06-01 00:42:52 - Processing GET request for dashboard data
+[01-Jun-2025 00:43:00 Europe/Berlin] [DEBUG] 2025-06-01 00:43:00 - Request Method: GET
+[01-Jun-2025 00:43:00 Europe/Berlin] [DEBUG] 2025-06-01 00:43:00 - Content Type: Not set
+[01-Jun-2025 00:43:00 Europe/Berlin] [DEBUG] 2025-06-01 00:43:00 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:43:00 Europe/Berlin] [DEBUG] 2025-06-01 00:43:00 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:43:00 Europe/Berlin] [DEBUG] 2025-06-01 00:43:00 - Processing GET request for dashboard data
+[01-Jun-2025 00:43:30 Europe/Berlin] [DEBUG] 2025-06-01 00:43:30 - Request Method: GET
+[01-Jun-2025 00:43:30 Europe/Berlin] [DEBUG] 2025-06-01 00:43:30 - Content Type: Not set
+[01-Jun-2025 00:43:30 Europe/Berlin] [DEBUG] 2025-06-01 00:43:30 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:43:30 Europe/Berlin] [DEBUG] 2025-06-01 00:43:30 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:43:30 Europe/Berlin] [DEBUG] 2025-06-01 00:43:30 - Processing GET request for dashboard data
+[01-Jun-2025 00:44:00 Europe/Berlin] [DEBUG] 2025-06-01 00:44:00 - Request Method: GET
+[01-Jun-2025 00:44:00 Europe/Berlin] [DEBUG] 2025-06-01 00:44:00 - Content Type: Not set
+[01-Jun-2025 00:44:00 Europe/Berlin] [DEBUG] 2025-06-01 00:44:00 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:44:00 Europe/Berlin] [DEBUG] 2025-06-01 00:44:00 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:44:00 Europe/Berlin] [DEBUG] 2025-06-01 00:44:00 - Processing GET request for dashboard data
+[01-Jun-2025 00:44:30 Europe/Berlin] [DEBUG] 2025-06-01 00:44:30 - Request Method: GET
+[01-Jun-2025 00:44:30 Europe/Berlin] [DEBUG] 2025-06-01 00:44:30 - Content Type: Not set
+[01-Jun-2025 00:44:30 Europe/Berlin] [DEBUG] 2025-06-01 00:44:30 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:44:30 Europe/Berlin] [DEBUG] 2025-06-01 00:44:30 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:44:30 Europe/Berlin] [DEBUG] 2025-06-01 00:44:30 - Processing GET request for dashboard data
+[01-Jun-2025 00:44:36 Europe/Berlin] [DEBUG] 2025-06-01 00:44:36 - Request Method: GET
+[01-Jun-2025 00:44:36 Europe/Berlin] [DEBUG] 2025-06-01 00:44:36 - Content Type: Not set
+[01-Jun-2025 00:44:36 Europe/Berlin] [DEBUG] 2025-06-01 00:44:36 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:44:36 Europe/Berlin] [DEBUG] 2025-06-01 00:44:36 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:44:36 Europe/Berlin] [DEBUG] 2025-06-01 00:44:36 - Processing GET request for dashboard data
+[01-Jun-2025 00:45:06 Europe/Berlin] [DEBUG] 2025-06-01 00:45:06 - Request Method: GET
+[01-Jun-2025 00:45:06 Europe/Berlin] [DEBUG] 2025-06-01 00:45:06 - Content Type: Not set
+[01-Jun-2025 00:45:06 Europe/Berlin] [DEBUG] 2025-06-01 00:45:06 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:45:06 Europe/Berlin] [DEBUG] 2025-06-01 00:45:06 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:45:06 Europe/Berlin] [DEBUG] 2025-06-01 00:45:06 - Processing GET request for dashboard data
+[01-Jun-2025 00:45:11 Europe/Berlin] [DEBUG] 2025-06-01 00:45:11 - Request Method: GET
+[01-Jun-2025 00:45:11 Europe/Berlin] [DEBUG] 2025-06-01 00:45:11 - Content Type: Not set
+[01-Jun-2025 00:45:11 Europe/Berlin] [DEBUG] 2025-06-01 00:45:11 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:45:11 Europe/Berlin] [DEBUG] 2025-06-01 00:45:11 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:45:11 Europe/Berlin] [DEBUG] 2025-06-01 00:45:11 - Processing GET request for dashboard data
+[01-Jun-2025 00:45:33 Europe/Berlin] [DEBUG] 2025-06-01 00:45:33 - Request Method: GET
+[01-Jun-2025 00:45:33 Europe/Berlin] [DEBUG] 2025-06-01 00:45:33 - Content Type: Not set
+[01-Jun-2025 00:45:33 Europe/Berlin] [DEBUG] 2025-06-01 00:45:33 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:45:33 Europe/Berlin] [DEBUG] 2025-06-01 00:45:33 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:45:33 Europe/Berlin] [DEBUG] 2025-06-01 00:45:33 - Processing GET request for dashboard data
+[01-Jun-2025 00:45:38 Europe/Berlin] [DEBUG] 2025-06-01 00:45:38 - Request Method: GET
+[01-Jun-2025 00:45:38 Europe/Berlin] [DEBUG] 2025-06-01 00:45:38 - Content Type: Not set
+[01-Jun-2025 00:45:38 Europe/Berlin] [DEBUG] 2025-06-01 00:45:38 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:45:38 Europe/Berlin] [DEBUG] 2025-06-01 00:45:38 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:45:38 Europe/Berlin] [DEBUG] 2025-06-01 00:45:38 - Processing GET request for dashboard data
+[01-Jun-2025 00:46:08 Europe/Berlin] [DEBUG] 2025-06-01 00:46:08 - Request Method: GET
+[01-Jun-2025 00:46:08 Europe/Berlin] [DEBUG] 2025-06-01 00:46:08 - Content Type: Not set
+[01-Jun-2025 00:46:08 Europe/Berlin] [DEBUG] 2025-06-01 00:46:08 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:46:08 Europe/Berlin] [DEBUG] 2025-06-01 00:46:08 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:46:08 Europe/Berlin] [DEBUG] 2025-06-01 00:46:08 - Processing GET request for dashboard data
+[01-Jun-2025 00:46:38 Europe/Berlin] [DEBUG] 2025-06-01 00:46:38 - Request Method: GET
+[01-Jun-2025 00:46:38 Europe/Berlin] [DEBUG] 2025-06-01 00:46:38 - Content Type: Not set
+[01-Jun-2025 00:46:38 Europe/Berlin] [DEBUG] 2025-06-01 00:46:38 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:46:38 Europe/Berlin] [DEBUG] 2025-06-01 00:46:38 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:46:38 Europe/Berlin] [DEBUG] 2025-06-01 00:46:38 - Processing GET request for dashboard data
+[01-Jun-2025 00:47:08 Europe/Berlin] [DEBUG] 2025-06-01 00:47:08 - Request Method: GET
+[01-Jun-2025 00:47:08 Europe/Berlin] [DEBUG] 2025-06-01 00:47:08 - Content Type: Not set
+[01-Jun-2025 00:47:08 Europe/Berlin] [DEBUG] 2025-06-01 00:47:08 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:47:08 Europe/Berlin] [DEBUG] 2025-06-01 00:47:08 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:47:08 Europe/Berlin] [DEBUG] 2025-06-01 00:47:08 - Processing GET request for dashboard data
+[01-Jun-2025 00:47:38 Europe/Berlin] [DEBUG] 2025-06-01 00:47:38 - Request Method: GET
+[01-Jun-2025 00:47:38 Europe/Berlin] [DEBUG] 2025-06-01 00:47:38 - Content Type: Not set
+[01-Jun-2025 00:47:38 Europe/Berlin] [DEBUG] 2025-06-01 00:47:38 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:47:38 Europe/Berlin] [DEBUG] 2025-06-01 00:47:38 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:47:38 Europe/Berlin] [DEBUG] 2025-06-01 00:47:38 - Processing GET request for dashboard data
+[01-Jun-2025 00:48:08 Europe/Berlin] [DEBUG] 2025-06-01 00:48:08 - Request Method: GET
+[01-Jun-2025 00:48:08 Europe/Berlin] [DEBUG] 2025-06-01 00:48:08 - Content Type: Not set
+[01-Jun-2025 00:48:08 Europe/Berlin] [DEBUG] 2025-06-01 00:48:08 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:48:09 Europe/Berlin] [DEBUG] 2025-06-01 00:48:08 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:48:09 Europe/Berlin] [DEBUG] 2025-06-01 00:48:09 - Processing GET request for dashboard data
+[01-Jun-2025 00:48:38 Europe/Berlin] [DEBUG] 2025-06-01 00:48:38 - Request Method: GET
+[01-Jun-2025 00:48:38 Europe/Berlin] [DEBUG] 2025-06-01 00:48:38 - Content Type: Not set
+[01-Jun-2025 00:48:38 Europe/Berlin] [DEBUG] 2025-06-01 00:48:38 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:48:38 Europe/Berlin] [DEBUG] 2025-06-01 00:48:38 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:48:38 Europe/Berlin] [DEBUG] 2025-06-01 00:48:38 - Processing GET request for dashboard data
+[01-Jun-2025 00:49:08 Europe/Berlin] [DEBUG] 2025-06-01 00:49:08 - Request Method: GET
+[01-Jun-2025 00:49:08 Europe/Berlin] [DEBUG] 2025-06-01 00:49:08 - Content Type: Not set
+[01-Jun-2025 00:49:08 Europe/Berlin] [DEBUG] 2025-06-01 00:49:08 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:49:08 Europe/Berlin] [DEBUG] 2025-06-01 00:49:08 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:49:08 Europe/Berlin] [DEBUG] 2025-06-01 00:49:08 - Processing GET request for dashboard data
+[01-Jun-2025 00:49:12 Europe/Berlin] [DEBUG] 2025-06-01 00:49:12 - Request Method: GET
+[01-Jun-2025 00:49:12 Europe/Berlin] [DEBUG] 2025-06-01 00:49:12 - Content Type: Not set
+[01-Jun-2025 00:49:12 Europe/Berlin] [DEBUG] 2025-06-01 00:49:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:49:12 Europe/Berlin] [DEBUG] 2025-06-01 00:49:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:49:12 Europe/Berlin] [DEBUG] 2025-06-01 00:49:12 - Processing GET request for dashboard data
+[01-Jun-2025 00:49:42 Europe/Berlin] [DEBUG] 2025-06-01 00:49:42 - Request Method: GET
+[01-Jun-2025 00:49:42 Europe/Berlin] [DEBUG] 2025-06-01 00:49:42 - Content Type: Not set
+[01-Jun-2025 00:49:42 Europe/Berlin] [DEBUG] 2025-06-01 00:49:42 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:49:42 Europe/Berlin] [DEBUG] 2025-06-01 00:49:42 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:49:42 Europe/Berlin] [DEBUG] 2025-06-01 00:49:42 - Processing GET request for dashboard data
+[01-Jun-2025 00:50:07 Europe/Berlin] [DEBUG] 2025-06-01 00:50:07 - Request Method: GET
+[01-Jun-2025 00:50:07 Europe/Berlin] [DEBUG] 2025-06-01 00:50:07 - Content Type: Not set
+[01-Jun-2025 00:50:07 Europe/Berlin] [DEBUG] 2025-06-01 00:50:07 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:50:07 Europe/Berlin] [DEBUG] 2025-06-01 00:50:07 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:50:07 Europe/Berlin] [DEBUG] 2025-06-01 00:50:07 - Processing GET request for dashboard data
+[01-Jun-2025 00:50:37 Europe/Berlin] [DEBUG] 2025-06-01 00:50:37 - Request Method: GET
+[01-Jun-2025 00:50:37 Europe/Berlin] [DEBUG] 2025-06-01 00:50:37 - Content Type: Not set
+[01-Jun-2025 00:50:37 Europe/Berlin] [DEBUG] 2025-06-01 00:50:37 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:50:37 Europe/Berlin] [DEBUG] 2025-06-01 00:50:37 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:50:37 Europe/Berlin] [DEBUG] 2025-06-01 00:50:37 - Processing GET request for dashboard data
+[01-Jun-2025 00:50:42 Europe/Berlin] [DEBUG] 2025-06-01 00:50:42 - Request Method: GET
+[01-Jun-2025 00:50:42 Europe/Berlin] [DEBUG] 2025-06-01 00:50:42 - Content Type: Not set
+[01-Jun-2025 00:50:42 Europe/Berlin] [DEBUG] 2025-06-01 00:50:42 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:50:42 Europe/Berlin] [DEBUG] 2025-06-01 00:50:42 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:50:42 Europe/Berlin] [DEBUG] 2025-06-01 00:50:42 - Processing GET request for dashboard data
+[01-Jun-2025 00:51:12 Europe/Berlin] [DEBUG] 2025-06-01 00:51:12 - Request Method: GET
+[01-Jun-2025 00:51:12 Europe/Berlin] [DEBUG] 2025-06-01 00:51:12 - Content Type: Not set
+[01-Jun-2025 00:51:12 Europe/Berlin] [DEBUG] 2025-06-01 00:51:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:51:12 Europe/Berlin] [DEBUG] 2025-06-01 00:51:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:51:12 Europe/Berlin] [DEBUG] 2025-06-01 00:51:12 - Processing GET request for dashboard data
+[01-Jun-2025 00:51:42 Europe/Berlin] [DEBUG] 2025-06-01 00:51:42 - Request Method: GET
+[01-Jun-2025 00:51:42 Europe/Berlin] [DEBUG] 2025-06-01 00:51:42 - Content Type: Not set
+[01-Jun-2025 00:51:42 Europe/Berlin] [DEBUG] 2025-06-01 00:51:42 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:51:42 Europe/Berlin] [DEBUG] 2025-06-01 00:51:42 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:51:42 Europe/Berlin] [DEBUG] 2025-06-01 00:51:42 - Processing GET request for dashboard data
+[01-Jun-2025 00:52:12 Europe/Berlin] [DEBUG] 2025-06-01 00:52:12 - Request Method: GET
+[01-Jun-2025 00:52:12 Europe/Berlin] [DEBUG] 2025-06-01 00:52:12 - Content Type: Not set
+[01-Jun-2025 00:52:12 Europe/Berlin] [DEBUG] 2025-06-01 00:52:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:52:12 Europe/Berlin] [DEBUG] 2025-06-01 00:52:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:52:12 Europe/Berlin] [DEBUG] 2025-06-01 00:52:12 - Processing GET request for dashboard data
+[01-Jun-2025 00:52:42 Europe/Berlin] [DEBUG] 2025-06-01 00:52:42 - Request Method: GET
+[01-Jun-2025 00:52:42 Europe/Berlin] [DEBUG] 2025-06-01 00:52:42 - Content Type: Not set
+[01-Jun-2025 00:52:42 Europe/Berlin] [DEBUG] 2025-06-01 00:52:42 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:52:42 Europe/Berlin] [DEBUG] 2025-06-01 00:52:42 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:52:42 Europe/Berlin] [DEBUG] 2025-06-01 00:52:42 - Processing GET request for dashboard data
+[01-Jun-2025 00:53:04 Europe/Berlin] [DEBUG] 2025-06-01 00:53:04 - Request Method: GET
+[01-Jun-2025 00:53:04 Europe/Berlin] [DEBUG] 2025-06-01 00:53:04 - Content Type: Not set
+[01-Jun-2025 00:53:04 Europe/Berlin] [DEBUG] 2025-06-01 00:53:04 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:53:04 Europe/Berlin] [DEBUG] 2025-06-01 00:53:04 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:53:04 Europe/Berlin] [DEBUG] 2025-06-01 00:53:04 - Processing GET request for dashboard data
+[01-Jun-2025 00:53:34 Europe/Berlin] [DEBUG] 2025-06-01 00:53:34 - Request Method: GET
+[01-Jun-2025 00:53:34 Europe/Berlin] [DEBUG] 2025-06-01 00:53:34 - Content Type: Not set
+[01-Jun-2025 00:53:34 Europe/Berlin] [DEBUG] 2025-06-01 00:53:34 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:53:34 Europe/Berlin] [DEBUG] 2025-06-01 00:53:34 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:53:34 Europe/Berlin] [DEBUG] 2025-06-01 00:53:34 - Processing GET request for dashboard data
+[01-Jun-2025 00:54:04 Europe/Berlin] [DEBUG] 2025-06-01 00:54:04 - Request Method: GET
+[01-Jun-2025 00:54:04 Europe/Berlin] [DEBUG] 2025-06-01 00:54:04 - Content Type: Not set
+[01-Jun-2025 00:54:04 Europe/Berlin] [DEBUG] 2025-06-01 00:54:04 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:54:04 Europe/Berlin] [DEBUG] 2025-06-01 00:54:04 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:54:04 Europe/Berlin] [DEBUG] 2025-06-01 00:54:04 - Processing GET request for dashboard data
+[01-Jun-2025 00:54:19 Europe/Berlin] [DEBUG] 2025-06-01 00:54:19 - Request Method: GET
+[01-Jun-2025 00:54:19 Europe/Berlin] [DEBUG] 2025-06-01 00:54:19 - Content Type: Not set
+[01-Jun-2025 00:54:19 Europe/Berlin] [DEBUG] 2025-06-01 00:54:19 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:54:19 Europe/Berlin] [DEBUG] 2025-06-01 00:54:19 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:54:19 Europe/Berlin] [DEBUG] 2025-06-01 00:54:19 - Processing GET request for dashboard data
+[01-Jun-2025 00:54:50 Europe/Berlin] [DEBUG] 2025-06-01 00:54:50 - Request Method: GET
+[01-Jun-2025 00:54:50 Europe/Berlin] [DEBUG] 2025-06-01 00:54:50 - Content Type: Not set
+[01-Jun-2025 00:54:50 Europe/Berlin] [DEBUG] 2025-06-01 00:54:50 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:54:50 Europe/Berlin] [DEBUG] 2025-06-01 00:54:50 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:54:50 Europe/Berlin] [DEBUG] 2025-06-01 00:54:50 - Processing GET request for dashboard data
+[01-Jun-2025 00:55:21 Europe/Berlin] [DEBUG] 2025-06-01 00:55:21 - Request Method: GET
+[01-Jun-2025 00:55:21 Europe/Berlin] [DEBUG] 2025-06-01 00:55:21 - Content Type: Not set
+[01-Jun-2025 00:55:21 Europe/Berlin] [DEBUG] 2025-06-01 00:55:21 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:55:21 Europe/Berlin] [DEBUG] 2025-06-01 00:55:21 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:55:21 Europe/Berlin] [DEBUG] 2025-06-01 00:55:21 - Processing GET request for dashboard data
+[01-Jun-2025 00:55:51 Europe/Berlin] [DEBUG] 2025-06-01 00:55:51 - Request Method: GET
+[01-Jun-2025 00:55:51 Europe/Berlin] [DEBUG] 2025-06-01 00:55:51 - Content Type: Not set
+[01-Jun-2025 00:55:51 Europe/Berlin] [DEBUG] 2025-06-01 00:55:51 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:55:51 Europe/Berlin] [DEBUG] 2025-06-01 00:55:51 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:55:51 Europe/Berlin] [DEBUG] 2025-06-01 00:55:51 - Processing GET request for dashboard data
+[01-Jun-2025 00:56:21 Europe/Berlin] [DEBUG] 2025-06-01 00:56:21 - Request Method: GET
+[01-Jun-2025 00:56:21 Europe/Berlin] [DEBUG] 2025-06-01 00:56:21 - Content Type: Not set
+[01-Jun-2025 00:56:21 Europe/Berlin] [DEBUG] 2025-06-01 00:56:21 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:56:21 Europe/Berlin] [DEBUG] 2025-06-01 00:56:21 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:56:21 Europe/Berlin] [DEBUG] 2025-06-01 00:56:21 - Processing GET request for dashboard data
+[01-Jun-2025 00:56:51 Europe/Berlin] [DEBUG] 2025-06-01 00:56:51 - Request Method: GET
+[01-Jun-2025 00:56:51 Europe/Berlin] [DEBUG] 2025-06-01 00:56:51 - Content Type: Not set
+[01-Jun-2025 00:56:51 Europe/Berlin] [DEBUG] 2025-06-01 00:56:51 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:56:51 Europe/Berlin] [DEBUG] 2025-06-01 00:56:51 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:56:51 Europe/Berlin] [DEBUG] 2025-06-01 00:56:51 - Processing GET request for dashboard data
+[01-Jun-2025 00:57:21 Europe/Berlin] [DEBUG] 2025-06-01 00:57:21 - Request Method: GET
+[01-Jun-2025 00:57:21 Europe/Berlin] [DEBUG] 2025-06-01 00:57:21 - Content Type: Not set
+[01-Jun-2025 00:57:21 Europe/Berlin] [DEBUG] 2025-06-01 00:57:21 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:57:21 Europe/Berlin] [DEBUG] 2025-06-01 00:57:21 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:57:21 Europe/Berlin] [DEBUG] 2025-06-01 00:57:21 - Processing GET request for dashboard data
+[01-Jun-2025 00:57:51 Europe/Berlin] [DEBUG] 2025-06-01 00:57:51 - Request Method: GET
+[01-Jun-2025 00:57:51 Europe/Berlin] [DEBUG] 2025-06-01 00:57:51 - Content Type: Not set
+[01-Jun-2025 00:57:51 Europe/Berlin] [DEBUG] 2025-06-01 00:57:51 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:57:51 Europe/Berlin] [DEBUG] 2025-06-01 00:57:51 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:57:51 Europe/Berlin] [DEBUG] 2025-06-01 00:57:51 - Processing GET request for dashboard data
+[01-Jun-2025 00:57:58 Europe/Berlin] [DEBUG] 2025-06-01 00:57:58 - Request Method: GET
+[01-Jun-2025 00:57:58 Europe/Berlin] [DEBUG] 2025-06-01 00:57:58 - Content Type: Not set
+[01-Jun-2025 00:57:58 Europe/Berlin] [DEBUG] 2025-06-01 00:57:58 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:57:58 Europe/Berlin] [DEBUG] 2025-06-01 00:57:58 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:57:58 Europe/Berlin] [DEBUG] 2025-06-01 00:57:58 - Processing GET request for dashboard data
+[01-Jun-2025 00:58:04 Europe/Berlin] [DEBUG] 2025-06-01 00:58:04 - Request Method: GET
+[01-Jun-2025 00:58:04 Europe/Berlin] [DEBUG] 2025-06-01 00:58:04 - Content Type: Not set
+[01-Jun-2025 00:58:04 Europe/Berlin] [DEBUG] 2025-06-01 00:58:04 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:58:04 Europe/Berlin] [DEBUG] 2025-06-01 00:58:04 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:58:04 Europe/Berlin] [DEBUG] 2025-06-01 00:58:04 - Processing GET request for dashboard data
+[01-Jun-2025 00:58:34 Europe/Berlin] [DEBUG] 2025-06-01 00:58:34 - Request Method: GET
+[01-Jun-2025 00:58:34 Europe/Berlin] [DEBUG] 2025-06-01 00:58:34 - Content Type: Not set
+[01-Jun-2025 00:58:34 Europe/Berlin] [DEBUG] 2025-06-01 00:58:34 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:58:34 Europe/Berlin] [DEBUG] 2025-06-01 00:58:34 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:58:34 Europe/Berlin] [DEBUG] 2025-06-01 00:58:34 - Processing GET request for dashboard data
+[01-Jun-2025 00:59:04 Europe/Berlin] [DEBUG] 2025-06-01 00:59:04 - Request Method: GET
+[01-Jun-2025 00:59:04 Europe/Berlin] [DEBUG] 2025-06-01 00:59:04 - Content Type: Not set
+[01-Jun-2025 00:59:04 Europe/Berlin] [DEBUG] 2025-06-01 00:59:04 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:59:04 Europe/Berlin] [DEBUG] 2025-06-01 00:59:04 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:59:04 Europe/Berlin] [DEBUG] 2025-06-01 00:59:04 - Processing GET request for dashboard data
+[01-Jun-2025 00:59:31 Europe/Berlin] [DEBUG] 2025-06-01 00:59:31 - Request Method: GET
+[01-Jun-2025 00:59:31 Europe/Berlin] [DEBUG] 2025-06-01 00:59:31 - Content Type: Not set
+[01-Jun-2025 00:59:31 Europe/Berlin] [DEBUG] 2025-06-01 00:59:31 - FILES array: Array
+(
+)
+
+[01-Jun-2025 00:59:31 Europe/Berlin] [DEBUG] 2025-06-01 00:59:31 - POST array: Array
+(
+)
+
+[01-Jun-2025 00:59:31 Europe/Berlin] [DEBUG] 2025-06-01 00:59:31 - Processing GET request for dashboard data
+[01-Jun-2025 02:00:44 Europe/Berlin] [DEBUG] 2025-06-01 02:00:44 - Request Method: GET
+[01-Jun-2025 02:00:44 Europe/Berlin] [DEBUG] 2025-06-01 02:00:44 - Content Type: Not set
+[01-Jun-2025 02:00:44 Europe/Berlin] [DEBUG] 2025-06-01 02:00:44 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:00:44 Europe/Berlin] [DEBUG] 2025-06-01 02:00:44 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:00:44 Europe/Berlin] [DEBUG] 2025-06-01 02:00:44 - Processing GET request for dashboard data
+[01-Jun-2025 02:01:11 Europe/Berlin] [DEBUG] 2025-06-01 02:01:11 - Request Method: GET
+[01-Jun-2025 02:01:11 Europe/Berlin] [DEBUG] 2025-06-01 02:01:11 - Content Type: Not set
+[01-Jun-2025 02:01:11 Europe/Berlin] [DEBUG] 2025-06-01 02:01:11 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:01:11 Europe/Berlin] [DEBUG] 2025-06-01 02:01:11 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:01:11 Europe/Berlin] [DEBUG] 2025-06-01 02:01:11 - Processing GET request for dashboard data
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - Request Method: POST
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - Content Type: multipart/form-data; boundary=----WebKitFormBoundarykPBi3vX5oqBtBUio
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => wavy-black-white-background.png
+            [full_path] => wavy-black-white-background.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php2BA5.tmp
+            [error] => 0
+            [size] => 425515
+        )
+
+)
+
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - POST array: Array
+(
+    [reportId] => 22
+    [action] => uploadImage
+)
+
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundarykPBi3vX5oqBtBUio
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - Image upload detected
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - File details: Array
+(
+    [name] => wavy-black-white-background.png
+    [full_path] => wavy-black-white-background.png
+    [type] => image/png
+    [tmp_name] => C:\xampp\tmp\php2BA5.tmp
+    [error] => 0
+    [size] => 425515
+)
+
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - Attempting to move file from C:\xampp\tmp\php2BA5.tmp to uploads/report_22_1748736085_683b98555b433.png
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - File moved successfully to: uploads/report_22_1748736085_683b98555b433.png
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - Created new message with image: report_22_1748736085_683b98555b433.png
+[01-Jun-2025 02:01:25 Europe/Berlin] [DEBUG] 2025-06-01 02:01:25 - Image stored successfully in Messages table with filename: report_22_1748736085_683b98555b433.png
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Request Method: POST
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Content Type: application/json
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Processing POST request with content type: application/json
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - JSON request with action: updateStatus
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Update request - ReportID: 22, Status: , Feedback: Fixed
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Error: Missing status
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Stack trace: #0 {main}
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Request Method: GET
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Content Type: Not set
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:01:26 Europe/Berlin] [DEBUG] 2025-06-01 02:01:26 - Processing GET request for dashboard data
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - Request Method: POST
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - Content Type: application/json
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - Processing POST request with content type: application/json
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - JSON request with action: updateStatus
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - Update request - ReportID: 22, Status: , Feedback: Fixed
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - Error: Missing status
+[01-Jun-2025 02:01:33 Europe/Berlin] [DEBUG] 2025-06-01 02:01:33 - Stack trace: #0 {main}
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - Request Method: POST
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - Content Type: application/json
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - Processing POST request with content type: application/json
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - JSON request with action: updateStatus
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - Update request - ReportID: 22, Status: Completed, Feedback: Fixed
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - Request Method: GET
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - Content Type: Not set
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:01:39 Europe/Berlin] [DEBUG] 2025-06-01 02:01:39 - Processing GET request for dashboard data
+[01-Jun-2025 02:01:41 Europe/Berlin] [DEBUG] 2025-06-01 02:01:41 - Request Method: GET
+[01-Jun-2025 02:01:41 Europe/Berlin] [DEBUG] 2025-06-01 02:01:41 - Content Type: Not set
+[01-Jun-2025 02:01:41 Europe/Berlin] [DEBUG] 2025-06-01 02:01:41 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:01:41 Europe/Berlin] [DEBUG] 2025-06-01 02:01:41 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:01:41 Europe/Berlin] [DEBUG] 2025-06-01 02:01:41 - Processing GET request for dashboard data
+[01-Jun-2025 02:20:14 Europe/Berlin] [DEBUG] 2025-06-01 02:20:14 - Request Method: GET
+[01-Jun-2025 02:20:14 Europe/Berlin] [DEBUG] 2025-06-01 02:20:14 - Content Type: Not set
+[01-Jun-2025 02:20:14 Europe/Berlin] [DEBUG] 2025-06-01 02:20:14 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:20:14 Europe/Berlin] [DEBUG] 2025-06-01 02:20:14 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:20:14 Europe/Berlin] [DEBUG] 2025-06-01 02:20:14 - Processing GET request for dashboard data
+[01-Jun-2025 02:20:57 Europe/Berlin] [DEBUG] 2025-06-01 02:20:57 - Request Method: GET
+[01-Jun-2025 02:20:57 Europe/Berlin] [DEBUG] 2025-06-01 02:20:57 - Content Type: Not set
+[01-Jun-2025 02:20:57 Europe/Berlin] [DEBUG] 2025-06-01 02:20:57 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:20:57 Europe/Berlin] [DEBUG] 2025-06-01 02:20:57 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:20:57 Europe/Berlin] [DEBUG] 2025-06-01 02:20:57 - Processing GET request for dashboard data
+[01-Jun-2025 02:21:27 Europe/Berlin] [DEBUG] 2025-06-01 02:21:27 - Request Method: GET
+[01-Jun-2025 02:21:27 Europe/Berlin] [DEBUG] 2025-06-01 02:21:27 - Content Type: Not set
+[01-Jun-2025 02:21:27 Europe/Berlin] [DEBUG] 2025-06-01 02:21:27 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:21:27 Europe/Berlin] [DEBUG] 2025-06-01 02:21:27 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:21:27 Europe/Berlin] [DEBUG] 2025-06-01 02:21:27 - Processing GET request for dashboard data
+[01-Jun-2025 02:21:57 Europe/Berlin] [DEBUG] 2025-06-01 02:21:57 - Request Method: GET
+[01-Jun-2025 02:21:57 Europe/Berlin] [DEBUG] 2025-06-01 02:21:57 - Content Type: Not set
+[01-Jun-2025 02:21:57 Europe/Berlin] [DEBUG] 2025-06-01 02:21:57 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:21:57 Europe/Berlin] [DEBUG] 2025-06-01 02:21:57 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:21:57 Europe/Berlin] [DEBUG] 2025-06-01 02:21:57 - Processing GET request for dashboard data
+[01-Jun-2025 02:22:27 Europe/Berlin] [DEBUG] 2025-06-01 02:22:27 - Request Method: GET
+[01-Jun-2025 02:22:27 Europe/Berlin] [DEBUG] 2025-06-01 02:22:27 - Content Type: Not set
+[01-Jun-2025 02:22:27 Europe/Berlin] [DEBUG] 2025-06-01 02:22:27 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:22:27 Europe/Berlin] [DEBUG] 2025-06-01 02:22:27 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:22:27 Europe/Berlin] [DEBUG] 2025-06-01 02:22:27 - Processing GET request for dashboard data
+[01-Jun-2025 02:22:57 Europe/Berlin] [DEBUG] 2025-06-01 02:22:57 - Request Method: GET
+[01-Jun-2025 02:22:57 Europe/Berlin] [DEBUG] 2025-06-01 02:22:57 - Content Type: Not set
+[01-Jun-2025 02:22:57 Europe/Berlin] [DEBUG] 2025-06-01 02:22:57 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:22:57 Europe/Berlin] [DEBUG] 2025-06-01 02:22:57 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:22:57 Europe/Berlin] [DEBUG] 2025-06-01 02:22:57 - Processing GET request for dashboard data
+[01-Jun-2025 02:23:27 Europe/Berlin] [DEBUG] 2025-06-01 02:23:27 - Request Method: GET
+[01-Jun-2025 02:23:27 Europe/Berlin] [DEBUG] 2025-06-01 02:23:27 - Content Type: Not set
+[01-Jun-2025 02:23:27 Europe/Berlin] [DEBUG] 2025-06-01 02:23:27 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:23:27 Europe/Berlin] [DEBUG] 2025-06-01 02:23:27 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:23:27 Europe/Berlin] [DEBUG] 2025-06-01 02:23:27 - Processing GET request for dashboard data
+[01-Jun-2025 02:23:57 Europe/Berlin] [DEBUG] 2025-06-01 02:23:57 - Request Method: GET
+[01-Jun-2025 02:23:57 Europe/Berlin] [DEBUG] 2025-06-01 02:23:57 - Content Type: Not set
+[01-Jun-2025 02:23:57 Europe/Berlin] [DEBUG] 2025-06-01 02:23:57 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:23:57 Europe/Berlin] [DEBUG] 2025-06-01 02:23:57 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:23:57 Europe/Berlin] [DEBUG] 2025-06-01 02:23:57 - Processing GET request for dashboard data
+[01-Jun-2025 02:24:27 Europe/Berlin] [DEBUG] 2025-06-01 02:24:27 - Request Method: GET
+[01-Jun-2025 02:24:27 Europe/Berlin] [DEBUG] 2025-06-01 02:24:27 - Content Type: Not set
+[01-Jun-2025 02:24:27 Europe/Berlin] [DEBUG] 2025-06-01 02:24:27 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:24:27 Europe/Berlin] [DEBUG] 2025-06-01 02:24:27 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:24:27 Europe/Berlin] [DEBUG] 2025-06-01 02:24:27 - Processing GET request for dashboard data
+[01-Jun-2025 02:24:40 Europe/Berlin] [DEBUG] 2025-06-01 02:24:40 - Request Method: GET
+[01-Jun-2025 02:24:40 Europe/Berlin] [DEBUG] 2025-06-01 02:24:40 - Content Type: Not set
+[01-Jun-2025 02:24:40 Europe/Berlin] [DEBUG] 2025-06-01 02:24:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:24:40 Europe/Berlin] [DEBUG] 2025-06-01 02:24:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:24:40 Europe/Berlin] [DEBUG] 2025-06-01 02:24:40 - Processing GET request for dashboard data
+[01-Jun-2025 02:25:10 Europe/Berlin] [DEBUG] 2025-06-01 02:25:10 - Request Method: GET
+[01-Jun-2025 02:25:10 Europe/Berlin] [DEBUG] 2025-06-01 02:25:10 - Content Type: Not set
+[01-Jun-2025 02:25:10 Europe/Berlin] [DEBUG] 2025-06-01 02:25:10 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:25:10 Europe/Berlin] [DEBUG] 2025-06-01 02:25:10 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:25:10 Europe/Berlin] [DEBUG] 2025-06-01 02:25:10 - Processing GET request for dashboard data
+[01-Jun-2025 02:25:40 Europe/Berlin] [DEBUG] 2025-06-01 02:25:40 - Request Method: GET
+[01-Jun-2025 02:25:40 Europe/Berlin] [DEBUG] 2025-06-01 02:25:40 - Content Type: Not set
+[01-Jun-2025 02:25:40 Europe/Berlin] [DEBUG] 2025-06-01 02:25:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:25:40 Europe/Berlin] [DEBUG] 2025-06-01 02:25:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:25:40 Europe/Berlin] [DEBUG] 2025-06-01 02:25:40 - Processing GET request for dashboard data
+[01-Jun-2025 02:26:10 Europe/Berlin] [DEBUG] 2025-06-01 02:26:10 - Request Method: GET
+[01-Jun-2025 02:26:10 Europe/Berlin] [DEBUG] 2025-06-01 02:26:10 - Content Type: Not set
+[01-Jun-2025 02:26:10 Europe/Berlin] [DEBUG] 2025-06-01 02:26:10 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:26:10 Europe/Berlin] [DEBUG] 2025-06-01 02:26:10 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:26:10 Europe/Berlin] [DEBUG] 2025-06-01 02:26:10 - Processing GET request for dashboard data
+[01-Jun-2025 02:26:40 Europe/Berlin] [DEBUG] 2025-06-01 02:26:40 - Request Method: GET
+[01-Jun-2025 02:26:40 Europe/Berlin] [DEBUG] 2025-06-01 02:26:40 - Content Type: Not set
+[01-Jun-2025 02:26:40 Europe/Berlin] [DEBUG] 2025-06-01 02:26:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:26:40 Europe/Berlin] [DEBUG] 2025-06-01 02:26:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:26:40 Europe/Berlin] [DEBUG] 2025-06-01 02:26:40 - Processing GET request for dashboard data
+[01-Jun-2025 02:27:10 Europe/Berlin] [DEBUG] 2025-06-01 02:27:10 - Request Method: GET
+[01-Jun-2025 02:27:10 Europe/Berlin] [DEBUG] 2025-06-01 02:27:10 - Content Type: Not set
+[01-Jun-2025 02:27:10 Europe/Berlin] [DEBUG] 2025-06-01 02:27:10 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:27:10 Europe/Berlin] [DEBUG] 2025-06-01 02:27:10 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:27:10 Europe/Berlin] [DEBUG] 2025-06-01 02:27:10 - Processing GET request for dashboard data
+[01-Jun-2025 02:27:19 Europe/Berlin] [DEBUG] 2025-06-01 02:27:19 - Request Method: GET
+[01-Jun-2025 02:27:19 Europe/Berlin] [DEBUG] 2025-06-01 02:27:19 - Content Type: Not set
+[01-Jun-2025 02:27:19 Europe/Berlin] [DEBUG] 2025-06-01 02:27:19 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:27:19 Europe/Berlin] [DEBUG] 2025-06-01 02:27:19 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:27:19 Europe/Berlin] [DEBUG] 2025-06-01 02:27:19 - Processing GET request for dashboard data
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - Request Method: POST
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - Content Type: application/json
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - Processing POST request with content type: application/json
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - JSON request with action: updateStatus
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - Update request - ReportID: 13, Status: Completed, Feedback: 
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - Request Method: GET
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - Content Type: Not set
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:27:30 Europe/Berlin] [DEBUG] 2025-06-01 02:27:30 - Processing GET request for dashboard data
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - Request Method: POST
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - Content Type: application/json
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - Processing POST request with content type: application/json
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - JSON request with action: updateStatus
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - Update request - ReportID: 21, Status: Completed, Feedback: 
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - Request Method: GET
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - Content Type: Not set
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:27:40 Europe/Berlin] [DEBUG] 2025-06-01 02:27:40 - Processing GET request for dashboard data
+[01-Jun-2025 02:27:49 Europe/Berlin] [DEBUG] 2025-06-01 02:27:49 - Request Method: GET
+[01-Jun-2025 02:27:49 Europe/Berlin] [DEBUG] 2025-06-01 02:27:49 - Content Type: Not set
+[01-Jun-2025 02:27:49 Europe/Berlin] [DEBUG] 2025-06-01 02:27:49 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:27:49 Europe/Berlin] [DEBUG] 2025-06-01 02:27:49 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:27:49 Europe/Berlin] [DEBUG] 2025-06-01 02:27:49 - Processing GET request for dashboard data
+[01-Jun-2025 02:28:19 Europe/Berlin] [DEBUG] 2025-06-01 02:28:19 - Request Method: GET
+[01-Jun-2025 02:28:19 Europe/Berlin] [DEBUG] 2025-06-01 02:28:19 - Content Type: Not set
+[01-Jun-2025 02:28:19 Europe/Berlin] [DEBUG] 2025-06-01 02:28:19 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:28:19 Europe/Berlin] [DEBUG] 2025-06-01 02:28:19 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:28:19 Europe/Berlin] [DEBUG] 2025-06-01 02:28:19 - Processing GET request for dashboard data
+[01-Jun-2025 02:28:49 Europe/Berlin] [DEBUG] 2025-06-01 02:28:49 - Request Method: GET
+[01-Jun-2025 02:28:49 Europe/Berlin] [DEBUG] 2025-06-01 02:28:49 - Content Type: Not set
+[01-Jun-2025 02:28:49 Europe/Berlin] [DEBUG] 2025-06-01 02:28:49 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:28:49 Europe/Berlin] [DEBUG] 2025-06-01 02:28:49 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:28:49 Europe/Berlin] [DEBUG] 2025-06-01 02:28:49 - Processing GET request for dashboard data
+[01-Jun-2025 02:28:59 Europe/Berlin] [DEBUG] 2025-06-01 02:28:59 - Request Method: GET
+[01-Jun-2025 02:28:59 Europe/Berlin] [DEBUG] 2025-06-01 02:28:59 - Content Type: Not set
+[01-Jun-2025 02:28:59 Europe/Berlin] [DEBUG] 2025-06-01 02:28:59 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:28:59 Europe/Berlin] [DEBUG] 2025-06-01 02:28:59 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:28:59 Europe/Berlin] [DEBUG] 2025-06-01 02:28:59 - Processing GET request for dashboard data
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - Request Method: POST
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - Content Type: application/json
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - Processing POST request with content type: application/json
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - JSON request with action: updateStatus
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - Update request - ReportID: 20, Status: Completed, Feedback: 
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - Request Method: GET
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - Content Type: Not set
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:29:14 Europe/Berlin] [DEBUG] 2025-06-01 02:29:14 - Processing GET request for dashboard data
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - Request Method: POST
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - Content Type: application/json
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - Processing POST request with content type: application/json
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - JSON request with action: updateStatus
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - Update request - ReportID: 19, Status: Completed, Feedback: 
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - Request Method: GET
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - Content Type: Not set
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:29:28 Europe/Berlin] [DEBUG] 2025-06-01 02:29:28 - Processing GET request for dashboard data
+[01-Jun-2025 02:29:29 Europe/Berlin] [DEBUG] 2025-06-01 02:29:29 - Request Method: GET
+[01-Jun-2025 02:29:29 Europe/Berlin] [DEBUG] 2025-06-01 02:29:29 - Content Type: Not set
+[01-Jun-2025 02:29:29 Europe/Berlin] [DEBUG] 2025-06-01 02:29:29 - FILES array: Array
+(
+)
+
+[01-Jun-2025 02:29:29 Europe/Berlin] [DEBUG] 2025-06-01 02:29:29 - POST array: Array
+(
+)
+
+[01-Jun-2025 02:29:29 Europe/Berlin] [DEBUG] 2025-06-01 02:29:29 - Processing GET request for dashboard data
+[01-Jun-2025 18:53:11 Europe/Berlin] [DEBUG] 2025-06-01 18:53:11 - Request Method: GET
+[01-Jun-2025 18:53:11 Europe/Berlin] [DEBUG] 2025-06-01 18:53:11 - Content Type: Not set
+[01-Jun-2025 18:53:11 Europe/Berlin] [DEBUG] 2025-06-01 18:53:11 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:53:11 Europe/Berlin] [DEBUG] 2025-06-01 18:53:11 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:53:11 Europe/Berlin] [DEBUG] 2025-06-01 18:53:11 - Processing GET request for dashboard data
+[01-Jun-2025 18:53:41 Europe/Berlin] [DEBUG] 2025-06-01 18:53:41 - Request Method: GET
+[01-Jun-2025 18:53:41 Europe/Berlin] [DEBUG] 2025-06-01 18:53:41 - Content Type: Not set
+[01-Jun-2025 18:53:41 Europe/Berlin] [DEBUG] 2025-06-01 18:53:41 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:53:41 Europe/Berlin] [DEBUG] 2025-06-01 18:53:41 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:53:41 Europe/Berlin] [DEBUG] 2025-06-01 18:53:41 - Processing GET request for dashboard data
+[01-Jun-2025 18:54:56 Europe/Berlin] [DEBUG] 2025-06-01 18:54:56 - Request Method: GET
+[01-Jun-2025 18:54:56 Europe/Berlin] [DEBUG] 2025-06-01 18:54:56 - Content Type: Not set
+[01-Jun-2025 18:54:56 Europe/Berlin] [DEBUG] 2025-06-01 18:54:56 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:54:56 Europe/Berlin] [DEBUG] 2025-06-01 18:54:56 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:54:56 Europe/Berlin] [DEBUG] 2025-06-01 18:54:56 - Processing GET request for dashboard data
+[01-Jun-2025 18:55:19 Europe/Berlin] [DEBUG] 2025-06-01 18:55:19 - Request Method: GET
+[01-Jun-2025 18:55:19 Europe/Berlin] [DEBUG] 2025-06-01 18:55:19 - Content Type: Not set
+[01-Jun-2025 18:55:19 Europe/Berlin] [DEBUG] 2025-06-01 18:55:19 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:55:19 Europe/Berlin] [DEBUG] 2025-06-01 18:55:19 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:55:19 Europe/Berlin] [DEBUG] 2025-06-01 18:55:19 - Processing GET request for dashboard data
+[01-Jun-2025 18:55:28 Europe/Berlin] [DEBUG] 2025-06-01 18:55:28 - Request Method: GET
+[01-Jun-2025 18:55:28 Europe/Berlin] [DEBUG] 2025-06-01 18:55:28 - Content Type: Not set
+[01-Jun-2025 18:55:28 Europe/Berlin] [DEBUG] 2025-06-01 18:55:28 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:55:28 Europe/Berlin] [DEBUG] 2025-06-01 18:55:28 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:55:28 Europe/Berlin] [DEBUG] 2025-06-01 18:55:28 - Processing GET request for dashboard data
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - Request Method: POST
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - Content Type: application/json
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - Processing POST request with content type: application/json
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - JSON request with action: clearImage
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - Request Method: GET
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - Content Type: Not set
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:55:34 Europe/Berlin] [DEBUG] 2025-06-01 18:55:34 - Processing GET request for dashboard data
+[01-Jun-2025 18:55:58 Europe/Berlin] [DEBUG] 2025-06-01 18:55:58 - Request Method: GET
+[01-Jun-2025 18:55:58 Europe/Berlin] [DEBUG] 2025-06-01 18:55:58 - Content Type: Not set
+[01-Jun-2025 18:55:58 Europe/Berlin] [DEBUG] 2025-06-01 18:55:58 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:55:58 Europe/Berlin] [DEBUG] 2025-06-01 18:55:58 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:55:58 Europe/Berlin] [DEBUG] 2025-06-01 18:55:58 - Processing GET request for dashboard data
+[01-Jun-2025 18:56:28 Europe/Berlin] [DEBUG] 2025-06-01 18:56:28 - Request Method: GET
+[01-Jun-2025 18:56:28 Europe/Berlin] [DEBUG] 2025-06-01 18:56:28 - Content Type: Not set
+[01-Jun-2025 18:56:28 Europe/Berlin] [DEBUG] 2025-06-01 18:56:28 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:56:28 Europe/Berlin] [DEBUG] 2025-06-01 18:56:28 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:56:28 Europe/Berlin] [DEBUG] 2025-06-01 18:56:28 - Processing GET request for dashboard data
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - Request Method: POST
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryABxGo3L1kdDQowKB
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpB66B.tmp
+            [error] => 0
+            [size] => 100229
+        )
+
+)
+
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - POST array: Array
+(
+    [reportId] => 23
+    [action] => uploadImage
+)
+
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryABxGo3L1kdDQowKB
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - Image upload detected
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - File details: Array
+(
+    [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+    [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\phpB66B.tmp
+    [error] => 0
+    [size] => 100229
+)
+
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - Attempting to move file from C:\xampp\tmp\phpB66B.tmp to uploads/report_23_1748797003_683c864b2f0dc.jpg
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - File moved successfully to: uploads/report_23_1748797003_683c864b2f0dc.jpg
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - Created new message with image: report_23_1748797003_683c864b2f0dc.jpg
+[01-Jun-2025 18:56:43 Europe/Berlin] [DEBUG] 2025-06-01 18:56:43 - Image stored successfully in Messages table with filename: report_23_1748797003_683c864b2f0dc.jpg
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - Request Method: POST
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - Content Type: application/json
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - Processing POST request with content type: application/json
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - JSON request with action: updateStatus
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - Update request - ReportID: 23, Status: Completed, Feedback: katlego fixed the work
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - Request Method: GET
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - Content Type: Not set
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:56:44 Europe/Berlin] [DEBUG] 2025-06-01 18:56:44 - Processing GET request for dashboard data
+[01-Jun-2025 18:56:58 Europe/Berlin] [DEBUG] 2025-06-01 18:56:58 - Request Method: GET
+[01-Jun-2025 18:56:58 Europe/Berlin] [DEBUG] 2025-06-01 18:56:58 - Content Type: Not set
+[01-Jun-2025 18:56:58 Europe/Berlin] [DEBUG] 2025-06-01 18:56:58 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:56:58 Europe/Berlin] [DEBUG] 2025-06-01 18:56:58 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:56:58 Europe/Berlin] [DEBUG] 2025-06-01 18:56:58 - Processing GET request for dashboard data
+[01-Jun-2025 18:57:28 Europe/Berlin] [DEBUG] 2025-06-01 18:57:28 - Request Method: GET
+[01-Jun-2025 18:57:28 Europe/Berlin] [DEBUG] 2025-06-01 18:57:28 - Content Type: Not set
+[01-Jun-2025 18:57:28 Europe/Berlin] [DEBUG] 2025-06-01 18:57:28 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:57:28 Europe/Berlin] [DEBUG] 2025-06-01 18:57:28 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:57:28 Europe/Berlin] [DEBUG] 2025-06-01 18:57:28 - Processing GET request for dashboard data
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - Request Method: POST
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - Content Type: application/json
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - Processing POST request with content type: application/json
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - JSON request with action: updateStatus
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - Update request - ReportID: 18, Status: Completed, Feedback: 
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - Request Method: GET
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - Content Type: Not set
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:57:39 Europe/Berlin] [DEBUG] 2025-06-01 18:57:39 - Processing GET request for dashboard data
+[01-Jun-2025 18:57:59 Europe/Berlin] [DEBUG] 2025-06-01 18:57:59 - Request Method: GET
+[01-Jun-2025 18:57:59 Europe/Berlin] [DEBUG] 2025-06-01 18:57:59 - Content Type: Not set
+[01-Jun-2025 18:57:59 Europe/Berlin] [DEBUG] 2025-06-01 18:57:59 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:57:59 Europe/Berlin] [DEBUG] 2025-06-01 18:57:59 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:57:59 Europe/Berlin] [DEBUG] 2025-06-01 18:57:59 - Processing GET request for dashboard data
+[01-Jun-2025 18:58:30 Europe/Berlin] [DEBUG] 2025-06-01 18:58:30 - Request Method: GET
+[01-Jun-2025 18:58:30 Europe/Berlin] [DEBUG] 2025-06-01 18:58:30 - Content Type: Not set
+[01-Jun-2025 18:58:30 Europe/Berlin] [DEBUG] 2025-06-01 18:58:30 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:58:30 Europe/Berlin] [DEBUG] 2025-06-01 18:58:30 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:58:30 Europe/Berlin] [DEBUG] 2025-06-01 18:58:30 - Processing GET request for dashboard data
+[01-Jun-2025 18:58:59 Europe/Berlin] [DEBUG] 2025-06-01 18:58:59 - Request Method: GET
+[01-Jun-2025 18:58:59 Europe/Berlin] [DEBUG] 2025-06-01 18:58:59 - Content Type: Not set
+[01-Jun-2025 18:58:59 Europe/Berlin] [DEBUG] 2025-06-01 18:58:59 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:58:59 Europe/Berlin] [DEBUG] 2025-06-01 18:58:59 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:58:59 Europe/Berlin] [DEBUG] 2025-06-01 18:58:59 - Processing GET request for dashboard data
+[01-Jun-2025 18:59:30 Europe/Berlin] [DEBUG] 2025-06-01 18:59:30 - Request Method: GET
+[01-Jun-2025 18:59:30 Europe/Berlin] [DEBUG] 2025-06-01 18:59:30 - Content Type: Not set
+[01-Jun-2025 18:59:30 Europe/Berlin] [DEBUG] 2025-06-01 18:59:30 - FILES array: Array
+(
+)
+
+[01-Jun-2025 18:59:30 Europe/Berlin] [DEBUG] 2025-06-01 18:59:30 - POST array: Array
+(
+)
+
+[01-Jun-2025 18:59:30 Europe/Berlin] [DEBUG] 2025-06-01 18:59:30 - Processing GET request for dashboard data
+[01-Jun-2025 19:00:00 Europe/Berlin] [DEBUG] 2025-06-01 19:00:00 - Request Method: GET
+[01-Jun-2025 19:00:00 Europe/Berlin] [DEBUG] 2025-06-01 19:00:00 - Content Type: Not set
+[01-Jun-2025 19:00:00 Europe/Berlin] [DEBUG] 2025-06-01 19:00:00 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:00:00 Europe/Berlin] [DEBUG] 2025-06-01 19:00:00 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:00:00 Europe/Berlin] [DEBUG] 2025-06-01 19:00:00 - Processing GET request for dashboard data
+[01-Jun-2025 19:00:29 Europe/Berlin] [DEBUG] 2025-06-01 19:00:30 - Request Method: GET
+[01-Jun-2025 19:00:30 Europe/Berlin] [DEBUG] 2025-06-01 19:00:30 - Content Type: Not set
+[01-Jun-2025 19:00:30 Europe/Berlin] [DEBUG] 2025-06-01 19:00:30 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:00:30 Europe/Berlin] [DEBUG] 2025-06-01 19:00:30 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:00:30 Europe/Berlin] [DEBUG] 2025-06-01 19:00:30 - Processing GET request for dashboard data
+[01-Jun-2025 19:00:50 Europe/Berlin] [DEBUG] 2025-06-01 19:00:50 - Request Method: GET
+[01-Jun-2025 19:00:50 Europe/Berlin] [DEBUG] 2025-06-01 19:00:50 - Content Type: Not set
+[01-Jun-2025 19:00:50 Europe/Berlin] [DEBUG] 2025-06-01 19:00:50 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:00:50 Europe/Berlin] [DEBUG] 2025-06-01 19:00:50 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:00:50 Europe/Berlin] [DEBUG] 2025-06-01 19:00:50 - Processing GET request for dashboard data
+[01-Jun-2025 19:01:20 Europe/Berlin] [DEBUG] 2025-06-01 19:01:20 - Request Method: GET
+[01-Jun-2025 19:01:20 Europe/Berlin] [DEBUG] 2025-06-01 19:01:20 - Content Type: Not set
+[01-Jun-2025 19:01:20 Europe/Berlin] [DEBUG] 2025-06-01 19:01:20 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:01:20 Europe/Berlin] [DEBUG] 2025-06-01 19:01:20 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:01:20 Europe/Berlin] [DEBUG] 2025-06-01 19:01:20 - Processing GET request for dashboard data
+[01-Jun-2025 19:01:51 Europe/Berlin] [DEBUG] 2025-06-01 19:01:51 - Request Method: GET
+[01-Jun-2025 19:01:51 Europe/Berlin] [DEBUG] 2025-06-01 19:01:51 - Content Type: Not set
+[01-Jun-2025 19:01:51 Europe/Berlin] [DEBUG] 2025-06-01 19:01:51 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:01:51 Europe/Berlin] [DEBUG] 2025-06-01 19:01:51 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:01:51 Europe/Berlin] [DEBUG] 2025-06-01 19:01:51 - Processing GET request for dashboard data
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Request Method: POST
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Content Type: application/json
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Processing POST request with content type: application/json
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - JSON request with action: updateStatus
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Update request - ReportID: 19, Status: Rejected, Feedback: 
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Request Method: POST
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Content Type: application/json
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Processing POST request with content type: application/json
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - JSON request with action: updateStatus
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Update request - ReportID: 23, Status: Rejected, Feedback: 
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Request Method: GET
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Content Type: Not set
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:02:12 Europe/Berlin] [DEBUG] 2025-06-01 19:02:12 - Processing GET request for dashboard data
+[01-Jun-2025 19:02:20 Europe/Berlin] [DEBUG] 2025-06-01 19:02:20 - Request Method: GET
+[01-Jun-2025 19:02:20 Europe/Berlin] [DEBUG] 2025-06-01 19:02:20 - Content Type: Not set
+[01-Jun-2025 19:02:20 Europe/Berlin] [DEBUG] 2025-06-01 19:02:20 - FILES array: Array
+(
+)
+
+[01-Jun-2025 19:02:20 Europe/Berlin] [DEBUG] 2025-06-01 19:02:20 - POST array: Array
+(
+)
+
+[01-Jun-2025 19:02:20 Europe/Berlin] [DEBUG] 2025-06-01 19:02:20 - Processing GET request for dashboard data
+[01-Jun-2025 20:44:55 Europe/Berlin] [DEBUG] 2025-06-01 20:44:55 - Request Method: GET
+[01-Jun-2025 20:44:55 Europe/Berlin] [DEBUG] 2025-06-01 20:44:55 - Content Type: Not set
+[01-Jun-2025 20:44:55 Europe/Berlin] [DEBUG] 2025-06-01 20:44:55 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:44:55 Europe/Berlin] [DEBUG] 2025-06-01 20:44:55 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:44:55 Europe/Berlin] [DEBUG] 2025-06-01 20:44:55 - Unauthenticated dashboard access: Admin not authenticated. Please log in.
+[01-Jun-2025 20:44:55 Europe/Berlin] [DEBUG] 2025-06-01 20:44:55 - Processing GET request for dashboard data
+[01-Jun-2025 20:44:59 Europe/Berlin] [DEBUG] 2025-06-01 20:44:59 - Request Method: GET
+[01-Jun-2025 20:44:59 Europe/Berlin] [DEBUG] 2025-06-01 20:44:59 - Content Type: Not set
+[01-Jun-2025 20:44:59 Europe/Berlin] [DEBUG] 2025-06-01 20:44:59 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:44:59 Europe/Berlin] [DEBUG] 2025-06-01 20:44:59 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:44:59 Europe/Berlin] [DEBUG] 2025-06-01 20:44:59 - Unauthenticated dashboard access: Admin not authenticated. Please log in.
+[01-Jun-2025 20:44:59 Europe/Berlin] [DEBUG] 2025-06-01 20:44:59 - Processing GET request for dashboard data
+[01-Jun-2025 20:45:29 Europe/Berlin] [DEBUG] 2025-06-01 20:45:29 - Request Method: GET
+[01-Jun-2025 20:45:29 Europe/Berlin] [DEBUG] 2025-06-01 20:45:29 - Content Type: Not set
+[01-Jun-2025 20:45:29 Europe/Berlin] [DEBUG] 2025-06-01 20:45:29 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:45:29 Europe/Berlin] [DEBUG] 2025-06-01 20:45:29 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:45:29 Europe/Berlin] [DEBUG] 2025-06-01 20:45:29 - Unauthenticated dashboard access: Admin not authenticated. Please log in.
+[01-Jun-2025 20:45:29 Europe/Berlin] [DEBUG] 2025-06-01 20:45:29 - Processing GET request for dashboard data
+[01-Jun-2025 20:45:52 Europe/Berlin] [DEBUG] 2025-06-01 20:45:52 - Request Method: GET
+[01-Jun-2025 20:45:52 Europe/Berlin] [DEBUG] 2025-06-01 20:45:52 - Content Type: Not set
+[01-Jun-2025 20:45:52 Europe/Berlin] [DEBUG] 2025-06-01 20:45:52 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:45:52 Europe/Berlin] [DEBUG] 2025-06-01 20:45:52 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:45:52 Europe/Berlin] [DEBUG] 2025-06-01 20:45:52 - Unauthenticated dashboard access: Admin not authenticated. Please log in.
+[01-Jun-2025 20:45:52 Europe/Berlin] [DEBUG] 2025-06-01 20:45:52 - Processing GET request for dashboard data
+[01-Jun-2025 20:46:22 Europe/Berlin] [DEBUG] 2025-06-01 20:46:22 - Request Method: GET
+[01-Jun-2025 20:46:22 Europe/Berlin] [DEBUG] 2025-06-01 20:46:22 - Content Type: Not set
+[01-Jun-2025 20:46:22 Europe/Berlin] [DEBUG] 2025-06-01 20:46:22 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:46:22 Europe/Berlin] [DEBUG] 2025-06-01 20:46:22 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:46:22 Europe/Berlin] [DEBUG] 2025-06-01 20:46:22 - Unauthenticated dashboard access: Admin not authenticated. Please log in.
+[01-Jun-2025 20:46:22 Europe/Berlin] [DEBUG] 2025-06-01 20:46:22 - Processing GET request for dashboard data
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - Request Method: POST
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryyQDc9oXHotb391bF
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => thisOne270.png
+            [full_path] => thisOne270.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php64BA.tmp
+            [error] => 0
+            [size] => 189027
+        )
+
+)
+
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - POST array: Array
+(
+    [reportId] => 23
+    [action] => uploadImage
+)
+
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - Error: Admin not authenticated. Please log in.
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - Stack trace: #0 C:\xampp\htdocs\WebWizards\dashboard_data.php(62): getCurrentAdminId()
+#1 {main}
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - Request Method: POST
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - Content Type: multipart/form-data; boundary=----WebKitFormBoundary9HjLGumj1nmygrHG
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php64DA.tmp
+            [error] => 0
+            [size] => 100229
+        )
+
+)
+
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - POST array: Array
+(
+    [reportId] => 26
+    [action] => uploadImage
+)
+
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - Error: Admin not authenticated. Please log in.
+[01-Jun-2025 20:46:41 Europe/Berlin] [DEBUG] 2025-06-01 20:46:41 - Stack trace: #0 C:\xampp\htdocs\WebWizards\dashboard_data.php(62): getCurrentAdminId()
+#1 {main}
+[01-Jun-2025 20:46:42 Europe/Berlin] [DEBUG] 2025-06-01 20:46:42 - Request Method: POST
+[01-Jun-2025 20:46:42 Europe/Berlin] [DEBUG] 2025-06-01 20:46:42 - Content Type: application/json
+[01-Jun-2025 20:46:42 Europe/Berlin] [DEBUG] 2025-06-01 20:46:42 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:46:42 Europe/Berlin] [DEBUG] 2025-06-01 20:46:42 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:46:42 Europe/Berlin] [DEBUG] 2025-06-01 20:46:42 - Error: Admin not authenticated. Please log in.
+[01-Jun-2025 20:46:42 Europe/Berlin] [DEBUG] 2025-06-01 20:46:42 - Stack trace: #0 C:\xampp\htdocs\WebWizards\dashboard_data.php(62): getCurrentAdminId()
+#1 {main}
+[01-Jun-2025 20:46:52 Europe/Berlin] [DEBUG] 2025-06-01 20:46:52 - Request Method: GET
+[01-Jun-2025 20:46:52 Europe/Berlin] [DEBUG] 2025-06-01 20:46:52 - Content Type: Not set
+[01-Jun-2025 20:46:52 Europe/Berlin] [DEBUG] 2025-06-01 20:46:52 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:46:52 Europe/Berlin] [DEBUG] 2025-06-01 20:46:52 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:46:52 Europe/Berlin] [DEBUG] 2025-06-01 20:46:52 - Processing GET request for dashboard data
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Request Method: POST
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryDn1GAdgSaiplZ0sY
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => thisOne270.png
+            [full_path] => thisOne270.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC7EB.tmp
+            [error] => 0
+            [size] => 189027
+        )
+
+)
+
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - POST array: Array
+(
+    [reportId] => 23
+    [action] => uploadImage
+)
+
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryDn1GAdgSaiplZ0sY
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Image upload detected
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - File details: Array
+(
+    [name] => thisOne270.png
+    [full_path] => thisOne270.png
+    [type] => image/png
+    [tmp_name] => C:\xampp\tmp\phpC7EB.tmp
+    [error] => 0
+    [size] => 189027
+)
+
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Attempting to move file from C:\xampp\tmp\phpC7EB.tmp to uploads/report_23_1748803626_683ca02a680aa.png
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - File moved successfully to: uploads/report_23_1748803626_683ca02a680aa.png
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Created new message with image: report_23_1748803626_683ca02a680aa.png
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Image stored successfully in Messages table with filename: report_23_1748803626_683ca02a680aa.png
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Request Method: POST
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryj6bIC2PzbWQ2kFV7
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC81B.tmp
+            [error] => 0
+            [size] => 100229
+        )
+
+)
+
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - POST array: Array
+(
+    [reportId] => 26
+    [action] => uploadImage
+)
+
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryj6bIC2PzbWQ2kFV7
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Image upload detected
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - File details: Array
+(
+    [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+    [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\phpC81B.tmp
+    [error] => 0
+    [size] => 100229
+)
+
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Attempting to move file from C:\xampp\tmp\phpC81B.tmp to uploads/report_26_1748803626_683ca02a77aa4.jpg
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - File moved successfully to: uploads/report_26_1748803626_683ca02a77aa4.jpg
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Created new message with image: report_26_1748803626_683ca02a77aa4.jpg
+[01-Jun-2025 20:47:06 Europe/Berlin] [DEBUG] 2025-06-01 20:47:06 - Image stored successfully in Messages table with filename: report_26_1748803626_683ca02a77aa4.jpg
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - Request Method: POST
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - Content Type: application/json
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - Processing POST request with content type: application/json
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - JSON request with action: updateStatus
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - Update request - ReportID: 26, Status: Completed, Feedback: Fixed
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - Request Method: GET
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - Content Type: Not set
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - FILES array: Array
+(
+)
+
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - POST array: Array
+(
+)
+
+[01-Jun-2025 20:47:07 Europe/Berlin] [DEBUG] 2025-06-01 20:47:07 - Processing GET request for dashboard data
+[01-Jun-2025 21:03:15 Europe/Berlin] [DEBUG] 2025-06-01 21:03:15 - Request Method: GET
+[01-Jun-2025 21:03:15 Europe/Berlin] [DEBUG] 2025-06-01 21:03:15 - Content Type: Not set
+[01-Jun-2025 21:03:15 Europe/Berlin] [DEBUG] 2025-06-01 21:03:15 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:03:15 Europe/Berlin] [DEBUG] 2025-06-01 21:03:15 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:03:15 Europe/Berlin] [DEBUG] 2025-06-01 21:03:15 - Processing GET request for dashboard data
+[01-Jun-2025 21:03:45 Europe/Berlin] [DEBUG] 2025-06-01 21:03:45 - Request Method: GET
+[01-Jun-2025 21:03:45 Europe/Berlin] [DEBUG] 2025-06-01 21:03:45 - Content Type: Not set
+[01-Jun-2025 21:03:45 Europe/Berlin] [DEBUG] 2025-06-01 21:03:45 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:03:45 Europe/Berlin] [DEBUG] 2025-06-01 21:03:45 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:03:45 Europe/Berlin] [DEBUG] 2025-06-01 21:03:45 - Processing GET request for dashboard data
+[01-Jun-2025 21:04:15 Europe/Berlin] [DEBUG] 2025-06-01 21:04:15 - Request Method: GET
+[01-Jun-2025 21:04:15 Europe/Berlin] [DEBUG] 2025-06-01 21:04:15 - Content Type: Not set
+[01-Jun-2025 21:04:15 Europe/Berlin] [DEBUG] 2025-06-01 21:04:15 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:04:15 Europe/Berlin] [DEBUG] 2025-06-01 21:04:15 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:04:15 Europe/Berlin] [DEBUG] 2025-06-01 21:04:15 - Processing GET request for dashboard data
+[01-Jun-2025 21:04:45 Europe/Berlin] [DEBUG] 2025-06-01 21:04:45 - Request Method: GET
+[01-Jun-2025 21:04:45 Europe/Berlin] [DEBUG] 2025-06-01 21:04:45 - Content Type: Not set
+[01-Jun-2025 21:04:45 Europe/Berlin] [DEBUG] 2025-06-01 21:04:45 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:04:45 Europe/Berlin] [DEBUG] 2025-06-01 21:04:45 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:04:45 Europe/Berlin] [DEBUG] 2025-06-01 21:04:45 - Processing GET request for dashboard data
+[01-Jun-2025 21:05:15 Europe/Berlin] [DEBUG] 2025-06-01 21:05:15 - Request Method: GET
+[01-Jun-2025 21:05:15 Europe/Berlin] [DEBUG] 2025-06-01 21:05:15 - Content Type: Not set
+[01-Jun-2025 21:05:15 Europe/Berlin] [DEBUG] 2025-06-01 21:05:15 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:05:15 Europe/Berlin] [DEBUG] 2025-06-01 21:05:15 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:05:15 Europe/Berlin] [DEBUG] 2025-06-01 21:05:15 - Processing GET request for dashboard data
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Request Method: POST
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryQikkKxG1NAzosgB7
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => exposed wires.jpg
+            [full_path] => exposed wires.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php74DB.tmp
+            [error] => 0
+            [size] => 46154
+        )
+
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - POST array: Array
+(
+    [reportId] => 3
+    [action] => uploadImage
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryQikkKxG1NAzosgB7
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Image upload detected
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - File details: Array
+(
+    [name] => exposed wires.jpg
+    [full_path] => exposed wires.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php74DB.tmp
+    [error] => 0
+    [size] => 46154
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Attempting to move file from C:\xampp\tmp\php74DB.tmp to uploads/report_3_1748804719_683ca46f3e3e3.jpg
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - File moved successfully to: uploads/report_3_1748804719_683ca46f3e3e3.jpg
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Created new message with image: report_3_1748804719_683ca46f3e3e3.jpg
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Image stored successfully in Messages table with filename: report_3_1748804719_683ca46f3e3e3.jpg
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Request Method: POST
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryv18uB1PQxSrWym4q
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => images.jpg
+            [full_path] => images.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php74FC.tmp
+            [error] => 0
+            [size] => 7511
+        )
+
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - POST array: Array
+(
+    [reportId] => 2
+    [action] => uploadImage
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryv18uB1PQxSrWym4q
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Image upload detected
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - File details: Array
+(
+    [name] => images.jpg
+    [full_path] => images.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php74FC.tmp
+    [error] => 0
+    [size] => 7511
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Attempting to move file from C:\xampp\tmp\php74FC.tmp to uploads/report_2_1748804719_683ca46f495ab.jpg
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - File moved successfully to: uploads/report_2_1748804719_683ca46f495ab.jpg
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Created new message with image: report_2_1748804719_683ca46f495ab.jpg
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Image stored successfully in Messages table with filename: report_2_1748804719_683ca46f495ab.jpg
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Request Method: POST
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryZ8X5Mwh7f6TsIGZ3
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => leaking-pipe-blue.webp
+            [full_path] => leaking-pipe-blue.webp
+            [type] => image/webp
+            [tmp_name] => C:\xampp\tmp\php752C.tmp
+            [error] => 0
+            [size] => 148242
+        )
+
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - POST array: Array
+(
+    [reportId] => 1
+    [action] => uploadImage
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryZ8X5Mwh7f6TsIGZ3
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Image upload detected
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - File details: Array
+(
+    [name] => leaking-pipe-blue.webp
+    [full_path] => leaking-pipe-blue.webp
+    [type] => image/webp
+    [tmp_name] => C:\xampp\tmp\php752C.tmp
+    [error] => 0
+    [size] => 148242
+)
+
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Attempting to move file from C:\xampp\tmp\php752C.tmp to uploads/report_1_1748804719_683ca46f509bb.webp
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - File moved successfully to: uploads/report_1_1748804719_683ca46f509bb.webp
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Created new message with image: report_1_1748804719_683ca46f509bb.webp
+[01-Jun-2025 21:05:19 Europe/Berlin] [DEBUG] 2025-06-01 21:05:19 - Image stored successfully in Messages table with filename: report_1_1748804719_683ca46f509bb.webp
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Request Method: POST
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Content Type: application/json
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Processing POST request with content type: application/json
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - JSON request with action: updateStatus
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Update request - ReportID: 3, Status: In Progress, Feedback: we are still working on it
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Request Method: POST
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Content Type: application/json
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Processing POST request with content type: application/json
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - JSON request with action: updateStatus
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Update request - ReportID: 2, Status: Completed, Feedback: report received
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Request Method: POST
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Content Type: application/json
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Processing POST request with content type: application/json
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - JSON request with action: updateStatus
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Update request - ReportID: 1, Status: Rejected, Feedback: report recieved
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Request Method: GET
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Content Type: Not set
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:05:20 Europe/Berlin] [DEBUG] 2025-06-01 21:05:20 - Processing GET request for dashboard data
+[01-Jun-2025 21:05:45 Europe/Berlin] [DEBUG] 2025-06-01 21:05:45 - Request Method: GET
+[01-Jun-2025 21:05:45 Europe/Berlin] [DEBUG] 2025-06-01 21:05:45 - Content Type: Not set
+[01-Jun-2025 21:05:45 Europe/Berlin] [DEBUG] 2025-06-01 21:05:45 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:05:45 Europe/Berlin] [DEBUG] 2025-06-01 21:05:45 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:05:45 Europe/Berlin] [DEBUG] 2025-06-01 21:05:45 - Processing GET request for dashboard data
+[01-Jun-2025 21:06:15 Europe/Berlin] [DEBUG] 2025-06-01 21:06:15 - Request Method: GET
+[01-Jun-2025 21:06:15 Europe/Berlin] [DEBUG] 2025-06-01 21:06:15 - Content Type: Not set
+[01-Jun-2025 21:06:15 Europe/Berlin] [DEBUG] 2025-06-01 21:06:15 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:06:15 Europe/Berlin] [DEBUG] 2025-06-01 21:06:15 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:06:15 Europe/Berlin] [DEBUG] 2025-06-01 21:06:15 - Processing GET request for dashboard data
+[01-Jun-2025 21:06:45 Europe/Berlin] [DEBUG] 2025-06-01 21:06:45 - Request Method: GET
+[01-Jun-2025 21:06:45 Europe/Berlin] [DEBUG] 2025-06-01 21:06:45 - Content Type: Not set
+[01-Jun-2025 21:06:45 Europe/Berlin] [DEBUG] 2025-06-01 21:06:45 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:06:45 Europe/Berlin] [DEBUG] 2025-06-01 21:06:45 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:06:45 Europe/Berlin] [DEBUG] 2025-06-01 21:06:45 - Processing GET request for dashboard data
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - Request Method: POST
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - Content Type: application/json
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - Processing POST request with content type: application/json
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - JSON request with action: updateStatus
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - Update request - ReportID: 1, Status: In Progress, Feedback: 
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - Request Method: GET
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - Content Type: Not set
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:06:46 Europe/Berlin] [DEBUG] 2025-06-01 21:06:46 - Processing GET request for dashboard data
+[01-Jun-2025 21:07:15 Europe/Berlin] [DEBUG] 2025-06-01 21:07:15 - Request Method: GET
+[01-Jun-2025 21:07:15 Europe/Berlin] [DEBUG] 2025-06-01 21:07:15 - Content Type: Not set
+[01-Jun-2025 21:07:15 Europe/Berlin] [DEBUG] 2025-06-01 21:07:15 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:07:15 Europe/Berlin] [DEBUG] 2025-06-01 21:07:15 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:07:15 Europe/Berlin] [DEBUG] 2025-06-01 21:07:15 - Processing GET request for dashboard data
+[01-Jun-2025 21:07:45 Europe/Berlin] [DEBUG] 2025-06-01 21:07:45 - Request Method: GET
+[01-Jun-2025 21:07:45 Europe/Berlin] [DEBUG] 2025-06-01 21:07:45 - Content Type: Not set
+[01-Jun-2025 21:07:45 Europe/Berlin] [DEBUG] 2025-06-01 21:07:45 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:07:45 Europe/Berlin] [DEBUG] 2025-06-01 21:07:45 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:07:45 Europe/Berlin] [DEBUG] 2025-06-01 21:07:45 - Processing GET request for dashboard data
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Request Method: POST
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Content Type: application/json
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Processing POST request with content type: application/json
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - JSON request with action: clearImage
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Request Method: POST
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Content Type: application/json
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Processing POST request with content type: application/json
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - JSON request with action: updateStatus
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Update request - ReportID: 3, Status: Completed, Feedback: 
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Request Method: POST
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Content Type: application/json
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Processing POST request with content type: application/json
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - JSON request with action: updateStatus
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Update request - ReportID: 1, Status: Completed, Feedback: 
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Request Method: GET
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Content Type: Not set
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:07 Europe/Berlin] [DEBUG] 2025-06-01 21:08:07 - Processing GET request for dashboard data
+[01-Jun-2025 21:08:15 Europe/Berlin] [DEBUG] 2025-06-01 21:08:15 - Request Method: GET
+[01-Jun-2025 21:08:15 Europe/Berlin] [DEBUG] 2025-06-01 21:08:15 - Content Type: Not set
+[01-Jun-2025 21:08:15 Europe/Berlin] [DEBUG] 2025-06-01 21:08:15 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:15 Europe/Berlin] [DEBUG] 2025-06-01 21:08:15 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:15 Europe/Berlin] [DEBUG] 2025-06-01 21:08:15 - Processing GET request for dashboard data
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - Request Method: POST
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - Content Type: application/json
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - Processing POST request with content type: application/json
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - JSON request with action: updateStatus
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - Update request - ReportID: 3, Status: Pending, Feedback: 
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - Request Method: GET
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - Content Type: Not set
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:18 Europe/Berlin] [DEBUG] 2025-06-01 21:08:18 - Processing GET request for dashboard data
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - Request Method: POST
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - Content Type: application/json
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - Processing POST request with content type: application/json
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - JSON request with action: updateStatus
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - Update request - ReportID: 3, Status: In Progress, Feedback: 
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - Request Method: GET
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - Content Type: Not set
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:33 Europe/Berlin] [DEBUG] 2025-06-01 21:08:33 - Processing GET request for dashboard data
+[01-Jun-2025 21:08:45 Europe/Berlin] [DEBUG] 2025-06-01 21:08:45 - Request Method: GET
+[01-Jun-2025 21:08:45 Europe/Berlin] [DEBUG] 2025-06-01 21:08:45 - Content Type: Not set
+[01-Jun-2025 21:08:45 Europe/Berlin] [DEBUG] 2025-06-01 21:08:45 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:45 Europe/Berlin] [DEBUG] 2025-06-01 21:08:45 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:45 Europe/Berlin] [DEBUG] 2025-06-01 21:08:45 - Processing GET request for dashboard data
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - Request Method: POST
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - Content Type: multipart/form-data; boundary=----WebKitFormBoundaryfrGxYAHDRJzAVzWz
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - FILES array: Array
+(
+    [feedbackImage] => Array
+        (
+            [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA036.tmp
+            [error] => 0
+            [size] => 100229
+        )
+
+)
+
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - POST array: Array
+(
+    [reportId] => 3
+    [action] => uploadImage
+)
+
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - Processing POST request with content type: multipart/form-data; boundary=----WebKitFormBoundaryfrGxYAHDRJzAVzWz
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - Image upload detected
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - File details: Array
+(
+    [name] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+    [full_path] => cyberpunk_watson_belleview_overwalk_vista_by_wanizame_deb80rx-350t-2x.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\phpA036.tmp
+    [error] => 0
+    [size] => 100229
+)
+
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - Attempting to move file from C:\xampp\tmp\phpA036.tmp to uploads/report_3_1748804926_683ca53eed6cb.jpg
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - File moved successfully to: uploads/report_3_1748804926_683ca53eed6cb.jpg
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - Updated existing message ID 1 with image: report_3_1748804926_683ca53eed6cb.jpg
+[01-Jun-2025 21:08:46 Europe/Berlin] [DEBUG] 2025-06-01 21:08:46 - Image stored successfully in Messages table with filename: report_3_1748804926_683ca53eed6cb.jpg
+[01-Jun-2025 21:08:48 Europe/Berlin] [DEBUG] 2025-06-01 21:08:48 - Request Method: GET
+[01-Jun-2025 21:08:48 Europe/Berlin] [DEBUG] 2025-06-01 21:08:48 - Content Type: Not set
+[01-Jun-2025 21:08:48 Europe/Berlin] [DEBUG] 2025-06-01 21:08:48 - FILES array: Array
+(
+)
+
+[01-Jun-2025 21:08:48 Europe/Berlin] [DEBUG] 2025-06-01 21:08:48 - POST array: Array
+(
+)
+
+[01-Jun-2025 21:08:48 Europe/Berlin] [DEBUG] 2025-06-01 21:08:48 - Processing GET request for dashboard data

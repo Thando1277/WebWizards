@@ -179,8 +179,6 @@ transform:translateY(-2px);
             justify-content: center;
             padding: 20px;
         }
-
-        /* Settings Container Styles */
         .wrapper {
             display: flex;
             align-items: center;
@@ -355,7 +353,6 @@ transform:translateY(-2px);
             background: linear-gradient(135deg, #cc0000, #990000);
         }
 
-        /* Overlay for mobile */
         .overlay {
             position: fixed;
             top: 0;
@@ -374,7 +371,6 @@ transform:translateY(-2px);
             visibility: visible;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .settings-container {
                 margin: 10px;
@@ -406,11 +402,11 @@ transform:translateY(-2px);
             }
         }
         .container {
-          position: relative; /* Allows absolute children to position from here */
+          position: relative;
         }
         
         .container a {
-          position: fixed; /* Use fixed to make it stay in top-left of the viewport */
+          position: fixed;
           top: 20px;
           left: 20px;
           padding: 10px 20px;

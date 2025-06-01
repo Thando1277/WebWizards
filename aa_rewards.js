@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize the page
   fetchPointsAndUpdateUI();
 
+  // Check if user just submitted a report and should be awarded points
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('awarded') === 'true') {
+    awardPoints();
+    // Clean up URL to remove the parameter
+    window.history.replaceState({}, '', 'aa-rewards.html');
+  }
+
   // Back button functionality
   document.getElementById('BackBtn').addEventListener('click', () => {
     window.location.href = 'premium-dashboard.html';
@@ -182,18 +190,28 @@ function redeemReward() {
 }
 
 function awardPoints() {
+  console.log('awardPoints() called'); 
   fetch('award_points.php', { method: 'POST' })
     .then(res => res.json())
     .then(data => {
+      console.log('Award points response:', data);
       if (data.success) {
-        showNotification(`+${config.pointsPerReport} points!`);
-        fetchPointsAndUpdateUI();
+        state.totalPoints = data.after.total;
+        state.availablePoints = data.after.available;
+        updateUI();
+        
+        showNotification(`+${data.pointsAdded} points awarded!`);
+
+        setTimeout(() => {
+          fetchPointsAndUpdateUI();
+        }, 500);
       } else {
         showNotification(`${data.error || 'Failed to award points'}`, true);
       }
     })
     .catch(error => {
-      showNotification('Network error', true);
+      console.log('Award points error:', error); 
+      showNotification('Network error while awarding points', true);
       console.error('Error:', error);
     });
 }

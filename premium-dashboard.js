@@ -27,22 +27,41 @@ document.addEventListener("DOMContentLoaded", function () {
   let issueCount = 0;
   let cameraStream;
 
-function updateIssueCount() {
-  fetch('get-report-count.php')
-    .then(res => res.json())
-    .then(data => {
-      if (data.total !== undefined) {
-        issueCount = data.total;  // total reports count
-        reportedCounter.textContent = data.total;
-        solvedCounter.textContent = data.completed;
-      }
-    })
-    .catch(err => {
-      console.error('Error fetching report count:', err);
-    });
-}
+  function showPopup(message, redirectUrl = null) {
+    document.getElementById("popupMessage").textContent = message;
+    document.getElementById("myPopup").style.display = "block";
 
-  updateIssueCount(); // initial fetch
+    if (redirectUrl) {
+      setTimeout(() => {
+        window.location.href = redirectUrl;
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        closePopup();
+      }, 3000);
+    }
+  }
+
+  function closePopup() {
+    document.getElementById("myPopup").style.display = "none";
+  }
+
+  function updateIssueCount() {
+    fetch('get-report-count.php')
+      .then(res => res.json())
+      .then(data => {
+        if (data.total !== undefined) {
+          issueCount = data.total;
+          reportedCounter.textContent = data.total;
+          solvedCounter.textContent = data.completed;
+        }
+      })
+      .catch(err => {
+        console.error('Error fetching report count:', err);
+      });
+  }
+
+  updateIssueCount();
 
   function checkFormReadiness() {
     const ready = (imageUploaded || photoTaken) && locationFetched && issueFilled;
@@ -52,7 +71,7 @@ function updateIssueCount() {
   uploadIcon.addEventListener("click", function (event) {
     event.preventDefault();
     if (imageUploaded) {
-      alert("An image has already been uploaded. Please clear it first to upload a new one.");
+      showPopup("An image has already been uploaded. Please clear it first to upload a new one.");
       return;
     }
     fileInput.click();
@@ -61,15 +80,15 @@ function updateIssueCount() {
   fileInput.addEventListener("change", () => {
     const file = fileInput.files[0];
     if (fileInput.files.length > 1) {
-      alert("Please select only one image.");
+      showPopup("Please select only one image.");
       fileInput.value = "";
     } else if (file && !file.type.startsWith("image/")) {
-      alert("Only image files are allowed.");
+      showPopup("Only image files are allowed.");
       fileInput.value = "";
     } else {
       imageUploaded = true;
       photoTaken = false;
-      alert("Image uploaded: " + file.name);
+      showPopup("Image uploaded: " + file.name);
       checkFormReadiness();
     }
   });
@@ -81,10 +100,10 @@ function updateIssueCount() {
       photoTaken = false;
       canvas.style.display = "none";
       stopCamera();
-      alert("Image cleared.");
+      showPopup("Image cleared.");
       checkFormReadiness();
     } else {
-      alert("No image to clear.");
+      showPopup("No image to clear.");
     }
   });
 
@@ -138,7 +157,7 @@ function updateIssueCount() {
         sendFormData(formData);
       }, "image/png");
     } else {
-      alert("Please upload or take a photo before submitting.");
+      showPopup("Please upload or take a photo before submitting.");
     }
     window.dispatchEvent(new Event("storage"));
   });
@@ -156,7 +175,6 @@ function updateIssueCount() {
           canvas.style.display = "none";
           stopCamera();
 
-          
           imageUploaded = false;
           photoTaken = false;
           issueFilled = false;
@@ -164,8 +182,7 @@ function updateIssueCount() {
           locationElement.textContent = "Location: Not fetched yet";
 
           checkFormReadiness();
-          updateIssueCount();    // refresh count from server
-
+          updateIssueCount();
 
           let currentPoints = parseInt(localStorage.getItem("points")) || 0;
           currentPoints += 20;
@@ -173,14 +190,14 @@ function updateIssueCount() {
           localStorage.setItem("availablePoints", currentPoints);
           localStorage.setItem("status", `Pending Verification`);
 
-          alert("Issue reported successfully! You earned 20 points!");
+          showPopup("Issue reported successfully! You earned 20 points!");
         } else {
-          alert("Error: " + (data.error || "Unknown error"));
+          showPopup("Error: " + (data.error || "Unknown error"));
         }
       })
       .catch(error => {
         console.error("Submission error:", error);
-        alert("Failed to submit the report.");
+        showPopup("Failed to submit the report.");
       });
   }
 
@@ -239,13 +256,13 @@ function updateIssueCount() {
       takePhotoBtn.style.display = "inline-block";
       stopCameraBtn.style.display = "inline-block";
     } catch (error) {
-      alert("Could not access webcam.");
+      showPopup("Could not access webcam.");
     }
   });
 
   takePhotoBtn.addEventListener("click", () => {
     if (!cameraStream) {
-      alert("Camera not started.");
+      showPopup("Camera not started.");
       return;
     }
     const context = canvas.getContext("2d");
@@ -257,27 +274,26 @@ function updateIssueCount() {
     imageUploaded = false;
     photoTaken = true;
     checkFormReadiness();
-    alert("Photo taken successfully!");
+    showPopup("Photo taken successfully!");
   });
 
   stopCameraBtn.addEventListener("click", stopCamera);
 });
 
-// getting the dark toogle
 const darkToggle = document.getElementById("darkModeToggle");
-const darkIcon = darkToggle.nextElementSibling.nextElementSibling;
-
-// Getting the stylish toggle
+const darkIcon = darkToggle?.nextElementSibling?.nextElementSibling;
 const styleToggle = document.getElementById("styleModeToggle");
-const styleIcon = styleToggle.nextElementSibling.nextElementSibling;
-
+const styleIcon = styleToggle?.nextElementSibling?.nextElementSibling;
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Getting saved settings fromstrage(localstorage)
+  const darkToggle = document.getElementById("darkModeToggle");
+  const styleToggle = document.getElementById("styleModeToggle");
+  const darkIcon = darkToggle?.nextElementSibling?.nextElementSibling;
+  const styleIcon = styleToggle?.nextElementSibling?.nextElementSibling;
+
   const darkMode = localStorage.getItem("darkMode") === "true"; 
   const styleMode = localStorage.getItem("styleMode") === "true";
 
-  // Appplying the dark mode setting 
   darkToggle.checked = darkMode; 
   if (darkMode) {
     document.body.classList.add("light-mode"); 
@@ -293,21 +309,18 @@ window.addEventListener("DOMContentLoaded", () => {
   } else {
     styleIcon.textContent = "🎨"; 
   }
-});
 
-// Daark mode toggle is clicked
-darkToggle.addEventListener("change", () => {
-  const isChecked = darkToggle.checked; 
-  document.body.classList.toggle("light-mode", isChecked);
-  darkIcon.textContent = isChecked ? "☀️" : "🌙";
+  darkToggle.addEventListener("change", () => {
+    const isChecked = darkToggle.checked;
+    document.body.classList.toggle("light-mode", isChecked);
+    darkIcon.textContent = isChecked ? "☀️" : "🌙";
+    localStorage.setItem("darkMode", isChecked);
+  });
 
-  // Save preference in local Storage
-  localStorage.setItem("darkMode", isChecked);
+  styleToggle.addEventListener("change", () => {
+    const isChecked = styleToggle.checked;
+    document.body.classList.toggle("masterpiece-mode", isChecked);
+    styleIcon.textContent = isChecked ? "✨" : "🎨";
+    localStorage.setItem("styleMode", isChecked);
+  });
 });
-styleToggle.addEventListener("change", () => {
-  const isChecked = styleToggle.checked;
-  document.body.classList.toggle("masterpiece-mode", isChecked);
-  styleIcon.textContent = isChecked ? "✨" : "🎨";
-  localStorage.setItem("styleMode", isChecked);
-});
-

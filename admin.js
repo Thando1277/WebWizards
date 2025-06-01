@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const usernameErrorEl = document.getElementById('usernameError');
         const passwordErrorEl = document.getElementById('passwordError');
         const serverErrorEl = document.getElementById('serverError');
-
-        // Clear previous errors
         usernameErrorEl.textContent = "";
         passwordErrorEl.textContent = "";
         serverErrorEl.textContent = "";

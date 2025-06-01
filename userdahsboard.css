@@ -418,6 +418,95 @@ display: flex;
 .back-button:focus:not(:focus-visible) {
   outline: none;
 }
+
+    #ads-banner {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 320px;
+    background-color: white;
+    border: 2px solid aqua;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px greenyellow;
+    overflow: hidden;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+  }
+
+  #ads-banner video {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+  }
+
+  #ads-banner .close-btn {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 400px) {
+    #ads-banner {
+      width: 90%;
+      left: 5%;
+      right: 5%;
+      bottom: 20px;
+    }
+  }
+
+
+/*Make Responsive*/
+body {
+  overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    left: 0;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+  }
+
+  .cardBox {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .upload-section,
+  .LocationWrap,
+  .IssuesCard {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .topbar h2 {
+    position: static;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .submit button {
+    width: 90%;
+  }
+
+}
 .startVoice{
   padding: 6px 12px;
     border: none;
@@ -429,5 +518,18 @@ display: flex;
     margin: 8px;
 }
 .startVoice:hover{
+  background: #3e290f;
+}
+.clearBtn{
+   padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:orange;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px;
+}
+.clearBtn:hover{
   background: #3e290f;
 }

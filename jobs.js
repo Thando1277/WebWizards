@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
   closeBtn.addEventListener('click', () => {
     closePopup();
   });
+  
+      document.getElementById('BackBtn').addEventListener('click', () => {
+      window.location.href = 'premium-dashboard.html';
+    });
 
 
   window.addEventListener('click', (event) => {

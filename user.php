@@ -2,21 +2,17 @@
 session_start();
 $isPremium = $_SESSION['isPremium'] ?? false;
 
-// Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
     echo "You must be logged in to view this page.";
     exit();
 }
 
-// Connect to MySQL database
 $conn = new mysqli("localhost", "root", "LockIn_78", "WebWizards");
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get user info based on session ID
 $userID = $_SESSION['user_id'];
 $sql = "SELECT * FROM Users WHERE UserID = ?";
 $stmt = $conn->prepare($sql);

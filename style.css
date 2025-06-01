@@ -269,9 +269,6 @@ footer .wave#wave4 {
     }
 }
 
-
-
-/* MAking Responsinve first for Tablet and Smaller */
 @media (max-width: 1024px) {
   header {
     padding: 20px 40px;
@@ -332,7 +329,6 @@ footer .wave#wave4 {
   }
 }
 
-/* FOR Phone Screens */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -379,6 +375,6 @@ footer .wave#wave4 {
   }
 
   footer .wave {
-    display:flex; /*Here we  have an option to hide the waves(display:none)*/
+    display:flex;
   }
 }
